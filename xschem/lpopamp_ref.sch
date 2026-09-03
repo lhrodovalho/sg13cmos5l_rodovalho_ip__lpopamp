@@ -25,9 +25,9 @@ N 360 -150 400 -150 { lab=znm}
 N 580 -680 620 -680 { lab=o}
 N 100 -180 140 -180 { lab=ibias}
 N 200 -180 240 -180 { lab=bnb}
-N 100 -300 140 -300 { lab=ynm}
+N 100 -300 140 -300 { lab=znm}
 N 200 -300 240 -300 { lab=o}
-N 100 -420 140 -420 { lab=ypm}
+N 100 -420 140 -420 { lab=zpm}
 N 200 -420 240 -420 { lab=o}
 N 360 -350 400 -350 { lab=xp}
 N 360 -230 400 -230 { lab=xn}
@@ -63,9 +63,9 @@ C {devices/iopin.sym} 50 -610 2 1 {name=pena lab=en}
 C {devices/lab_pin.sym} 100 -180 0 0 {name=libias  lab=ibias type=std_logic}
 C {devices/lab_pin.sym} 240 -180 0 1 {name=lbnb0  lab=bnb type=std_logic}
 C {devices/iopin.sym} 50 -580 2 1 {name=penb lab=enb}
-C {devices/lab_pin.sym} 100 -300 0 0 {name=lynm0 lab=ynm type=std_logic}
+C {devices/lab_pin.sym} 100 -300 0 0 {name=lynm0 lab=znm type=std_logic}
 C {devices/lab_pin.sym} 240 -300 0 1 {name=lo0  lab=o type=std_logic}
-C {devices/lab_pin.sym} 100 -420 0 0 {name=lypm0 lab=ypm type=std_logic}
+C {devices/lab_pin.sym} 100 -420 0 0 {name=lypm0 lab=zpm type=std_logic}
 C {devices/lab_pin.sym} 240 -420 0 1 {name=lo2  lab=o type=std_logic}
 C {devices/res.sym} 170 -180 3 0 {name=ralias_ibias
 value=1
@@ -76,11 +76,11 @@ C {devices/iopin.sym} 50 -470 2 1 {name=pavss1 lab=vsub}
 C {devices/lab_pin.sym} 360 -550 0 0 {name=lvsub sig_type=std_logic lab=vsub}
 C {devices/capa.sym} 170 -420 1 0 {name=C1
 m=1
-value=1p
+value=8p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/capa.sym} 170 -300 1 0 {name=C2
 m=1
-value=1p
+value=8p
 footprint=1206
 device="ceramic capacitor"}
