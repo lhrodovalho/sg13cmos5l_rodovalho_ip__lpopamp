@@ -1,0 +1,42 @@
+v {xschem version=2.9.9 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @@y @@bna @@bnb @@bp_sc @@y @@avdd @@avss @@vsub @symname"
+template="name=X1"}
+V {}
+S {}
+E {}
+L 4 0 0 180 0 {}
+L 4 0 -80 180 -80 {}
+L 4 0 -190 180 -190 {}
+L 4 -0 -190 0 0 {}
+L 4 180 -190 180 -0 {}
+B 5 -2.5 -162.5 2.5 -157.5 {name=y
+dir=inout
+sim_pinnumber=0}
+B 5 -2.5 -102.5 2.5 -97.5 {name=bna
+dir=inout
+sim_pinnumber=2}
+B 5 -2.5 -42.5 2.5 -37.5 {name=avss
+dir=inout
+sim_pinnumber=5}
+B 5 -2.5 -62.5 2.5 -57.5 {name=avdd
+dir=inout
+sim_pinnumber=4}
+B 5 -2.5 -22.5 2.5 -17.5 {name=vsub
+dir=inout
+sim_pinnumber=6}
+B 5 -2.5 -122.5 2.5 -117.5 {name=bnb
+dir=inout
+sim_pinnumber=1}
+B 5 177.5 -142.5 182.5 -137.5 {name=bp_sc
+dir=inout
+sim_pinnumber=3}
+T {@name} 70 -170 2 1 0.2 0.2 {}
+T {y} 10 -170 0 0 0.2 0.2 {}
+T {bna} 10 -110 0 0 0.2 0.2 {}
+T {avdd} 10 -70 0 0 0.2 0.2 {}
+T {avss} 10 -50 0 0 0.2 0.2 {}
+T {vsub} 10 -30 0 0 0.2 0.2 {}
+T {bnb} 10 -130 0 0 0.2 0.2 {}
+T {bp_sc} 140 -150 0 0 0.2 0.2 {}

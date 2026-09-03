@@ -1,0 +1,58 @@
+v {xschem version=2.9.9 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @@yp @@yn @@zp @@zn @@bp_sc @@bpb @@bnb @@bn_sc @@avdd @@avss @@vsub @symname"
+template="name=X1"}
+V {}
+S {}
+E {}
+L 4 0 0 180 0 {}
+L 4 0 -180 180 -180 {}
+L 4 0 -260 180 -260 {}
+L 4 180 -260 180 0 {}
+L 4 -0 -260 0 -0 {}
+B 5 -2.5 -202.5 2.5 -197.5 {name=yn
+dir=inout
+sim_pinnumber=6}
+B 5 -2.5 -222.5 2.5 -217.5 {name=yp
+dir=inout
+sim_pinnumber=5}
+B 5 -2.5 -162.5 2.5 -157.5 {name=bp_sc
+dir=inout
+sim_pinnumber=7}
+B 5 -2.5 -42.5 2.5 -37.5 {name=avss
+dir=inout
+sim_pinnumber=4}
+B 5 -2.5 -62.5 2.5 -57.5 {name=avdd
+dir=inout
+sim_pinnumber=3}
+B 5 -2.5 -22.5 2.5 -17.5 {name=vsub
+dir=inout
+sim_pinnumber=4}
+B 5 -2.5 -142.5 2.5 -137.5 {name=bpb
+dir=inout
+sim_pinnumber=7}
+B 5 177.5 -202.5 182.5 -197.5 {name=zn
+dir=inout
+sim_pinnumber=6}
+B 5 177.5 -222.5 182.5 -217.5 {name=zp
+dir=inout
+sim_pinnumber=5}
+B 5 -2.5 -122.5 2.5 -117.5 {name=bnb
+dir=inout
+sim_pinnumber=7}
+B 5 -2.5 -102.5 2.5 -97.5 {name=bn_sc
+dir=inout
+sim_pinnumber=7}
+T {@name} 70 -240 2 1 0.2 0.2 {}
+T {yp} 10 -230 0 0 0.2 0.2 {}
+T {yn} 10 -210 0 0 0.2 0.2 {}
+T {bp_sc} 10 -170 0 0 0.2 0.2 {}
+T {avdd} 10 -70 0 0 0.2 0.2 {}
+T {avss} 10 -50 0 0 0.2 0.2 {}
+T {vsub} 10 -30 0 0 0.2 0.2 {}
+T {bpb} 10 -150 0 0 0.2 0.2 {}
+T {zp} 150 -230 0 0 0.2 0.2 {}
+T {zn} 150 -210 0 0 0.2 0.2 {}
+T {bnb} 10 -130 0 0 0.2 0.2 {}
+T {bn_sc} 10 -110 0 0 0.2 0.2 {}
