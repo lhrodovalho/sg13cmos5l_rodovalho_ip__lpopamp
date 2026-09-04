@@ -53,7 +53,7 @@ N 780 -440 820 -440 { lab=out_}
 N 320 -520 360 -520 { lab=in}
 N 320 -420 360 -420 { lab=avss}
 C {devices/title.sym} 160 -40 0 0 {name=l6 author="Luis Henrique Rodovalho"}
-C {lpopamp.sym} 360 -300 0 0 {name=Xdut}
+C {lpopamp_ref.sym} 360 -300 0 0 {name=Xdut}
 C {devices/lab_pin.sym} 320 -460 0 0 {name=lavdd1 sig_type=std_logic lab=avdd}
 C {devices/lab_pin.sym} 320 -440 0 0 {name=lavss1 sig_type=std_logic lab=avss}
 C {devices/lab_pin.sym} 320 -380 0 0 {name=len1 sig_type=std_logic lab=en}
@@ -96,7 +96,7 @@ C {devices/code_shown.sym} 960 -1030 0 0 {name=control only_toplevel=false value
 .option method=Gear
 .param xtstart = \{xper\}\}
 .param xtend   = \{xtstart+10*xper\}
-.param xtstep  = \{xper/100\}
+.param xtstep  = 1e-9
 .tran \{xtstep\} \{xtend\} \{xtstart\}
 .control
   pre_osdi /home/rodovalho/git/ihp130_rodovalho_ip__lpopamp/ngspice/models/psp103_nqs.osdi

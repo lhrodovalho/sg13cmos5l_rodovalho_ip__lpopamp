@@ -96,7 +96,7 @@ C {devices/code_shown.sym} 960 -1030 0 0 {name=control only_toplevel=false value
 .option noinit list opts klu
 .param xtstart = 0
 .param xtend   = \{xper\}
-.param xtstep  = \{xper/100\}
+.param xtstep  = 1e-9
 .tran \{xtstep\} \{xtend\} \{xtstart\}
 .control
   pre_osdi /home/rodovalho/git/ihp130_rodovalho_ip__lpopamp/ngspice/models/psp103_nqs.osdi
