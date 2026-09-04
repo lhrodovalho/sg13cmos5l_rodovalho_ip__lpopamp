@@ -1,5 +1,9 @@
 #!/usr/bin/tclsh
 
+if {[catch {file mkdir out} err opts] != 0} {
+    puts $err
+}
+
 set spiceList [lsort -dictionary [glob ./spice/*.sp*]]
 puts ">>> spiceList: $spiceList"
 

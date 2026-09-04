@@ -1,0 +1,2 @@
+num,corner,vdd,temp,gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd,vos
+2,mos_ff,3.0,-40,3.40336E+06,60.163,99.765,119.68,60.5606,-0.000263349,0.000291713
