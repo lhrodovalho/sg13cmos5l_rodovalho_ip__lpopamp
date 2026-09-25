@@ -1,0 +1,1570 @@
+* NGSPICE file created from lpopamp.ext - technology: ihp-sg13g2
+
+.subckt lpopamp_sliceB in_m in_p out avss avdd ib en zp_p zn_p
+X0 zp_m bnb a_7450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X1 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X2 a_n2050_3450# bpa_r a_n2150_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X3 avss zn_m a_4150_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X4 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X5 a_10850_6450# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X6 bna_ bnb a_n1950_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X7 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X8 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X9 bna en ib avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X10 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X11 bpa bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X12 a_1850_6450# in_m xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X13 a_n4050_4050# bpa_r a_n4150_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X14 a_6550_6450# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X15 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X16 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X17 avss zn_p a_16850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X18 avdd bpa a_10750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X19 a_13650_5850# bnb zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X20 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X21 zn_m zn_m a_10250_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X22 a_n4650_5850# bna_ a_n4750_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X23 a_n1350_5850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X24 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X25 zp_m bnb a_7850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X26 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X27 xn in_p a_850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X28 a_4950_5850# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X29 xn in_p a_1250_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X30 a_9350_5850# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X31 tihi tihi avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=9.5u
+X32 a_15650_6450# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X33 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X34 avdd bpa bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X35 a_n3350_6450# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X36 zn_m zn_m a_9850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X37 a_n4450_4050# bpa_l a_n4550_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X38 a_6950_5850# bna a_6550_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X39 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X40 zn_m zn_m a_10650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X41 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X42 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X43 a_n1750_5850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X44 bpb bna a_n6250_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X45 xn in_m a_1650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X46 yn_p zn_m a_9350_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X47 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X48 enb en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=2.25p ps=10u w=4.5u l=1.5u
+X49 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X50 zn_p zn_m a_12650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X51 a_n3750_6450# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X52 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X53 a_n7850_6450# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X54 a_6950_5850# bnb a_8050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X55 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X56 out zn_p a_15450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X57 a_150_6450# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X58 yn_m zn_m a_12150_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X59 a_n6250_5850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X60 avdd bpa a_9350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X61 a_n4350_3450# bpa_l a_n4450_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X62 bnb bnb a_n3350_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X63 a_9850_5850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X64 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X65 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X66 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X67 a_10750_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X68 a_n1950_4050# bpa_r a_n2050_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X69 bna enb avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X70 a_14250_6450# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X71 a_n6350_4050# bpa_l a_n6450_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X72 zn_m bpb a_9350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X73 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X74 xp bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X75 out zn_p a_15850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X76 a_n550_6450# bna_ a_n650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X77 a_12650_5850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X78 avss bna a_n7050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X79 a_10750_3450# bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X80 bnb bnb a_n3750_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X81 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X82 zn_p enb avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X83 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X84 a_8050_5850# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X85 a_14950_6450# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X86 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X87 avss bna a_n9050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X88 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X89 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X90 a_n2350_6450# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X91 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X92 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X93 a_n950_6450# bna_ bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X94 zn_m bpb a_10750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X95 avdd bpa_r a_n1950_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X96 yn_m zn_m a_14050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X97 avdd tihi tihi avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=9.5u
+X98 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X99 bpa_l bpa_l a_n6350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X100 a_9350_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X101 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X102 a_n450_5850# bna_ a_n550_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X103 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X104 avdd en zp_p avdd sg13_hv_pmos ad=2.25p pd=10u as=1.125p ps=5u w=4.5u l=1.5u
+X105 a_n2750_6450# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X106 avss zn_p a_16050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X107 bpa_r bpa_r a_n3950_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X108 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X109 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X110 zp_m bnb a_7050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X111 out zp_p a_15550_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X112 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X113 yn_m zn_m a_14450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X114 bna_ bnb a_n2350_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X115 a_9350_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X116 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X117 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X118 a_n850_5850# bna_ a_n950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X119 a_2550_5850# bna xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X120 avss zn_p a_16450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X121 a_13250_6450# bnb zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X122 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X123 zn_m bpb a_10750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X124 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X125 bna_ bna_ a_n4350_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X126 a_n2050_4050# bpa_r a_n2150_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X127 zp_m bnb a_7450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X128 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X129 avss zn_m a_4150_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X130 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X131 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X132 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X133 bna_ bnb a_n2750_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X134 a_16050_5850# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X135 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X136 bpa bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X137 avss bna a_2550_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X138 avss en enb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X139 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X140 a_7050_5850# bnb a_6950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X141 avss zn_p a_16850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X142 yp_m bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X143 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X144 zn_m zn_m a_10250_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X145 a_13650_6450# bnb zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X146 avdd bpa a_10750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X147 a_n4650_6450# bna_ a_n4750_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X148 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X149 a_n1350_6450# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X150 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X151 a_4950_6450# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X152 zp_m bnb a_7850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X153 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X154 xn in_p a_850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X155 xn in_p a_1250_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X156 a_9350_6450# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X157 tihi tihi avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=9.5u
+X158 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X159 a_16450_5850# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X160 bpa en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X161 zn_p zn_m a_13050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X162 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X163 a_n4150_5850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X164 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X165 a_7450_5850# bnb a_6950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X166 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X167 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X168 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X169 zn_m zn_m a_10650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X170 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X171 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X172 a_n1750_6450# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X173 bpb bna a_n6250_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X174 xn in_m a_1650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X175 yn_p zn_m a_9350_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X176 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X177 enb en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=2.25p ps=10u w=4.5u l=1.5u
+X178 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X179 a_16850_5850# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X180 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X181 zn_p bnb a_13450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X182 a_10750_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X183 a_10250_5850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X184 a_n4550_5850# bna_ a_n4650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X185 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X186 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X187 bnb bnb a_n1350_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X188 a_7850_5850# bnb a_6950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X189 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X190 a_850_5850# in_p yp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X191 a_1250_5850# in_p yp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X192 bnb bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X193 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X194 out zn_p a_15450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X195 a_n6250_6450# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X196 yn_m zn_m a_12150_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X197 avdd bpa a_9350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X198 bnb bnb a_n3350_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X199 a_n4350_4050# bpa_l a_n4450_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X200 a_9850_6450# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X201 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X202 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X203 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X204 zn_p bnb a_13850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X205 a_n4950_5850# bna_ avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X206 a_10650_5850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X207 bnb bnb a_n1750_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X208 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X209 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X210 avss zn_m a_14950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X211 a_n9050_5850# bna bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X212 a_1650_5850# in_m yp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X213 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X214 out zn_p a_15850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X215 a_12650_6450# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X216 avss bna a_n7050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X217 a_10750_3450# bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X218 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X219 bnb bnb a_n3750_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X220 zn_p enb avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X221 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X222 a_8050_6450# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X223 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X224 ib en bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X225 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X226 a_15450_5850# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X227 a_n3150_5850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X228 avdd bpa_l a_n4350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X229 avdd bpa xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X230 zn_m bpb a_10750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X231 yn_m zn_m a_14050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X232 avdd bpa_r a_n1950_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X233 avdd tihi tihi avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=9.5u
+X234 bpa_l bpa_l a_n6350_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X235 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X236 a_9350_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X237 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X238 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X239 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X240 a_15850_5850# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X241 a_n450_6450# bna_ a_n550_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X242 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X243 a_n3550_5850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X244 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X245 xp bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X246 a_9350_3450# bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X247 yn_m zn_m a_14450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X248 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X249 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X250 bna_ bnb a_n2350_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X251 a_9350_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X252 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X253 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X254 a_2550_6450# bna xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X255 a_n850_6450# bna_ a_n950_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X256 yn_m zn_m a_12850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X257 a_n3950_5850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X258 bnb bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X259 avss enb bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X260 a_14050_5850# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X261 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X262 zn_m bpb a_9350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X263 yn_p zn_m a_4950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X264 a_n350_5850# bna_ a_n450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X265 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X266 bna_ bnb a_n2750_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X267 a_16050_6450# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X268 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X269 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X270 bpa bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X271 avss bna a_2550_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X272 avss en enb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X273 a_7050_6450# bnb a_6950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X274 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X275 a_15550_3450# zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X276 yp_m bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X277 a_14450_5850# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X278 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X279 a_n6550_3450# bpa_l avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X280 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X281 a_n2150_5850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X282 zn_m bpb a_9350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X283 a_5750_5850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X284 xn in_m a_2050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X285 a_n750_5850# bna_ a_n850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X286 a_16450_6450# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X287 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X288 zn_p zn_m a_13050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X289 bpa en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X290 a_n4150_6450# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X291 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X292 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X293 a_7450_6450# bnb a_6950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X294 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X295 a_15950_3450# zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X296 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X297 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X298 avdd bpa bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X299 a_n2550_5850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X300 zp_p en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X301 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X302 avss zn_m a_5750_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X303 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X304 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X305 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X306 a_16850_6450# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X307 zn_p bnb a_13450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X308 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X309 a_10750_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X310 a_10250_6450# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X311 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X312 a_n4550_6450# bna_ a_n4650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X313 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X314 bnb bnb a_n1350_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X315 a_7850_6450# bnb a_6950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X316 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X317 a_850_6450# in_p yp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X318 a_1250_6450# in_p yp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X319 bnb bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X320 a_n2950_5850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X321 out zn_p a_16250_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X322 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X323 a_13050_5850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X324 a_n7050_5850# bna bpa avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X325 bnb bnb a_n4150_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X326 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X327 a_6950_5850# bnb a_7250_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X328 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X329 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X330 zn_p bnb a_13850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X331 a_10650_6450# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X332 a_n4950_6450# bna_ avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X333 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X334 bnb bnb a_n1750_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X335 avss zn_m a_14950_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X336 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X337 a_n9050_6450# bna bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X338 a_1650_6450# in_m yp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X339 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X340 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X341 out zn_p a_16650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X342 bpa bna a_n7850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X343 zn_m bpb a_10750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X344 a_13450_5850# bnb zp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X345 a_n4450_5850# bna_ a_n4550_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X346 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X347 yn_p zn_m a_10050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X348 a_n1150_5850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X349 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X350 a_6950_5850# bnb a_7650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X351 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X352 yp_m in_p a_650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X353 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X354 yp_m in_p a_1050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X355 a_15450_6450# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X356 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X357 ib en bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X358 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X359 avdd bpa_l a_n4350_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X360 a_n3150_6450# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X361 avdd bpa xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X362 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X363 a_13850_5850# bnb zp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X364 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X365 yn_p zn_m a_10450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X366 a_n4850_5850# bna_ a_n4950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X367 out zp_p a_15950_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X368 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X369 a_n1550_5850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X370 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X371 yp_p in_m a_1450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X372 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X373 avdd en enb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X374 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X375 a_15850_6450# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X376 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X377 a_n3550_6450# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X378 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X379 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X380 xp bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X381 a_9350_3450# bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X382 yn_p zn_m a_10850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X383 a_n1950_5850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X384 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X385 out zp_p a_16350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X386 yp_p in_m a_1850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X387 a_n4150_3450# bpa_r avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X388 bna_ bnb a_n3150_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X389 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X390 a_3350_5850# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X391 yn_m zn_m a_12850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X392 a_n3950_6450# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X393 a_14050_6450# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X394 bnb bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X395 avss enb bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X396 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X397 zn_m bpb a_9350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X398 yn_p zn_m a_4950_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X399 out zp_p a_16750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X400 avss zn_p a_15650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X401 a_n350_6450# bna_ a_n450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X402 bna_ bnb a_n3550_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X403 a_n4550_3450# bpa_l bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X404 yn_m zn_m a_3350_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X405 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X406 a_14450_6450# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X407 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X408 a_n6550_4050# bpa_l avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X409 a_n2150_6450# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X410 zn_m bpb a_9350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X411 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X412 a_5750_6450# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X413 a_n750_6450# bna_ a_n850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X414 xn in_m a_2050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X415 a_12850_5850# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X416 bna_ bnb a_n3950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X417 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X418 avss enb zn_p avss sg13_hv_nmos ad=2.25p pd=10u as=1.125p ps=5u w=4.5u l=1.5u
+X419 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X420 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X421 a_4150_5850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X422 a_8550_5850# bna a_6950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X423 avss bna_ a_n350_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X424 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X425 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X426 avdd bpa bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X427 zp_p en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X428 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X429 a_n2550_6450# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X430 avss zn_m a_5750_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X431 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X432 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X433 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X434 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X435 zn_p zn_m a_14250_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X436 a_11350_5850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X437 avss bna a_n5450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X438 a_n6450_3450# bpa_l a_n6550_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X439 bnb bnb a_n2150_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X440 avss bna a_8550_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X441 a_9350_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X442 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X443 a_2050_5850# in_m yp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X444 a_n650_5850# bna_ a_n750_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X445 bna bna a_n10250_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X446 a_n2950_6450# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X447 out zn_p a_16250_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X448 a_13050_6450# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X449 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X450 a_n7050_6450# bna bpa avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X451 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X452 bnb bnb a_n4150_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X453 a_6950_5850# bnb a_7250_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X454 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X455 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X456 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X457 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X458 avss zn_m a_11350_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X459 a_n5450_5850# bna bpb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X460 bnb bnb a_n2550_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X461 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X462 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X463 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X464 a_n10250_5850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X465 out zn_p a_16650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X466 a_13450_6450# bnb zp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X467 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X468 bpa bna a_n7850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X469 yn_p zn_m a_10050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X470 zn_m bpb a_10750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X471 a_n4450_6450# bna_ a_n4550_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X472 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X473 a_n1150_6450# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X474 a_6950_5850# bnb a_7650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X475 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X476 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X477 yp_m in_p a_650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X478 yp_m in_p a_1050_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X479 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X480 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X481 a_12150_5850# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X482 a_n3950_3450# bpa_r a_n4050_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X483 bnb bnb a_n2950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X484 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X485 a_16250_5850# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X486 avdd en bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X487 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X488 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X489 enb en avss avss sg13_hv_nmos ad=1.125p pd=5u as=2.25p ps=10u w=4.5u l=1.5u
+X490 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X491 a_7250_5850# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X492 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X493 xn bna a_150_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X494 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X495 a_13850_6450# bnb zp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X496 a_n4850_6450# bna_ a_n4950_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X497 yn_p zn_m a_10450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X498 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X499 a_n1550_6450# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X500 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X501 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X502 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X503 yp_p in_m a_1450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X504 avdd en enb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X505 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X506 a_16650_5850# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X507 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X508 zp_p bnb a_13250_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X509 a_10750_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X510 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X511 a_10050_5850# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X512 a_n4350_5850# bna_ a_n4450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X513 a_n2150_3450# bpa_r bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X514 bna_ bnb a_n1150_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X515 a_7650_5850# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X516 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X517 a_650_5850# in_p xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X518 a_1050_5850# in_p xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X519 yn_p zn_m a_10850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X520 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X521 a_n1950_6450# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X522 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X523 bna_ bnb a_n3150_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X524 yp_p in_m a_1850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X525 a_n4150_4050# bpa_r avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X526 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X527 a_3350_6450# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X528 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X529 zp_p bnb a_13650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X530 a_10450_5850# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X531 a_n4750_5850# bna_ a_n4850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X532 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X533 bna_ bnb a_n1550_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X534 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X535 avdd bpa xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X536 a_1450_5850# in_m xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X537 avss zn_p a_15650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X538 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X539 a_n4550_4050# bpa_l bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X540 bna_ bnb a_n3550_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X541 yn_m zn_m a_3350_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X542 a_10850_5850# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X543 bna_ bnb a_n1950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X544 a_16350_3450# zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X545 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X546 bna en ib avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X547 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X548 bpa bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X549 a_1850_5850# in_m xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X550 a_n4050_3450# bpa_r a_n4150_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X551 a_6550_5850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X552 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X553 a_12850_6450# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X554 bna_ bnb a_n3950_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X555 avss enb zn_p avss sg13_hv_nmos ad=2.25p pd=10u as=1.125p ps=5u w=4.5u l=1.5u
+X556 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X557 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X558 a_4150_6450# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X559 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X560 a_8550_6450# bna a_6950_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X561 a_16750_3450# zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X562 avss bna_ a_n350_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X563 a_15650_5850# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X564 avdd bpa bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X565 a_n3350_5850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X566 a_n4450_3450# bpa_l a_n4550_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X567 zn_m zn_m a_9850_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X568 a_6950_5850# bna a_6550_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X569 zn_p zn_m a_14250_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X570 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X571 a_11350_6450# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X572 a_n6450_4050# bpa_l a_n6550_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X573 avss bna a_n5450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X574 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X575 bnb bnb a_n2150_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X576 avss bna a_8550_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X577 a_9350_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X578 a_2050_6450# in_m yp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X579 bna bna a_n10250_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X580 a_n650_6450# bna_ a_n750_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X581 zn_p zn_m a_12650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X582 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X583 a_n3750_5850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X584 a_n7850_5850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X585 a_6950_5850# bnb a_8050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X586 a_150_5850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X587 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X588 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X589 a_n5450_6450# bna bpb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X590 avss zn_m a_11350_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X591 bnb bnb a_n2550_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X592 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X593 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X594 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X595 a_n10250_6450# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X596 a_10750_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X597 a_n1950_3450# bpa_r a_n2050_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X598 a_14250_5850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X599 bna enb avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X600 a_n6350_3450# bpa_l a_n6450_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X601 zn_m bpb a_9350_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X602 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X603 xp bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X604 a_n550_5850# bna_ a_n650_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X605 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X606 a_12150_6450# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X607 a_16250_6450# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X608 a_n3950_4050# bpa_r a_n4050_4050# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X609 bnb bnb a_n2950_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X610 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X611 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X612 avdd en bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X613 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X614 enb en avss avss sg13_hv_nmos ad=1.125p pd=5u as=2.25p ps=10u w=4.5u l=1.5u
+X615 a_7250_6450# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X616 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X617 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X618 xn bna a_150_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X619 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X620 a_14950_5850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X621 avss bna a_n9050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X622 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X623 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X624 a_n2350_5850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X625 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X626 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X627 a_n950_5850# bna_ bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X628 a_16650_6450# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X629 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X630 zp_p bnb a_13250_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X631 a_10750_3450# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X632 a_n4350_6450# bna_ a_n4450_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X633 a_10050_6450# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X634 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X635 bna_ bnb a_n1150_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X636 a_n2150_4050# bpa_r bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X637 a_7650_6450# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X638 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X639 a_650_6450# in_p xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X640 a_1050_6450# in_p xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X641 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X642 a_n2750_5850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X643 avdd en zp_p avdd sg13_hv_pmos ad=2.25p pd=10u as=1.125p ps=5u w=4.5u l=1.5u
+X644 bpa_r bpa_r a_n3950_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X645 avss zn_p a_16050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X646 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X647 zp_m bnb a_7050_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X648 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X649 zp_p bnb a_13650_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X650 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X651 a_10450_6450# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X652 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X653 a_n4750_6450# bna_ a_n4850_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X654 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X655 bna_ bnb a_n1550_6450# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X656 avdd bpa xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X657 a_1450_6450# in_m xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X658 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X659 avss zn_p a_16450_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X660 a_13250_5850# bnb zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X661 zn_m bpb a_10750_3450# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X662 bna_ bna_ a_n4350_5850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X663 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+C0 enb bnb 8.31444f
+C1 bpa zp_m 1.63057f
+C2 xp avdd 5.12389f
+C3 bnb a_6950_5850# 4.357f
+C4 bna bnb 7.13374f
+C5 zp_m avdd 0.11852p
+C6 en ib 1.70555f
+C7 avdd zp_p 27.5448f
+C8 zp_m out 1.94781f
+C9 zp_p out 0.16014p
+C10 bpb bpa_r 12.0076f
+C11 yp_m in_p 4.19047f
+C12 zn_m bpb 4.69389f
+C13 bpa_r avdd 11.5755f
+C14 yn_p avdd 2.26285f
+C15 bna enb 2.95512f
+C16 zn_m a_9350_3450# 2.88641f
+C17 yn_p out 1.96732f
+C18 bpb zn_p 2.98212f
+C19 bna a_6950_5850# 1.84008f
+C20 zn_m avdd 3.90709f
+C21 yp_p avdd 14.6679f
+C22 zn_m out 3.58001f
+C23 yp_p out 1.25527f
+C24 bnb bpa 3.32557f
+C25 avdd zn_p 3.06408f
+C26 zn_p out 0.1582p
+C27 bnb avdd 3.10092f
+C28 bpa yp_m 1.31028f
+C29 xn in_m 2.45959f
+C30 yp_m avdd 22.366f
+C31 bna bpb 1.58919f
+C32 tihi avdd 27.2979f
+C33 bpb a_10750_3450# 2.25051f
+C34 bna bpa 1.58919f
+C35 enb avdd 1.01854f
+C36 bpa a_10750_3450# 1.61069f
+C37 xp in_m 2.8345f
+C38 a_10750_3450# avdd 2.02388f
+C39 avdd in_p 7.05338f
+C40 in_p out 2.77066f
+C41 bpa bpb 9.77074f
+C42 bpb a_9350_3450# 2.25051f
+C43 yn_p in_m 5.48943f
+C44 bpb avdd 75.2689f
+C45 bpa a_9350_3450# 1.61108f
+C46 yp_p in_m 2.7765f
+C47 bpa avdd 0.11874p
+C48 a_9350_3450# avdd 2.02358f
+C49 in_m zn_p 1.02531f
+C50 en zp_p 2.22075f
+C51 avdd out 19.3164f
+C52 yn_m xp 3.56806f
+C53 bna_ bnb 10.5436f
+C54 zp_m zp_p 5.40181f
+C55 zn_m yn_m 12.14f
+C56 bpb bpa_l 11.917f
+C57 yn_m zn_p 1.92524f
+C58 yn_p xp 3.56806f
+C59 bpa_l avdd 11.6328f
+C60 enb en 5.87088f
+C61 yp_p zp_m 24.3518f
+C62 bna en 1.86118f
+C63 avdd in_m 6.72109f
+C64 bna xn 1.80641f
+C65 in_m out 1.38383f
+C66 zn_p zp_p 10.9232f
+C67 bnb zp_m 2.8492f
+C68 bnb zp_p 2.21812f
+C69 xn in_p 2.45714f
+C70 zn_m yn_p 12.304f
+C71 yp_m zp_m 17.6411f
+C72 yn_m in_p 4.02283f
+C73 yp_m zp_p 6.47803f
+C74 zn_m zn_p 3.47337f
+C75 bpa en 2.43842f
+C76 a_6950_5850# zp_m 1.38781f
+C77 bnb zn_m 1.3099f
+C78 xp in_p 2.8357f
+C79 avdd en 62.3413f
+C80 in_p zp_p 1.2409f
+C81 en out 1.20486f
+C82 bnb zn_p 2.61433f
+C83 yn_m avdd 2.26285f
+C84 yn_m out 2.26168f
+C85 enb zn_m 1.21778f
+C86 bpb zp_m 1.50171f
+C87 bpb zp_p 3.30671f
+C88 bpa xp 4.53548f
+C89 zn_m a_10750_3450# 2.88641f
+C90 enb zn_p 1.99594f
+C91 out avss 0.13625p
+C92 ib avss 18.15021f
+C93 avdd avss 78.30043f
+C94 xp avss 44.21417f
+C95 a_16850_5850# avss 22.48648f
+C96 a_7450_5850# avss 32.10461f
+C97 a_4150_5850# avss 60.74831f
+C98 a_n4650_5850# avss 10.67148f
+C99 a_n4750_5850# avss 10.67974f
+C100 a_n7050_5850# avss 11.46193f
+C101 a_6950_5850# avss 3.4955f
+C102 a_6550_6450# avss 69.78984f
+C103 yn_p avss 35.9074f
+C104 yn_m avss 39.84895f
+C105 yp_p avss 22.29804f
+C106 yp_m avss 2.70801f
+C107 xn avss 3.78329f
+.ends
+
+.subckt lpopamp_sliceA in_m in_p out avss avdd ib en zp_p zn_p
+X0 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X1 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X2 a_14950_3850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X3 avss bna a_n9050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X4 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X5 out zn_p a_15450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X6 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X7 yn_m zn_m a_12150_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X8 a_n2350_3850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X9 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X10 a_n6250_3250# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X11 a_9850_3250# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X12 bnb bnb a_n3350_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X13 a_n950_3850# bna_ bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X14 zn_m bpb a_10750_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X15 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X16 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X17 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X18 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X19 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X20 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X21 a_n3950_5650# bpa_r a_n4050_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X22 out zn_p a_15850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X23 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X24 avdd en bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X25 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X26 a_12650_3250# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X27 avss bna a_n7050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X28 avss zn_p a_16050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X29 a_n2750_3850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X30 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X31 zn_p enb avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X32 bnb bnb a_n3750_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X33 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X34 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X35 zp_m bnb a_7050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X36 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X37 a_8050_3250# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X38 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X39 out zp_p a_15950_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X40 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X41 avdd bpa yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X42 avdd en enb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X43 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X44 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X45 avss zn_p a_16450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X46 a_10750_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X47 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X48 a_13250_3850# bnb zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X49 a_n2150_5650# bpa_r bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X50 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X51 yn_m zn_m a_14050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X52 bna_ bna_ a_n4350_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X53 zp_m bnb a_7450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X54 avss zn_m a_4150_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X55 out zp_p a_16350_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X56 a_n450_3250# bna_ a_n550_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X57 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X58 a_n4150_6250# bpa_r avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X59 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X60 avss zn_p a_16850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X61 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X62 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X63 a_13650_3850# bnb zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X64 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X65 zn_m zn_m a_10250_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X66 yn_m zn_m a_14450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X67 a_n4650_3850# bna_ a_n4750_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X68 avdd bpa xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X69 zp_m bnb a_7850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X70 a_n1350_3850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X71 a_4950_3850# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X72 bna_ bnb a_n2350_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X73 xn in_m a_1250_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X74 xn in_m a_850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X75 a_9350_3850# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X76 out zp_p a_16750_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X77 a_2550_3250# bna xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X78 a_n850_3250# bna_ a_n950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X79 a_n4550_6250# bpa_l bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X80 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X81 zn_m zn_m a_10650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X82 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X83 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X84 bpa bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X85 a_n1750_3850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X86 a_n4050_5650# bpa_r a_n4150_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X87 a_16050_3250# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X88 bna_ bnb a_n2750_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X89 bpb bna a_n6250_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X90 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X91 yn_p zn_m a_9350_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X92 xn in_p a_1650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X93 avss bna a_2550_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X94 a_7050_3250# bnb a_6950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X95 avss en enb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X96 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X97 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X98 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X99 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X100 avdd bpa bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X101 out zn_p a_15450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X102 a_n4450_5650# bpa_l a_n4550_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X103 a_16450_3250# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X104 yn_m zn_m a_12150_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X105 a_n6250_3850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X106 zn_p zn_m a_13050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X107 bnb bnb a_n3350_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X108 a_9850_3850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X109 a_n4150_3250# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X110 a_7450_3250# bnb a_6950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X111 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X112 a_n6450_6250# bpa_l a_n6550_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X113 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X114 a_9350_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X115 out zn_p a_15850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X116 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X117 a_12650_3850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X118 a_16850_3250# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X119 zn_p enb avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X120 avss bna a_n7050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X121 zn_p bnb a_13450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X122 bnb bnb a_n3750_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X123 a_10250_3250# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X124 a_n4550_3250# bna_ a_n4650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X125 bnb bnb a_n1350_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X126 a_7850_3250# bnb a_6950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X127 a_8050_3850# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X128 a_1250_3250# in_m yp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X129 a_850_3250# in_m yp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X130 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X131 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X132 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X133 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X134 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X135 a_10750_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X136 a_n1950_5650# bpa_r a_n2050_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X137 zn_p bnb a_13850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X138 a_n6350_5650# bpa_l a_n6450_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X139 a_10650_3250# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X140 yn_m zn_m a_14050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X141 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X142 zn_m bpb a_9350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X143 a_n4950_3250# bna_ avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X144 avss zn_m a_14950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X145 bnb bnb a_n1750_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X146 a_n9050_3250# bna bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X147 xp bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X148 a_1650_3250# in_p yp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X149 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X150 a_n450_3850# bna_ a_n550_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X151 a_n3950_6250# bpa_r a_n4050_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X152 avdd en bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X153 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X154 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X155 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X156 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X157 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X158 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X159 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X160 yn_m zn_m a_14450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X161 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X162 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X163 a_15450_3250# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X164 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X165 ib en bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X166 bna_ bnb a_n2350_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X167 a_n3150_3250# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X168 a_2550_3850# bna xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X169 a_n850_3850# bna_ a_n950_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X170 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X171 a_10750_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X172 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X173 a_n2150_6250# bpa_r bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X174 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X175 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X176 bpa_r bpa_r a_n3950_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X177 avdd en zp_p avdd sg13_hv_pmos ad=2.25p pd=10u as=1.125p ps=5u w=4.5u l=1.5u
+X178 a_15850_3250# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X179 a_16050_3850# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X180 bna_ bnb a_n2750_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X181 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X182 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X183 a_n3550_3250# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X184 avss bna a_2550_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X185 a_7050_3850# bnb a_6950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X186 avss en enb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X187 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X188 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X189 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X190 avdd bpa xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X191 a_16450_3850# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X192 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X193 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X194 yn_m zn_m a_12850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X195 zn_p zn_m a_13050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X196 zn_m bpb a_10750_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X197 a_n2050_5650# bpa_r a_n2150_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X198 a_n3950_3250# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X199 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X200 a_14050_3250# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X201 a_n4150_3850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X202 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X203 avss enb bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X204 a_7450_3850# bnb a_6950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X205 yn_m zn_m a_4950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X206 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X207 a_16350_6250# zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X208 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X209 a_n350_3250# bna_ a_n450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X210 bpa bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X211 a_n4050_6250# bpa_r a_n4150_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X212 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X213 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X214 a_16850_3850# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X215 avdd bpa a_10750_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X216 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X217 zn_p bnb a_13450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X218 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X219 a_14450_3250# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X220 a_10250_3850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X221 a_n4550_3850# bna_ a_n4650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X222 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X223 bnb bnb a_n1350_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X224 a_7850_3850# bnb a_6950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X225 tihi tihi avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=9.5u
+X226 a_n2150_3250# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X227 a_850_3850# in_m yp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X228 a_5750_3250# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X229 a_1250_3850# in_m yp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X230 xn in_p a_2050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X231 a_16750_6250# zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X232 a_n750_3250# bna_ a_n850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X233 avdd bpa bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X234 a_n4450_6250# bpa_l a_n4550_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X235 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X236 zn_p bnb a_13850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X237 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X238 a_10650_3850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X239 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X240 a_n4950_3850# bna_ avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X241 avss zn_m a_14950_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X242 bnb bnb a_n1750_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X243 a_n9050_3850# bna bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X244 a_n2550_3250# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X245 enb en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=2.25p ps=10u w=4.5u l=1.5u
+X246 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X247 a_1650_3850# in_p yp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X248 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X249 avss zn_m a_5750_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X250 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X251 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X252 avdd bpa a_9350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X253 a_15450_3850# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X254 a_n4350_5650# bpa_l a_n4450_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X255 ib en bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X256 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X257 out zn_p a_16250_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X258 a_n2950_3250# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X259 a_13050_3250# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X260 a_n7050_3250# bna bpa avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X261 a_n3150_3850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X262 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X263 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X264 bnb bnb a_n4150_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X265 a_10750_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X266 a_6950_3250# bnb a_7250_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X267 a_n1950_6250# bpa_r a_n2050_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X268 a_n6350_6250# bpa_l a_n6450_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X269 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X270 zn_m bpb a_9350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X271 xp bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X272 a_15850_3850# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X273 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X274 a_10750_5650# bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X275 out zn_p a_16650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X276 a_13450_3250# bnb zp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X277 a_n3550_3850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X278 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X279 yn_p zn_m a_10050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X280 bpa bna a_n7850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X281 a_n4450_3250# bna_ a_n4550_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X282 a_6950_3250# bnb a_7650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X283 a_n1150_3250# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X284 yp_p in_m a_650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X285 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X286 yp_p in_m a_1050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X287 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X288 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X289 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X290 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X291 zn_m bpb a_10750_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X292 yn_m zn_m a_12850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X293 avdd tihi tihi avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=9.5u
+X294 avdd bpa_r a_n1950_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X295 a_13850_3250# bnb zp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X296 a_n3950_3850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X297 bpa_l bpa_l a_n6350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X298 yn_p zn_m a_10450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X299 a_14050_3850# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X300 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X301 a_9350_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X302 a_n4850_3250# bna_ a_n4950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X303 avss enb bna avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X304 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X305 a_n1550_3250# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X306 yp_m in_p a_1450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X307 yn_m zn_m a_4950_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X308 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X309 a_n350_3850# bna_ a_n450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X310 bpa_r bpa_r a_n3950_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X311 avdd en zp_p avdd sg13_hv_pmos ad=2.25p pd=10u as=1.125p ps=5u w=4.5u l=1.5u
+X312 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X313 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X314 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X315 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X316 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X317 yn_p zn_m a_10850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X318 a_14450_3850# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X319 a_9350_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X320 a_n1950_3250# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X321 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X322 a_n2150_3850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X323 a_5750_3850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X324 yp_m in_p a_1850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X325 bna_ bnb a_n3150_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X326 xn in_p a_2050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X327 a_n750_3850# bna_ a_n850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X328 a_3350_3250# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X329 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X330 zn_m bpb a_10750_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X331 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X332 a_n2050_6250# bpa_r a_n2150_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X333 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X334 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X335 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X336 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X337 bpa bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X338 avss zn_p a_15650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X339 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X340 a_n2550_3850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X341 bna_ bnb a_n3550_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X342 avss zn_m a_5750_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X343 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X344 yn_p zn_m a_3350_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X345 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X346 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X347 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X348 avdd bpa a_10750_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X349 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X350 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X351 tihi tihi avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=9.5u
+X352 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X353 bpa en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X354 a_12850_3250# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X355 out zn_p a_16250_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X356 a_n2950_3850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X357 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X358 a_13050_3850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X359 a_n7050_3850# bna bpa avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X360 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X361 avss enb zn_p avss sg13_hv_nmos ad=2.25p pd=10u as=1.125p ps=5u w=4.5u l=1.5u
+X362 bna_ bnb a_n3950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X363 bnb bnb a_n4150_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X364 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X365 a_4150_3250# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X366 a_6950_3250# bnb a_7250_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X367 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X368 a_8550_3250# bna a_6950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X369 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X370 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X371 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X372 avss bna_ a_n350_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X373 enb en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=2.25p ps=10u w=4.5u l=1.5u
+X374 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X375 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X376 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X377 out zn_p a_16650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X378 a_10750_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X379 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X380 a_13450_3850# bnb zp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X381 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X382 yn_p zn_m a_10050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X383 bpa bna a_n7850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X384 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X385 zn_p zn_m a_14250_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X386 a_n4450_3850# bna_ a_n4550_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X387 a_11350_3250# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X388 a_6950_3250# bnb a_7650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X389 a_n1150_3850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X390 bnb bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X391 bnb bnb a_n2150_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X392 avss bna a_n5450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X393 avss bna a_8550_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X394 yp_p in_m a_1050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X395 yp_p in_m a_650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X396 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X397 a_2050_3250# in_p yp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X398 a_n650_3250# bna_ a_n750_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X399 bna bna a_n10250_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X400 avdd bpa a_9350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X401 a_n4350_6250# bpa_l a_n4450_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X402 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X403 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X404 avdd zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X405 a_13850_3850# bnb zp_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X406 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X407 yn_p zn_m a_10450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X408 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X409 a_n4850_3850# bna_ a_n4950_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X410 avss zn_m a_11350_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X411 a_n1550_3850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X412 a_n5450_3250# bna bpb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X413 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X414 bnb bnb a_n2550_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X415 yp_m in_p a_1450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X416 a_n10250_3250# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X417 a_10750_5650# bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X418 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X419 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X420 yn_p zn_m a_10850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X421 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X422 a_12150_3250# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X423 a_n1950_3850# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X424 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X425 avdd bpa_l a_n4350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X426 a_16250_3250# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X427 bnb bnb a_n2950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X428 yp_m in_p a_1850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X429 bna_ bnb a_n3150_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X430 avdd bpa xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X431 a_3350_3850# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X432 a_7250_3250# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X433 enb en avss avss sg13_hv_nmos ad=1.125p pd=5u as=2.25p ps=10u w=4.5u l=1.5u
+X434 zn_m bpb a_10750_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X435 avdd bpa_r a_n1950_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X436 xn bna a_150_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X437 avdd tihi tihi avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=9.5u
+X438 bpa_l bpa_l a_n6350_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X439 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X440 a_9350_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X441 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X442 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X443 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X444 avss zn_p a_15650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X445 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X446 a_16650_3250# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X447 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X448 zp_p bnb a_13250_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X449 bna_ bnb a_n3550_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X450 xp bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X451 a_10050_3250# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X452 a_n4350_3250# bna_ a_n4450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X453 a_9350_5650# bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X454 a_7650_3250# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X455 bna_ bnb a_n1150_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X456 yn_p zn_m a_3350_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X457 a_1050_3250# in_m xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X458 a_650_3250# in_m xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X459 out zp_p a_15550_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X460 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X461 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X462 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X463 a_9350_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X464 a_12850_3850# zn_m zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X465 bnb bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X466 zp_p bnb a_13650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X467 avss enb zn_p avss sg13_hv_nmos ad=2.25p pd=10u as=1.125p ps=5u w=4.5u l=1.5u
+X468 bna_ bnb a_n3950_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X469 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X470 a_10450_3250# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X471 a_n4750_3250# bna_ a_n4850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X472 zn_m bpb a_9350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X473 bna_ bnb a_n1550_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X474 a_4150_3850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X475 a_8550_3850# bna a_6950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X476 a_1450_3250# in_p xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X477 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X478 avss bna_ a_n350_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X479 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X480 bpa bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X481 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X482 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X483 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X484 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X485 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X486 a_n6550_5650# bpa_l avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X487 a_10850_3250# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X488 zn_p zn_m a_14250_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X489 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X490 zn_m bpb a_9350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X491 a_11350_3850# zn_m yn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X492 bna_ bnb a_n1950_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X493 bna en ib avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X494 avss bna a_n5450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X495 avss bna a_8550_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X496 bnb bnb a_n2150_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X497 a_1850_3250# in_p xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X498 a_2050_3850# in_p yp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X499 a_6550_3250# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X500 a_n650_3850# bna_ a_n750_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X501 bna bna a_n10250_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X502 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X503 bpa en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X504 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X505 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X506 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X507 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X508 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X509 avdd bpa bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X510 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X511 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X512 avss zn_m a_11350_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X513 zp_p en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X514 a_15650_3250# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X515 a_n5450_3850# bna bpb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X516 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X517 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X518 bnb bnb a_n2550_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X519 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X520 zn_m zn_m a_9850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X521 a_n3350_3250# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X522 a_6950_3250# bna a_6550_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X523 a_n10250_3850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X524 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X525 a_10750_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X526 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X527 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X528 yn_m in_p xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X529 bnb bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X530 a_12150_3850# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X531 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X532 zn_p zn_m a_12650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X533 a_16250_3850# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X534 bnb bnb a_n2950_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X535 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X536 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X537 a_n3750_3250# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X538 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X539 a_n7850_3250# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X540 a_7250_3850# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X541 enb en avss avss sg13_hv_nmos ad=1.125p pd=5u as=2.25p ps=10u w=4.5u l=1.5u
+X542 a_6950_3250# bnb a_8050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X543 xn bna a_150_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X544 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X545 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X546 a_150_3250# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X547 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X548 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X549 a_16650_3850# zn_p avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X550 zn_m bpb a_10750_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X551 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X552 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X553 zp_p bnb a_13250_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X554 a_10050_3850# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X555 a_14250_3250# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X556 a_n4350_3850# bna_ a_n4450_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X557 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X558 bna enb avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X559 a_7650_3850# bnb zp_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X560 bna_ bnb a_n1150_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X561 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X562 a_1050_3850# in_m xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X563 a_650_3850# in_m xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X564 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X565 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X566 a_n550_3250# bna_ a_n650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X567 avdd bpa_l a_n4350_6250# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X568 avdd bpa xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X569 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X570 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X571 zp_p bnb a_13650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X572 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X573 a_10450_3850# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X574 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X575 a_14950_3250# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X576 avss bna a_n9050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X577 a_n4750_3850# bna_ a_n4850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X578 avdd bpa yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X579 bna_ bnb a_n1550_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X580 avdd en enb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X581 a_n2350_3250# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X582 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X583 a_1450_3850# in_p xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X584 avdd zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X585 a_n950_3250# bna_ bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X586 yp_m zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X587 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X588 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X589 xp bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X590 a_9350_5650# bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X591 a_10850_3850# zn_m zn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X592 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X593 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X594 bna_ bnb a_n1950_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X595 a_n4150_5650# bpa_r avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X596 bna en ib avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X597 avss zn_p a_16050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X598 a_n2750_3250# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X599 a_1850_3850# in_p xn avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X600 xp in_m yn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X601 a_6550_3850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X602 zp_m bnb a_7050_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X603 bnb bpa avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X604 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X605 zn_m bpb a_9350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X606 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X607 a_15650_3850# zn_p out avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X608 a_n4550_5650# bpa_l bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X609 avss zn_p a_16450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X610 a_13250_3250# bnb zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X611 zn_m zn_m a_9850_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X612 a_n3350_3850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X613 a_6950_3250# bna a_6550_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X614 bna_ bna_ a_n4350_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X615 zp_m bnb a_7450_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X616 avss zn_m a_4150_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X617 a_15550_6250# zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X618 zp_p zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X619 a_n6550_6250# bpa_l avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X620 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X621 zn_m bpb a_9350_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X622 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X623 zn_p zn_m a_12650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X624 avss zn_p a_16850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X625 avdd zp_m yp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X626 a_13650_3250# bnb zn_p avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X627 a_n3750_3850# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X628 bpa_l bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X629 zn_m zn_m a_10250_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X630 a_n4650_3250# bna_ a_n4750_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X631 a_n7850_3850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X632 zp_m bnb a_7850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X633 a_n1350_3250# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X634 a_4950_3250# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X635 a_6950_3250# bnb a_8050_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X636 a_15950_6250# zp_p out avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X637 xn in_m a_1250_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X638 xn in_m a_850_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X639 zp_p bpb zn_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X640 a_9350_3250# zn_m avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X641 avdd bpa bpa avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X642 a_150_3850# bna avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X643 bpa_r bpb bpb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X644 zp_p en avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X645 yp_p zp_m zp_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X646 yn_p in_m xp avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X647 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X648 out zp_p avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X649 a_n6450_5650# bpa_l a_n6550_5650# avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X650 zn_m zn_m a_10650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X651 a_14250_3850# zn_m yn_m avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X652 bpb bpb bpa_r avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X653 bna enb avss avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=1.5u
+X654 a_9350_5650# bpb zn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X655 a_n1750_3250# bnb bna_ avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X656 xn in_p a_1650_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X657 bpb bna a_n6250_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X658 yn_p zn_m a_9350_3250# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+X659 a_n550_3850# bna_ a_n650_3850# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X660 yp_m zp_m zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X661 bpb bpb bpa_l avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X662 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+X663 xp in_p yn_m avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+C0 yp_p avdd 16.2067f
+C1 zn_m bpb 4.69389f
+C2 a_6950_3250# bna 1.84008f
+C3 yn_p in_m 5.48943f
+C4 avdd in_m 6.64923f
+C5 yn_m avdd 2.12437f
+C6 in_p out 2.77066f
+C7 zp_p zn_p 10.9232f
+C8 bpa en 2.43842f
+C9 bnb zp_m 2.8492f
+C10 bpb zp_p 3.30671f
+C11 bnb avdd 2.98388f
+C12 a_9350_5650# bpb 2.25051f
+C13 a_10750_5650# bpa 1.61069f
+C14 zp_m avdd 0.11896p
+C15 xp in_m 2.8345f
+C16 yp_m in_p 4.21111f
+C17 xp yn_m 3.56806f
+C18 enb zn_p 1.99594f
+C19 yn_p avdd 2.12437f
+C20 a_6950_3250# bnb 4.357f
+C21 bna bpb 1.58919f
+C22 en out 1.20324f
+C23 in_m zn_p 1.02409f
+C24 in_p zp_p 1.23968f
+C25 yn_m zn_p 1.92524f
+C26 a_6950_3250# zp_m 1.38781f
+C27 bpa_r avdd 11.5876f
+C28 bnb zn_p 2.61433f
+C29 zn_m a_10750_5650# 2.88641f
+C30 xp yn_p 3.56806f
+C31 xp avdd 5.00714f
+C32 bna_ bnb 10.5436f
+C33 en zp_p 2.21979f
+C34 avdd zn_p 2.92062f
+C35 yn_m in_p 4.02283f
+C36 xn bna 1.80641f
+C37 yp_m bpa 1.45942f
+C38 bpb zp_m 1.50171f
+C39 zn_m out 3.58001f
+C40 a_9350_5650# bpa 1.61108f
+C41 bna en 1.86118f
+C42 bpb avdd 74.5549f
+C43 xn in_m 2.45959f
+C44 bna bpa 1.58919f
+C45 enb en 5.87088f
+C46 avdd in_p 6.98145f
+C47 zp_p out 0.1602p
+C48 bpb bpa_r 12.0076f
+C49 bpa_l avdd 11.6449f
+C50 a_9350_5650# zn_m 2.88641f
+C51 bpb zn_p 2.98212f
+C52 yp_p out 1.25527f
+C53 xp in_p 2.8357f
+C54 yp_m zp_p 6.56781f
+C55 bnb bpa 3.32557f
+C56 bpa zp_m 1.6741f
+C57 avdd en 62.1624f
+C58 in_m out 1.38383f
+C59 en ib 1.70555f
+C60 yn_m out 2.26168f
+C61 zn_m enb 1.21778f
+C62 bpa avdd 0.11848p
+C63 yn_m zn_m 11.2462f
+C64 a_10750_5650# avdd 1.96078f
+C65 zp_m out 1.94796f
+C66 bnb zn_m 1.3099f
+C67 bpa_l bpb 11.917f
+C68 yn_p out 1.96732f
+C69 avdd out 19.3157f
+C70 xp bpa 4.53548f
+C71 tihi avdd 27.3459f
+C72 yn_p zn_m 13.5782f
+C73 zn_m avdd 3.67507f
+C74 bna enb 2.95512f
+C75 yp_m zp_m 16.9076f
+C76 bnb zp_p 2.21812f
+C77 xn in_p 2.45714f
+C78 yp_p in_m 2.7765f
+C79 zp_m zp_p 5.40188f
+C80 bpa bpb 9.77074f
+C81 yp_m avdd 18.1066f
+C82 a_10750_5650# bpb 2.25051f
+C83 bna bnb 7.13374f
+C84 avdd zp_p 27.2479f
+C85 zn_p out 0.15827p
+C86 a_9350_5650# avdd 1.96048f
+C87 zn_m zn_p 3.47337f
+C88 yp_p zp_m 25.4502f
+C89 bnb enb 8.31444f
+C90 ib avss 8.03181f
+C91 out avss 0.16128p
+C92 avdd avss 73.71222f
+C93 a_15450_3250# avss 23.5379f
+C94 a_16450_3850# avss 11.45838f
+C95 a_14950_3850# avss 60.88189f
+C96 a_6950_3250# avss 3.4955f
+C97 xn avss 3.78329f
+C98 a_n950_3850# avss 10.66708f
+C99 a_n2350_3850# avss 32.12355f
+C100 a_n9050_3850# avss 64.75334f
+C101 yn_m avss 99.0003f
+C102 yn_p avss 37.65735f
+C103 xp avss 44.25167f
+C104 yp_m avss 9.56357f
+C105 yp_p avss 6.25584f
+.ends
+
+.subckt lpopamp_core in_m in_p ib en out zn_p zp_p avdd avss
+XsliceB_1 in_m in_p out avss avdd ib en zp_p zn_p lpopamp_sliceB
+XsliceA_0 in_m in_p out avss avdd ib en zp_p zn_p lpopamp_sliceA
+XsliceA_1 in_m in_p out avss avdd ib en zp_p zn_p lpopamp_sliceA
+XsliceB_0 in_m in_p out avss avdd ib en zp_p zn_p lpopamp_sliceB
+C0 avdd avss -27.29739f
+C1 out avss -1.61f
+.ends
+
+.subckt lpopamp in_m in_p ib en avss avdd out
+Xlpopamp_core_0 in_m in_p ib en out zn_p zp_p avdd avss lpopamp_core
+C0 zn_p zp_p 0.23821p
+C1 zp_p out 4.17108p
+C2 zn_p out 4.17107p
+C3 avdd avss -27.28546f
+C4 out avss -13.9768f
+C5 zp_p avss -1.1052f
+C6 zn_p avss -1.16977f
+.ends
+
