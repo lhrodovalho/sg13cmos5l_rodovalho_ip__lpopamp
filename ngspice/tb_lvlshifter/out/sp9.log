@@ -1,0 +1,169 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: * num: 9 corner: mos_ss vdd: 3.6 temp: -40
+
+Doing analysis at TEMP = -40.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+xdut.xst.xp0                               3.6
+in                                           0
+xdut.xst.x0a.xd.xd.x                       3.6
+avdd                                       3.6
+xdut.xst.x0a.xd.x                          3.6
+xdut.xst.x0a.xd.xs.x                       3.6
+xdut.xst.x0a.x                             3.6
+xdut.xst.x0a.xs.xd.x                       3.6
+xdut.xst.x0a.xs.x                          3.6
+xdut.xst.x0a.xs.xs.x                       3.6
+xdut.x                                     3.6
+xdut.xst.x0b.xd.xd.x                       3.6
+xdut.xst.x0b.xd.x                          3.6
+xdut.xst.x0b.xd.xs.x                       3.6
+xdut.xst.x0b.x                             3.6
+xdut.xst.x0b.xs.xd.x                       3.6
+xdut.xst.x0b.xs.x                          3.6
+xdut.xst.x0b.xs.xs.x                       3.6
+xdut.xst.xn0                           2.79209
+avss                                         0
+xdut.xst.xp1                               3.6
+xdut.xst.x1a.xd.xd.x                       3.6
+xdut.xst.x1a.xd.x                          3.6
+xdut.xst.x1a.xd.xs.x                       3.6
+xdut.xst.x1a.x                             3.6
+xdut.xst.x1a.xs.xd.x                       3.6
+xdut.xst.x1a.xs.x                          3.6
+xdut.xst.x1a.xs.xs.x                       3.6
+xdut.xst.y1                                3.6
+xdut.xst.x1b.xd.xd.x                       3.6
+xdut.xst.x1b.xd.x                          3.6
+xdut.xst.x1b.xd.xs.x                       3.6
+xdut.xst.x1b.x                             3.6
+xdut.xst.x1b.xs.xd.x                       3.6
+xdut.xst.x1b.xs.x                          3.6
+xdut.xst.x1b.xs.xs.x                       3.6
+xdut.xst.x2a.xd.xd.x                       3.6
+xdut.xst.x2a.xd.x                          3.6
+xdut.xst.x2a.xd.xs.x                       3.6
+xdut.xst.x2a.x                             3.6
+xdut.xst.x2a.xs.xd.x                       3.6
+xdut.xst.x2a.xs.x                          3.6
+xdut.xst.x2a.xs.xs.x                       3.6
+xdut.xst.y2                        0.000714552
+xdut.xst.x2b.xd.xd.x                0.00286034
+xdut.xst.x2b.xd.x                   0.00286245
+xdut.xst.x2b.xd.xs.x                0.00286245
+xdut.xst.x2b.x                      0.00286245
+xdut.xst.x2b.xs.xd.x                0.00286246
+xdut.xst.x2b.xs.x                   0.00286598
+xdut.xst.x2b.xs.xs.x                0.00644242
+xdut.xst.xn2                       0.000714552
+out                                1.44412e-12
+v_in#branch                                  0
+v_avdd#branch                     -2.08083e-10
+v_avss#branch                      2.08012e-10
+
+
+No. of Data Rows : 2035
+
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+binary raw file "../out/sp9.raw"
+Doing analysis at TEMP = -40.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Columns : 3  
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+xdut.xst.xp0                               3.6
+in                                           0
+xdut.xst.x0a.xd.xd.x                       3.6
+avdd                                       3.6
+xdut.xst.x0a.xd.x                          3.6
+xdut.xst.x0a.xd.xs.x                       3.6
+xdut.xst.x0a.x                             3.6
+xdut.xst.x0a.xs.xd.x                       3.6
+xdut.xst.x0a.xs.x                          3.6
+xdut.xst.x0a.xs.xs.x                       3.6
+xdut.x                                     3.6
+xdut.xst.x0b.xd.xd.x                       3.6
+xdut.xst.x0b.xd.x                          3.6
+xdut.xst.x0b.xd.xs.x                       3.6
+xdut.xst.x0b.x                             3.6
+xdut.xst.x0b.xs.xd.x                       3.6
+xdut.xst.x0b.xs.x                          3.6
+xdut.xst.x0b.xs.xs.x                       3.6
+xdut.xst.xn0                           2.79209
+avss                                         0
+xdut.xst.xp1                               3.6
+xdut.xst.x1a.xd.xd.x                       3.6
+xdut.xst.x1a.xd.x                          3.6
+xdut.xst.x1a.xd.xs.x                       3.6
+xdut.xst.x1a.x                             3.6
+xdut.xst.x1a.xs.xd.x                       3.6
+xdut.xst.x1a.xs.x                          3.6
+xdut.xst.x1a.xs.xs.x                       3.6
+xdut.xst.y1                                3.6
+xdut.xst.x1b.xd.xd.x                       3.6
+xdut.xst.x1b.xd.x                          3.6
+xdut.xst.x1b.xd.xs.x                       3.6
+xdut.xst.x1b.x                             3.6
+xdut.xst.x1b.xs.xd.x                       3.6
+xdut.xst.x1b.xs.x                          3.6
+xdut.xst.x1b.xs.xs.x                       3.6
+xdut.xst.x2a.xd.xd.x                       3.6
+xdut.xst.x2a.xd.x                          3.6
+xdut.xst.x2a.xd.xs.x                       3.6
+xdut.xst.x2a.x                             3.6
+xdut.xst.x2a.xs.xd.x                       3.6
+xdut.xst.x2a.xs.x                          3.6
+xdut.xst.x2a.xs.xs.x                       3.6
+xdut.xst.y2                        0.000714552
+xdut.xst.x2b.xd.xd.x                0.00286034
+xdut.xst.x2b.xd.x                   0.00286245
+xdut.xst.x2b.xd.xs.x                0.00286245
+xdut.xst.x2b.x                      0.00286245
+xdut.xst.x2b.xs.xd.x                0.00286246
+xdut.xst.x2b.xs.x                   0.00286598
+xdut.xst.x2b.xs.xs.x                0.00644242
+xdut.xst.xn2                       0.000714552
+out                                1.44412e-12
+v_in#branch                                  0
+v_avdd#branch                     -2.08083e-10
+v_avss#branch                      2.08012e-10
+
+
+No. of Data Rows : 2035
+
+Total analysis time (seconds) = 7.65569
+
+Total elapsed time (seconds) = 7.767 
+
+Total DRAM available = 19163.059 MB.
+DRAM currently available = 13050.527 MB.
+Maximum ngspice program size =  103.172 MB.
+Current ngspice program size =   21.922 MB.
+
+Shared ngspice pages =   11.797 MB.
+Text (code) pages =    6.406 MB.
+Stack = 0 bytes.
+Library pages =   18.238 MB.
+

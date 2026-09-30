@@ -37,7 +37,6 @@ Xdut im_ ip ibias en avss avdd out lpopamp
 v_avss GND avss xavss
 v_avdd avdd avss dc {xavdd} ac {xavdd_ac} 
 v_en en avss {xen*xavdd} 
-v_enb enb avss {(1-xen)*xavdd} 
 i_ibias avdd ibias {xen*xibias} 
 c_l out cm 'xcl' m=1 
 c_i im_ im 'xci' m=1 

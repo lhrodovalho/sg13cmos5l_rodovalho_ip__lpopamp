@@ -1,0 +1,226 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: * num: 12 corner: mos_fs vdd: 3.6 temp: -40
+
+Doing analysis at TEMP = -40.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+xdut.xlpopamp_core_0.xsliceb_1.zp_m         2.78699
+xdut.xlpopamp_core_0.xsliceb_1.bnb         1.40887
+avss                                         0
+avdd                                       3.6
+xdut.xlpopamp_core_0.xsliceb_1.yp_p         3.48402
+xdut.xlpopamp_core_0.xsliceb_1.bpa_r         2.85114
+xdut.xlpopamp_core_0.xsliceb_1.zn_m         0.70363
+xdut.xlpopamp_core_0.xsliceb_1.xp         2.71843
+out                                    1.74917
+xdut.xlpopamp_core_0.xsliceb_1.yn_p       0.0847131
+xdut.xlpopamp_core_0.xsliceb_1.bna_        0.694039
+xdut.zp_p                              2.85003
+xdut.xlpopamp_core_0.xsliceb_1.bpb           1.938
+xdut.xlpopamp_core_0.xsliceb_1.bna        0.711076
+en                                         3.6
+ibias                                 0.711497
+xdut.xlpopamp_core_0.xsliceb_1.yp_m         3.48537
+xdut.xlpopamp_core_0.xsliceb_1.bpa         2.76725
+xdut.xlpopamp_core_0.xsliceb_1.xn        0.977073
+xdut.xlpopamp_core_0.xsliceb_1.yn_m       0.0842872
+in                                        1.75
+xdut.zn_p                             0.677012
+xdut.xlpopamp_core_0.xsliceb_1.bpa_l         2.85114
+xdut.xlpopamp_core_0.xsliceb_1.tihi         3.16224
+xdut.xlpopamp_core_0.xsliceb_1.enb     1.76658e-11
+xdut.xlpopamp_core_0.xslicea_0.bpb           1.938
+xdut.xlpopamp_core_0.xslicea_0.zn_m         0.70363
+xdut.xlpopamp_core_0.xslicea_0.yn_m       0.0842872
+xdut.xlpopamp_core_0.xslicea_0.bna        0.711076
+xdut.xlpopamp_core_0.xslicea_0.bpa_r         2.85114
+xdut.xlpopamp_core_0.xslicea_0.zp_m         2.78699
+xdut.xlpopamp_core_0.xslicea_0.yp_p         3.48402
+xdut.xlpopamp_core_0.xslicea_0.bnb         1.40887
+xdut.xlpopamp_core_0.xslicea_0.xp         2.71843
+xdut.xlpopamp_core_0.xslicea_0.yn_p       0.0847131
+xdut.xlpopamp_core_0.xslicea_0.bna_        0.694039
+xdut.xlpopamp_core_0.xslicea_0.bpa_l         2.85114
+xdut.xlpopamp_core_0.xslicea_0.yp_m         3.48537
+xdut.xlpopamp_core_0.xslicea_0.bpa         2.76725
+xdut.xlpopamp_core_0.xslicea_0.enb     1.76658e-11
+xdut.xlpopamp_core_0.xslicea_0.xn        0.977073
+xdut.xlpopamp_core_0.xslicea_0.tihi         3.16224
+xdut.xlpopamp_core_0.xslicea_1.bpb           1.938
+xdut.xlpopamp_core_0.xslicea_1.zn_m         0.70363
+xdut.xlpopamp_core_0.xslicea_1.yn_m       0.0842872
+xdut.xlpopamp_core_0.xslicea_1.bna        0.711076
+xdut.xlpopamp_core_0.xslicea_1.bpa_r         2.85114
+xdut.xlpopamp_core_0.xslicea_1.zp_m         2.78699
+xdut.xlpopamp_core_0.xslicea_1.yp_p         3.48402
+xdut.xlpopamp_core_0.xslicea_1.bnb         1.40887
+xdut.xlpopamp_core_0.xslicea_1.xp         2.71843
+xdut.xlpopamp_core_0.xslicea_1.yn_p       0.0847131
+xdut.xlpopamp_core_0.xslicea_1.bna_        0.694039
+xdut.xlpopamp_core_0.xslicea_1.bpa_l         2.85114
+xdut.xlpopamp_core_0.xslicea_1.yp_m         3.48537
+xdut.xlpopamp_core_0.xslicea_1.bpa         2.76725
+xdut.xlpopamp_core_0.xslicea_1.enb     1.76658e-11
+xdut.xlpopamp_core_0.xslicea_1.xn        0.977073
+xdut.xlpopamp_core_0.xslicea_1.tihi         3.16224
+xdut.xlpopamp_core_0.xsliceb_0.zp_m         2.78699
+xdut.xlpopamp_core_0.xsliceb_0.bnb         1.40887
+xdut.xlpopamp_core_0.xsliceb_0.yp_p         3.48402
+xdut.xlpopamp_core_0.xsliceb_0.bpa_r         2.85114
+xdut.xlpopamp_core_0.xsliceb_0.zn_m         0.70363
+xdut.xlpopamp_core_0.xsliceb_0.xp         2.71843
+xdut.xlpopamp_core_0.xsliceb_0.yn_p       0.0847131
+xdut.xlpopamp_core_0.xsliceb_0.bna_        0.694039
+xdut.xlpopamp_core_0.xsliceb_0.bpb           1.938
+xdut.xlpopamp_core_0.xsliceb_0.bna        0.711076
+xdut.xlpopamp_core_0.xsliceb_0.yp_m         3.48537
+xdut.xlpopamp_core_0.xsliceb_0.bpa         2.76725
+xdut.xlpopamp_core_0.xsliceb_0.xn        0.977073
+xdut.xlpopamp_core_0.xsliceb_0.yn_m       0.0842872
+xdut.xlpopamp_core_0.xsliceb_0.bpa_l         2.85114
+xdut.xlpopamp_core_0.xsliceb_0.tihi         3.16224
+xdut.xlpopamp_core_0.xsliceb_0.enb     1.76658e-11
+enb                                          0
+out_                                       1.8
+v_out#branch                      -1.01659e-05
+v_enb#branch                                 0
+v_en#branch                       -1.18902e-10
+v_in#branch                       -1.13622e-10
+v_avdd#branch                     -0.000180387
+v_avss#branch                      2.18631e-09
+
+
+No. of Data Rows : 1022
+
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+../data/tb_lpopamp_buf_tran_sine_cc.dat12: No such file or directory
+binary raw file "../out/sp12.raw"
+Doing analysis at TEMP = -40.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Columns : 3  
+Note: Starting dynamic gmin stepping
+Note: Dynamic gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+xdut.xlpopamp_core_0.xsliceb_1.zp_m         2.78699
+xdut.xlpopamp_core_0.xsliceb_1.bnb         1.40887
+avss                                         0
+avdd                                       3.6
+xdut.xlpopamp_core_0.xsliceb_1.yp_p         3.48402
+xdut.xlpopamp_core_0.xsliceb_1.bpa_r         2.85114
+xdut.xlpopamp_core_0.xsliceb_1.zn_m         0.70363
+xdut.xlpopamp_core_0.xsliceb_1.xp         2.71843
+out                                    1.74917
+xdut.xlpopamp_core_0.xsliceb_1.yn_p       0.0847131
+xdut.xlpopamp_core_0.xsliceb_1.bna_        0.694039
+xdut.zp_p                              2.85003
+xdut.xlpopamp_core_0.xsliceb_1.bpb           1.938
+xdut.xlpopamp_core_0.xsliceb_1.bna        0.711076
+en                                         3.6
+ibias                                 0.711497
+xdut.xlpopamp_core_0.xsliceb_1.yp_m         3.48537
+xdut.xlpopamp_core_0.xsliceb_1.bpa         2.76725
+xdut.xlpopamp_core_0.xsliceb_1.xn        0.977073
+xdut.xlpopamp_core_0.xsliceb_1.yn_m       0.0842872
+in                                        1.75
+xdut.zn_p                             0.677012
+xdut.xlpopamp_core_0.xsliceb_1.bpa_l         2.85114
+xdut.xlpopamp_core_0.xsliceb_1.tihi         3.16224
+xdut.xlpopamp_core_0.xsliceb_1.enb     1.76658e-11
+xdut.xlpopamp_core_0.xslicea_0.bpb           1.938
+xdut.xlpopamp_core_0.xslicea_0.zn_m         0.70363
+xdut.xlpopamp_core_0.xslicea_0.yn_m       0.0842872
+xdut.xlpopamp_core_0.xslicea_0.bna        0.711076
+xdut.xlpopamp_core_0.xslicea_0.bpa_r         2.85114
+xdut.xlpopamp_core_0.xslicea_0.zp_m         2.78699
+xdut.xlpopamp_core_0.xslicea_0.yp_p         3.48402
+xdut.xlpopamp_core_0.xslicea_0.bnb         1.40887
+xdut.xlpopamp_core_0.xslicea_0.xp         2.71843
+xdut.xlpopamp_core_0.xslicea_0.yn_p       0.0847131
+xdut.xlpopamp_core_0.xslicea_0.bna_        0.694039
+xdut.xlpopamp_core_0.xslicea_0.bpa_l         2.85114
+xdut.xlpopamp_core_0.xslicea_0.yp_m         3.48537
+xdut.xlpopamp_core_0.xslicea_0.bpa         2.76725
+xdut.xlpopamp_core_0.xslicea_0.enb     1.76658e-11
+xdut.xlpopamp_core_0.xslicea_0.xn        0.977073
+xdut.xlpopamp_core_0.xslicea_0.tihi         3.16224
+xdut.xlpopamp_core_0.xslicea_1.bpb           1.938
+xdut.xlpopamp_core_0.xslicea_1.zn_m         0.70363
+xdut.xlpopamp_core_0.xslicea_1.yn_m       0.0842872
+xdut.xlpopamp_core_0.xslicea_1.bna        0.711076
+xdut.xlpopamp_core_0.xslicea_1.bpa_r         2.85114
+xdut.xlpopamp_core_0.xslicea_1.zp_m         2.78699
+xdut.xlpopamp_core_0.xslicea_1.yp_p         3.48402
+xdut.xlpopamp_core_0.xslicea_1.bnb         1.40887
+xdut.xlpopamp_core_0.xslicea_1.xp         2.71843
+xdut.xlpopamp_core_0.xslicea_1.yn_p       0.0847131
+xdut.xlpopamp_core_0.xslicea_1.bna_        0.694039
+xdut.xlpopamp_core_0.xslicea_1.bpa_l         2.85114
+xdut.xlpopamp_core_0.xslicea_1.yp_m         3.48537
+xdut.xlpopamp_core_0.xslicea_1.bpa         2.76725
+xdut.xlpopamp_core_0.xslicea_1.enb     1.76658e-11
+xdut.xlpopamp_core_0.xslicea_1.xn        0.977073
+xdut.xlpopamp_core_0.xslicea_1.tihi         3.16224
+xdut.xlpopamp_core_0.xsliceb_0.zp_m         2.78699
+xdut.xlpopamp_core_0.xsliceb_0.bnb         1.40887
+xdut.xlpopamp_core_0.xsliceb_0.yp_p         3.48402
+xdut.xlpopamp_core_0.xsliceb_0.bpa_r         2.85114
+xdut.xlpopamp_core_0.xsliceb_0.zn_m         0.70363
+xdut.xlpopamp_core_0.xsliceb_0.xp         2.71843
+xdut.xlpopamp_core_0.xsliceb_0.yn_p       0.0847131
+xdut.xlpopamp_core_0.xsliceb_0.bna_        0.694039
+xdut.xlpopamp_core_0.xsliceb_0.bpb           1.938
+xdut.xlpopamp_core_0.xsliceb_0.bna        0.711076
+xdut.xlpopamp_core_0.xsliceb_0.yp_m         3.48537
+xdut.xlpopamp_core_0.xsliceb_0.bpa         2.76725
+xdut.xlpopamp_core_0.xsliceb_0.xn        0.977073
+xdut.xlpopamp_core_0.xsliceb_0.yn_m       0.0842872
+xdut.xlpopamp_core_0.xsliceb_0.bpa_l         2.85114
+xdut.xlpopamp_core_0.xsliceb_0.tihi         3.16224
+xdut.xlpopamp_core_0.xsliceb_0.enb     1.76658e-11
+enb                                          0
+out_                                       1.8
+v_out#branch                      -1.01659e-05
+v_enb#branch                                 0
+v_en#branch                       -1.18902e-10
+v_in#branch                       -1.13622e-10
+v_avdd#branch                     -0.000180387
+v_avss#branch                      2.18631e-09
+
+
+No. of Data Rows : 1022
+
+Total analysis time (seconds) = 925.073
+
+Total elapsed time (seconds) = 927.671 
+
+Total DRAM available = 19163.051 MB.
+DRAM currently available = 8655.242 MB.
+Maximum ngspice program size =  306.930 MB.
+Current ngspice program size =  225.023 MB.
+
+Shared ngspice pages =   11.992 MB.
+Text (code) pages =    6.406 MB.
+Stack = 0 bytes.
+Library pages =  221.996 MB.
+

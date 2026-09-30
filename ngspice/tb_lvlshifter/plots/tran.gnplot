@@ -1,0 +1,42 @@
+set xlabel 'Time (s)'
+set ylabel 'Signal (V)'
+set grid
+set key off
+set term png
+set output 'tran.png'
+set datafile separator ','
+plot \
+'../data/tb_lvlshifter.csv0' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv0' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv1' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv1' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv2' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv2' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv3' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv3' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv4' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv4' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv5' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv5' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv6' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv6' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv7' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv7' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv8' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv8' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv9' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv9' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv10' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv10' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv11' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv11' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv12' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv12' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv13' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv13' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv14' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv14' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv15' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv15' using 3:4 with lines lt rgb 'red',\
+'../data/tb_lvlshifter.csv16' using 1:2 with lines lt rgb 'blue',\
+'../data/tb_lvlshifter.csv16' using 3:4 with lines lt rgb 'red',\

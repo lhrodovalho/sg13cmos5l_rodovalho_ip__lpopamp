@@ -1,0 +1,79 @@
+* num: 0 corner: mos_tt vdd: 3.3 temp: 25
+
+* Include models
+.lib ../..//models/cornerMOShv.lib mos_tt
+.temp 25
+
+.include ../../netlists/lpopamp.cc.spice
+
+* Simulation parameters
+.param xavdd  = 3.3
+.param xavss  = 0
+.param xen    = 1
+.param xvin   = {xavdd/2}
+.param xvout  = {xavdd/2}
+
+.param xavdd_ac = 0
+.param xvin_ac  = 0
+.param xvout_ac = 0
+
+.param xibias = 7.75u
+
+.param xcl    = 15p
+.param xrl    = 5k
+
+.param xcl    = 30p
+.param xrl    = 5k
+
+.param xamp  = {100m}
+.param xvlo  = {xavdd/2-xamp/2}
+.param xvhi  = {xavdd/2+xamp/2}
+.param xper  = {40u}
+.param xtdel = {xper/4}
+.param xtr   = {xper/1000}
+.param xpw   = {xper/2-xtr}
+
+* Design under test
+*.subckt lpopamp in_m in_p ib en avss avdd out
+Xdut out in ibias en avss avdd out lpopamp
+
+v_avss GND avss xavss
+v_avdd avdd avss dc {xavdd} ac {xavdd_ac} 
+v_in in avss pulse({xvlo} {xvhi} {xtdel} {xtr} {xtr} {xpw} {xper}) 
+v_en en avss {xen*xavdd} 
+v_enb enb avss {(1-xen)*xavdd} 
+i_ibias avdd ibias {xen*xibias} 
+CL out avss 'xcl' m=1 
+v_out out_ avss dc {xvout} ac {xvout_ac} 
+RL out out_ 'xrl' m=1 
+
+* Simulation control
+.option gmin=1e-12
+.option rshunt=1e12
+.option method=Gear
+.param xtstart = 0
+.param xtend   = {xper}
+.param xtstep  = {xper/1000}
+.tran {xtstep} {xtend} {xtstart}
+
+.save v(in) v(out)
+.control
+  pre_osdi ../../models/psp103_nqs.osdi
+  
+  run
+  plot in out
+
+  let avdd = 3.3
+  let vhi  = avdd-50m
+  let vlo  = 50m
+  let vmax = vlo+0.9*(vhi-vlo)
+  let vmin = vlo+0.1*(vhi-vlo)
+  let dv   = vmax-vmin
+
+  wrdata ../data/tb_lpopamp_buf_tran_sine_cc.dat0 v(in) v(out)
+
+.endc
+
+.GLOBAL GND 
+.end 
+

@@ -1,10 +1,14 @@
-* num: 0 corner: mos_tt vdd: 3.3 temp: 25
+* num: 1 corner: mos_tt vdd: 3.3 temp: 25
 
 * Include models
 .lib ../..//models/cornerMOShv.lib mos_tt
 .temp 25
 
-.include ../../netlists/lpopamp.sch.spice
+*.include ../../netlists/lpopamp.sch.spice
+*.include ../../../magic/sliceA.spice
+*.include ../../../magic/lpopamp_flat.spice
+.include ../../../magic/lpopamp.spice
+*.include ../../../magic/lpopamp_sliceB.spice
 
 * Simulation parameters
 .param xavdd  = 3.3
@@ -21,18 +25,29 @@
 .param xvin_ac  = 1
 .param xvout_ac = 0
 
-.param xibias = 10u
+.param xibias = 7.75u
 
 .param xci    = 1T
 .param xri    = 1T
 .param xlf    = 1T
 .param xrf    = 1f
-.param xcl    = 30p
+.param xcl    = 15p
 .param xrl    = 5k
 
 * Design under test
 *.subckt lpopamp  im  ip  o  avdd  avss  vsub  en  enb  ibias
-Xdut im_ ip out avdd  avss  avss  en  enb  ibias lpopamp
+*Xdut im_ ip out avdd  avss  avss  en  enb  ibias lpopamp
+*Xdut im_ ip out avss avdd ibias en sliceA
+
+*.subckt lpopamp_flat in_m in_p out avdd avss ib en
+*Xdut im_ ip out avdd avss ibias en lpopamp_flat
+
+*.subckt lpopamp in_m in_p ib en avss avdd out
+Xdut im_ ip ibias en avss avdd out lpopamp
+
+*.subckt lpopamp_sliceB in_m in_p out avss avdd ib en zp_p zn_p
+*Xdut im_ ip out avss avdd ibias en zp_p zn_p lpopamp_sliceB
+
 v_avss GND avss xavss
 v_avdd avdd avss dc {xavdd} ac {xavdd_ac} 
 v_en en avss {xen*xavdd} 
@@ -94,13 +109,13 @@ v_ip ip avss dc {xavdd/2}
   plot ph
   print idd vos
 
-  echo "num,corner,vdd,temp,gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd,vos" > ./meas/tb_lpopamp_open_ac_sch.meas0
-  echo "0,mos_tt,3.3,25,$&gbw,$&pm,$&av0p1hz,$&cmrr0p1hz,$&psrr0p1hz,$&idd,$&vos" >> ./meas/tb_lpopamp_open_ac_sch.meas0
+  echo "num,corner,vdd,temp,gbw,pm,av0p1hz,cmrr0p1hz,psrr0p1hz,idd,vos" > ./meas/tb_lpopamp_open_ac_sch.meas1
+  echo "1,mos_ss,3.0,-40,$&gbw,$&pm,$&av0p1hz,$&cmrr0p1hz,$&psrr0p1hz,$&idd,$&vos" >> ./meas/tb_lpopamp_open_ac_sch.meas1
 
-  wrdata ./data/tb_lpopamp_open_ac_sch_av.dat0 av
-  wrdata ./data/tb_lpopamp_open_ac_sch_ph.dat0 ph
-  wrdata ./data/tb_lpopamp_open_ac_sch_cmrr.dat0 cmrr
-  wrdata ./data/tb_lpopamp_open_ac_sch_psrr.dat0 psrr
+  wrdata ./data/tb_lpopamp_open_ac_sch_av.dat1 av
+  wrdata ./data/tb_lpopamp_open_ac_sch_ph.dat1 ph
+  wrdata ./data/tb_lpopamp_open_ac_sch_cmrr.dat1 cmrr
+  wrdata ./data/tb_lpopamp_open_ac_sch_psrr.dat1 psrr
 
 .endc
 

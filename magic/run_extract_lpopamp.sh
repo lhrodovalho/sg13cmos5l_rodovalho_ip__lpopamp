@@ -1,0 +1,16 @@
+#! /bin/bash
+
+magic -dnull -noconsole -T ihp-sg13g2.tech << EOF
+load lpopamp
+select top cell
+extract path extfiles
+extract do unique
+extract all
+ext2spice lvs
+ext2spice -p extfiles -o ../ngspice/netlists/lpopamp.lvs.spice
+ext2spice cthresh 1f
+ext2spice -p extfiles -o ../ngspice/netlists/lpopamp.cc.spice
+quit -noprompt
+EOF
+rm -r extfiles
+exit 0

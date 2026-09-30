@@ -1,0 +1,66 @@
+* NGSPICE file created from lpopamp.ext - technology: ihp-sg13g2
+
+.subckt n1_1 d g s b
+xn d g s b sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+.ends
+
+.subckt n2_1 d g s b
+xl d g s b n1_1
+xr d g s b n1_1
+.ends
+
+.subckt n4_1 d g s b
+xl d g s b n2_1
+xr d g s b n2_1
+.ends
+
+.subckt n8_1 d g s b
+xl d g s b n4_1
+xr d g s b n4_1
+.ends
+
+.subckt p1_1 d g s b
+xp d g s b sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+.ends
+
+.subckt p1_2 d g s b
+xd d g x b p1_1
+xs x g s b p1_1
+.ends
+
+.subckt p1_4 d g s b
+xd d g x b p1_2
+xs x g s b p1_2
+.ends
+
+.subckt p1_8 d g s b
+xd d g x b p1_4
+xs x g s b p1_4
+.ends
+
+.subckt inv in out vdd vss
+xp out in vdd vdd p1_1
+xn out in vss vss n1_1
+.ends
+
+.subckt st in out vdd vss
+x0a xp0 in  vdd vdd p1_8
+x0b out in  xp0 vdd p1_8
+x0c out in  xn0 vss n8_1
+x0d xn0 in  vss vss n8_1
+
+x1a xp1 in  vdd vdd p1_8
+x1b y1  in  xp1 vdd p1_8
+x1c y1  out xn0 vss n8_1
+x1d xn0 in  vss vss n8_1
+
+x2a xp0 in  vdd vdd p1_8
+x2b y2  out xp0 vdd p1_8
+x2c y2  out xn2 vss n8_1
+x2d xn2 in  vss vss n8_1
+.ends
+
+.subckt lvlshifter in out vdd vss
+xst  in x   vdd vss st
+xinv x  out vdd vss inv
+.ends
