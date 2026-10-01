@@ -1,6 +1,6 @@
 ########################################################################
 #
-# Copyright 2025 IHP PDK Authors
+# Copyright 2026 IHP PDK Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -47,23 +47,6 @@ style gdsii
 	calma 189 4
 
 #----------------------------------------------------------------
-# DNWELL (nBuLay)
-#----------------------------------------------------------------
-
- layer DNWELL	pnp
-	shrink 260
-	or dnwell
-	bloat-all (*ntap,*hvntap)/a nwell
-	calma	32 0
-
- layer DNWELL
-	bloat-all (*var)/a (*nsd)/a
-	grow 240
-	and nwell
-	shrink 240
-	calma	32 0
-
-#----------------------------------------------------------------
 # SUBCUT
 #----------------------------------------------------------------
 
@@ -82,12 +65,7 @@ style gdsii
 # NWELL
 #----------------------------------------------------------------
 
-# Identify a schottky diode area, which generates its own nwell.
- templayer schottkyarea *schottky
-	grow 1170
-
  layer NWELL 	allnwell
-	and-not schottkyarea
  	calma 	31 0
 
  layer WELLPIN
@@ -107,63 +85,19 @@ style gdsii
 #----------------------------------------------------------------
 
  layer LVSTEXT
-	labels comment text
+ 	labels comment text
 	calma 63 0
 
 #----------------------------------------------------------------
 # DIFF (Activ)
 #----------------------------------------------------------------
 
- # DIFFMASK is used in the ptapSB structure around isodiffres
- # Note that this is not used around hvisodiffres.  DIFFMASK
- # in bipolar transistors is handled below with other bipolar
- # device masks.
-
- templayer diffmaskarea
-	bloat-or isodiffres * 0 *ndiff 130 *psd 200
-
- layer DIFF 	allnactive,allpactive,*schottky,hvisodiffres,*var,pvar,sealc
-	and-not diffmaskarea
+ layer DIFF 	allnactive,allpactive,*var,pvar,sealc
  	calma 	1 0
 
  layer DIFFPIN
  	labels allnactive,allpactive port
 	calma	1 2
-
- layer DIFFMASK diffmaskarea
- 	calma 	1 20
-
-#----------------------------------------------------------------
-# BIPOLARID (TRANS), applies to NPN bipolar transistor.  Use
-# the unique emitter layer and grow to fill the area inside
-# PSD
-#----------------------------------------------------------------
-
- templayer trans
-	bloat-all (gec,nec,hvnec)/a (nemitter,hvnemitter,*ndiff,space)/a 3430
-	shrink 200
-
- # Define the guard ring area around bipolar transistors
- templayer transhalo trans
-	grow 700
-	and-not trans
-
- layer BIPOLARID trans
-	calma 26 0
-
-#----------------------------------------------------------------
-# Emitter window and related layers
-#----------------------------------------------------------------
-
- layer EMITTER nec,gec
-	calma 33 0
-
- layer HEATTRANS nec,hvnec
-	grow 50
-	calma 51 0 
-
- layer HVEMITTER hvnec
-	calma 156 0
 
 #----------------------------------------------------------------
 # DIFF (Fill)
@@ -187,6 +121,11 @@ style gdsii
 	grow 1100
 	and *psd,*hvpsd
 
+ # Define the guard ring area around bipolar transistors
+ templayer transhalo pnparea
+	grow 700
+	and-not pnparea
+
 #----------------------------------------------------------------
 # PSD, NSD (PPLUS, NPLUS implants)
 #----------------------------------------------------------------
@@ -201,7 +140,7 @@ style gdsii
 	# PSD covers rppd and righ resistors
 	bloat-all pres,xres poly
 	grow 180
-	bloat-or allpactivetap * 30 allnactivenontap 0 isodiffres 150
+	bloat-or allpactivetap * 30 allnactivenontap 0
 	bloat-or allpactivenontap * 180 allnactivetap 0
 	bloat-or pmos * 300
 	bloat-or hvpmos * 400
@@ -220,7 +159,7 @@ style gdsii
 
  # PSD overlaps P+ guard ring by 0.2um (npnG2.c, also pnpMPA)
  layer PSD allpactivetap
-	and transhalo,pnparea
+	and pnparea
 	grow 200
 	calma	14 0
 
@@ -233,7 +172,7 @@ style gdsii
 	and varactorarea
 	calma	14 0
 
-# NOTE: sg13g2 defines PSD but not (by default) NSD.  Although
+# NOTE: sg13cmos5l defines PSD but not (by default) NSD.  Although
 # GDS layer:purpose pair 7 0 is marked for use as NSD, it is
 # not commonly used.  It is found coincident with PSD on "rhigh"
 # resistors (low n-doped poly).
@@ -250,8 +189,8 @@ style gdsii
 #----------------------------------------------------------------
 
  layer ESDID  
-	bloat-all hvnfetesd dnwell
-	bloat-all hvpfetesd dnwell
+	bloat-all hvnfetesd nwell
+	bloat-all hvpfetesd nwell
 	grow 360
 	mask-hints ESDID
 	calma 99 30
@@ -262,8 +201,8 @@ style gdsii
 #----------------------------------------------------------------
 
  layer DEVICE
-	bloat-all hvnfetesd dnwell
-	bloat-all hvpfetesd dnwell
+	bloat-all hvnfetesd nwell
+	bloat-all hvpfetesd nwell
 	grow 360
 	calma 99 0
 
@@ -274,25 +213,10 @@ style gdsii
  layer SBLK
 	bloat-or pres,xres * 200 *poly 0
 	bloat-or hvndiffres * 280 *hvndiff,*hvpsd 0
-	bloat-or isodiffres * 320 *ndiff,*psd 0
-	bloat-or hvisodiffres * 330 *hvndiff,*hvpsd 0
 	grow 210
 	shrink 210
 	mask-hints SBLK
 	calma 28 0
-
- # NSDBLOCK is inside SBLK.  This satisfies rule (nmosi.g)
- # The grow/shrink 160 joins neighboring taps and satisfies rule (nmosi.f)
- layer NSDBLOCK
-	bloat-or isodiffres * 320 *ndiff,*psd 0
-	grow 160
-	shrink 160
-	bloat-or hvisodiffres * 350 *hvndiff 0 *hvpsd 150
-	shrink 150
-	grow 155
-	shrink 155
-	mask-hints NSDBLOCK
-	calma 7 21
 
  # NSD block and salicide block surround diffusion fill when diffusion fill
  # is coincident with PWell:block.  These do not interact with the layers
@@ -301,6 +225,7 @@ style gdsii
  layer NSDBLOCK difffill
 	and pblock
 	grow 250
+	mask-hints NSDBLOCK
 	calma 7 21
 
  layer SBLK difffill
@@ -384,7 +309,7 @@ style gdsii
 # THKOX (ThickGateOx)
 #----------------------------------------------------------------
 
- layer THKOX schottkyarea,varactorarea
+ layer THKOX varactorarea
 	grow 100
 	or alldiffhv,var,pvar
         bloat-or alldiffhv,var,pvar * 270 alldifflv 0
@@ -395,65 +320,11 @@ style gdsii
 	mask-hints THKOX
  	calma 	44 0
 
-#----------------------------------------------------------------
-# Schottky diode.  All schottky dimensions are relative to the
-# contact bar.
-#----------------------------------------------------------------
-
- # PWell:block surrounds the contact by 0.25um (Sdiod.a)
- layer PWELLBLK sdic
-	grow 250
-	calma 46 21
-
- # NSD:block surrounds the contact by 0.40nm (Sdiod.b)
- layer NSDBLOCK sdic
-	grow 400
-	calma 7 21
-
- # Salicide block surrounds the contact by 0.45um (Sdiod.c)
- layer SBLK sdic
-	grow 450
-	calma 28 0
-
- # (Re-)generate the nwell around the schottky, which forms
- # the fence around the buried layer.  The drawn nwell is
- # "false" and has been made larger to avoid specialty DRC
- # rules.
- layer NWELL *schottky
-	grow 650
-	and *schottky,*hvnsd
-	grow 100
-	and-not *schottky
-	grow 150
-	calma 31 0
-
- # layer DNWELL *schottky
- #	grow 500
- #	calma 32 0
-
- # Diode recognition layer is coincident with the nwell
- templayer diodeid *schottky
-	grow 650
-	and *schottky,*hvnsd
-	grow 250
-
- layer DIODE diodeid
-	calma 99 31
-
- # PWell:block also surrounds the nwell around the whole
- # schottky structure.  This violates pblock DRC rules,
- # so it is handled with mask hints.
+ # If PWELLBLK is needed, it can be defined with mask hints.
 
  layer PWELLBLK pblock
 	mask-hints PWELLBLK
 	calma 46 21
-
- # There is no layer and no actions associated with
- # DEEPNBLK, but it can be generated using mask hints.
-
- layer DEEPNBLK
-	mask-hints DEEPNBLK
-	calma 32 21
 
 #----------------------------------------------------------------
 # SRAMID --- Marked by SRAMID mask-hints only.
@@ -500,59 +371,13 @@ style gdsii
 # CONTBAR
 #----------------------------------------------------------------
 
- # Base contacts are drawn as-is, either bar or square, as
- # are schottky diode contacts, and contacts in the seal ring.
-
- layer CONT pbc,sdic
-	or contbar
-	calma	6 0
+ # Contacts in the seal ring are drawn as bar contacts.  Include
+ # all bar contacts marked by mask hints here.
 
  layer CONT sealc
 	and sealring
+	or contbar
  	calma	6 0
-
-#----------------------------------------------------------------
-# Bipolar transistors
-#----------------------------------------------------------------
-
- # Emitter contacts are derived from the emitter window layer
- # NOTE:  No CONT found over the "gec" (sg13g2 device model)
- # emitter window in the IHP example primitive device GDS.
- layer CONT nec,hvnec
-	grow 200
-	and nemitter,hvnemitter,nec,hvnec
-	shrink 50
-	calma	6 0
-
- # To make the NPNs extractable, layers have been shuffled
- # around and need to be regenerated as the expected types. 
-
- templayer npnarea nec,hvnec
-	grow 750
-
- # NSDBLOCK is used only in the sg13g2 layout.
- layer NSDBLOCK pbase
-	and-not npnarea
-	shrink 40
-	calma 7 21
-
- # DIFFMASK is used in the base regions in the sg13g2l and sg13g2v layouts.
- layer DIFFMASK pbase
-	and npnarea
-	and-not *nemitter,*hvnemitter
-	calma 1 20
-
- # DIFFMASK is used in the emitter region in the sg13g2 layout.
- layer DIFFMASK nemitter
-	and-not npnarea
-	or gec 
-	calma 1 20
-
- # DIFF is used in the emitter region of sg13g2l and sg13g2v
- # The collector region DIFF is already handled.
- layer DIFF *nemitter,*hvnemitter
-	and npnarea
-	calma 1 0
 
 #----------------------------------------------------------------
 # Device markers
@@ -749,140 +574,39 @@ style gdsii
 	calma 50 22
 
 #----------------------------------------------------------------
-# VIA4
-#----------------------------------------------------------------
-# See note above for VIA2
-
- layer via4large via4
-	shrink 710
-	grow 710
-
- layer VIA4 via4
-	and-not via4large
-	and-not sealring
-	squares-grid 5 190 220
-	calma 66 0
-
- layer VIA4 via4
-	and via4large
-	and-not sealring
- 	squares-grid 5 190 290
- 	calma	66 0
-
- layer VIA4 sealv4
-	and sealring
-	calma	66 0
-
-#----------------------------------------------------------------
-# MET5
-#----------------------------------------------------------------
- layer MET5 	allm5,m5fill,sealv5,mimcap,mimcc
- 	calma 	67 0
-
- layer MET5TXT
-	labels	allm5
-	calma	67 25
-
- layer MET5PIN
-	labels	allm5 port
-	calma	67 2
-
- layer MET5RES rm5
-	labels rm5
-	calma 67 29
-
- layer MET5FILL m5fill
-	labels m5fill
-	calma 67 22
-
-#----------------------------------------------------------------
-# VIA5 (TopVia1)
+# VIA4 (TopVia1)
 #----------------------------------------------------------------
 
- layer VIA5	via5
+ layer VIA4	via4
 	and-not sealring
 	squares-grid 100 420 420
  	calma 	125 0
 
- layer VIA5	sealv5
+ layer VIA4	sealv4
 	and sealring
 	calma	125 0
 
- layer MIMCC	mimcc
-	# 0.84um separation is not a DRC requirement but is used
-	# in the example MiM cap layouts.
- 	squares-grid 360 420 840
- 	calma 	129 0
-
 #----------------------------------------------------------------
-# MET6 (TopMetal1)
+# MET5 (TopMetal1)
 #----------------------------------------------------------------
- layer MET6 	allm6,m6fill,sealv6
+ layer MET5 	allm5,m5fill,sealv4
  	calma 	126 0
 
- layer MET6TXT
-	labels	allm6
+ layer MET5TXT
+	labels	allm5
 	calma	126 25
 
- layer MET6PIN
-	labels	allm6 port
+ layer MET5PIN
+	labels	allm5 port
 	calma	126 2
 
- layer MET6RES rm6
-	labels rm6
+ layer MET5RES rm5
+	labels rm5
 	calma 126 29
 
- layer MET6FILL m6fill
-	labels m6fill
+ layer MET5FILL m5fill
+	labels m5fill
 	calma 126 22
-
-#----------------------------------------------------------------
-# VIA6 (TopVia2)
-#----------------------------------------------------------------
- layer VIA6	via6
-	and-not sealring
- 	squares-grid 500 900 1060
- 	calma 	133 0
-
- layer VIA6	sealv6
-	and sealring
-	calma	133 0
-
-#----------------------------------------------------------------
-# MET7 (TopMetal2)
-#----------------------------------------------------------------
- layer MET7 	allm7,m7fill
- 	calma 	134 0
-
- layer MET7TXT
-	labels	allm7
-	calma	134 25
-
- layer MET7PIN
-	labels	allm7 port
-	calma	134 2
-
- layer MET7RES rm7
-	labels rm7
-	calma 134 29
-
- layer MET7FILL m7fill
-	labels m7fill
-	calma 134 22
-
-#----------------------------------------------------------------
-# Cu pillar ID
-# (note:  this is made coincident with the passivation cut)
-#----------------------------------------------------------------
- layer PILLARID pillar
-	calma 41 35
-
-#----------------------------------------------------------------
-# Solder bump ID
-# (note:  this is made coincident with the passivation cut)
-#----------------------------------------------------------------
- layer SOLDERID solder
-	calma 41 36
 
 #----------------------------------------------------------------
 # Bond pad ID
@@ -896,25 +620,6 @@ style gdsii
 #----------------------------------------------------------------
  layer GLASS 	seal,glass
  	calma 	9 0
-
-#----------------------------------------------------------------
-# PILLAR (passivation cut for Cu pillar)
-#----------------------------------------------------------------
- layer PILLAR 	pillar
- 	calma 	9 35
-
-#----------------------------------------------------------------
-# SOLDER (passivation cut for solder bump)
-#----------------------------------------------------------------
- layer SOLDER 	solder
- 	calma 	9 36
-
-#----------------------------------------------------------------
-# MIM
-#----------------------------------------------------------------
- layer MIM 	*mimcap
- 	labels 	mimcap
- 	calma 	36 0
 
 #----------------------------------------------------------------
 # Inductor identifier
@@ -960,18 +665,9 @@ style gdsii
 	mask-hints MET5BLOCK
 	calma	67 23
 
- layer FILLOBSM6 obsm6,inductor
-	mask-hints MET6BLOCK
-	calma	126 23
-
- layer FILLOBSM7 obsm7,inductor
-	mask-hints MET7BLOCK
-	calma	134 23
-
  layer FILLBLOCK fillblock
 	calma 160 0
 
- render	DNWELL 	cwell       -0.1    0.1
  render	NWELL	nwell        0.0    0.2062
  render DIFF	ndiffusion   0.2062 0.12
  render POLY	polysilicon  0.3262 0.18
@@ -985,11 +681,6 @@ style gdsii
  render MET4	metal4       4.0211 0.845
  render VIA4	via          4.8661 0.505
  render MET5	metal5       5.3711 1.26
- render MIM	metal8       2.4661 0.2
- render VIA5	via          4.8661 0.505
- render MET6	metal6       5.3711 1.26
- render VIA6	via          4.8661 0.505
- render MET7	metal7       5.3711 1.26
 
 #----------------------------------------------------------------
 style drc
@@ -999,53 +690,6 @@ style drc
  scalefactor 10  nanometers
  options calma-permissive-labels
 
- templayer pwell_in_dnwell dnwell
- and-not nwell
-
- templayer active_in_pwell alldiff,isodiffres,hvisodiffres
- and pwell_in_dnwell
-
- templayer dwell_overlap_of_active active_in_pwell
- and-not nbase
- grow 1240
- and-not dnwell
-
- templayer scr_butting_junction
- bloat-or *hvnsubdiff * 0 hvndiffres 390
-
- # Find nwell spacing to diffusion in pwell.  Exclude butting edge of
- # hvndiffres (in SCR layout, for example)
- templayer nwell_space_to_pwell_active nwell
- grow 390
- and active_in_pwell
- and-not scr_butting_junction
-
- # Ensure that nwell overlaps dnwell at least 0.62um on the inside edge
- templayer dnwell_shrink dnwell
- shrink 620
-
- templayer nwell_missing dnwell
- and-not nbase
- and-not dnwell_shrink
- and-not nwell
-
- # Find all transistor source/drain regions in pwell
- ## templayer nfet_in_pwell allnfets
- ## and active_in_pwell
-
- ## templayer nfet_source_drain_in_pwell
- ## bloat-all nfet_in_pwell alldiffnonfet,isodiffres,hvisodiffres,hvndiffres
-
- # Find all ptap diffusion
- ## templayer ptap_in_pwell *psd,*hvpsd,*ptap,*hvptap
- ## and active_in_pwell
-
- # Any ptap area that is not included in nfet_source_drain_in_pwell
- # is an error.
- ## templayer unconnected_pwell_ptap
- ## bloat-all ptap_in_pwell alldiffnonfet,isodiffres,hvisodiffres
- ## and-not nfet_source_drain_in_pwell
-
  # Check latchup rule (20um minimum from tap diffusion to any
  # non-tap diffusion.
 
@@ -1053,23 +697,19 @@ style drc
  # bloat-all (*psd,*hvpsd,*ptap,*hvptap)/a pwell,space/w 20000
  or (*psd,*hvpsd,*ptap,*hvptap)/a
  # steps of 620 ensure that the step doesn't reach across a narrow nwell
- # 620 * 32 + 160 = 20000
  repeat 32
  grow 620
  and-not nwell
  endrepeat
  grow 160
  and-not nwell
-
-
+ 
  templayer ptap_missing *ndiff,*hvndiff
- and-not dnwell
  and-not ptap_reach
 
  templayer ntap_reach
  # bloat-all (*nsd,*hvnsd,*ntap,*hvntap)/a nwell,pnp 20000
  or (*nsd,*hvnsd,*ntap,*hvntap)/a
- # 620 * 32 + 160 = 20000
  repeat 32
  grow 620
  and nwell,pnp
@@ -1078,20 +718,7 @@ style drc
  and nwell,pnp
 
  templayer ntap_missing *pdiff,*hvpdiff
- and-not pwell_in_dnwell
  and-not ntap_reach
-
- templayer dptap_reach
- bloat-all (*psd,*hvpsd,*ptap,*hvptap)/a pwell_in_dnwell 20000
-
- templayer dptap_missing *ndiff,*hvndiff
- and dnwell
- and-not dptap_reach
-
- templayer pdiff_crosses_dnwell dnwell
- grow 20
- and-not dnwell
- and allpdifflv,allpdiffhv
 
  # hV nwell must be 2um from any other nwell
  templayer hvnwell
@@ -1144,53 +771,12 @@ style drc
  templayer diff_hole_empty diff_small_hole
  and-not alldiff
 
- # Identify bipolar areas (same as BIPOLARID)
-
- templayer trans
-	bloat-all (gec,nec,hvnec)/a (nemitter,hvnemitter,*ndiff,space)/a 3430
-	shrink 200
-
  # Identify areas that have to be seprated by a specific
  # distance from bipolar areas (see "trans" definition, above)
 
  templayer cifpoly allpoly,polyfill
 
  templayer psdcont psc
-
- # Note:  Need to include nsd block here
- templayer transkeepout allnactive,nwell,dnwell,pblock
- 	and-not trans
-
- templayer npngrow npn
-	grow 10
-
- templayer npnactive npn
-	bloat-all npngrow (*ndiff,nemit)/a
-
- # Nothing may exist on the active plane inside the npn area
- # other than the npn itself.
- templayer illegal_type_in_npn trans
-	grow 100
-	and-not npnactive
-	and alldiff,difffill,npn,nwell,dnwell
-
- # Check for (lack of) TopVia1 over MiM cap.
- templayer mimcap_with_via
-	bloat-all mimcc mimcap
-
- templayer mimcap_missing_via mimcap
-	and-not mimcap_with_via 
-
- # For metal6 spacing to MiM cap, a regular spacing rule will
- # not suffice, because only unrelated metal6 should be
- # considered.
- templayer metal6_connects_mimcap
-	bloat-all mimcc/m6 (*metal6)/m6
-
- templayer metal6_spacing_to_mimcap metal6
-	and-not metal6_connects_mimcap
-	grow 600
-	and mimcap
 
  # Identify butted p-tap areas
  templayer butted_tap
@@ -1211,10 +797,8 @@ style drc
  templayer tap_far_from_contact
 	# bloat-all (pdc,ndc,hvpdc,hvndc)/a (alldiff)/a 6000
 	or (pdc,ndc,hvpdc,hvndc)/a
-	# Distance of 210 avoids reaching over space to another diffusion area
-	# 210 * 28 + 120 = 6000
 	repeat 28
-        grow 210
+	grow 210
 	and (alldiff)/a
 	endrepeat
 	grow 120
@@ -1225,24 +809,16 @@ style drc
  templayer latchup_error butted_tap
 	and-not tap_far_from_contact
 
- templayer scr_tap_area hvnmosesd
-	# Locate the well area in the middle of the scr1 device
-	grow 1380
-	and nwell
-
  templayer tap_contact_halo
 	# bloat-all (psc,nsc,ptapc,ntapc,hvpsc,hvnsc,hvptapc,hvntapc,sealc)/a \
 	#	(allnactivetap,allpactivetap)/a 6000
 	or (psc,nsc,ptapc,ntapc,hvpsc,hvnsc,hvptapc,hvntapc,sealc)/a
-	# 210 * 28 + 120 = 6000
 	repeat 28
 	grow 210
 	and (allnactivetap,allpactivetap)/a
 	endrepeat
 	grow 120
 	and (allnactivetap,allpactivetap)/a
-	# ignore the area inside the scr1 macro (exempted from rule)
-	or scr_tap_area
 
  templayer tap_far_from_tap_contact psd,nsd,ptap,ntap,hvpsd,hvnsd,hvptap,hvntap
 	and-not tap_contact_halo
@@ -1276,6 +852,24 @@ style drc
 	grow 150
 	and *pdiff
 
+ # Check for 50nm metal surround of ContBar.  ContBar is
+ # generated only for certain devices such as resistors,
+ # where it can only be distinguished from Cont by
+ # detecting the resistor area.
+
+ templayer resistors
+	bloat-all nres,pres,xres (*poly)/a
+
+ templayer contbar
+	mask-hints CONTBAR
+	and allcont
+
+ templayer contbar_enclosure_error pc
+	and resistors
+	or contbar
+	grow 50
+	and-not *m1
+
  # There are no specific rules for seal metal overlap of seal
  # vias, so seal metal width rules can only be calculated by
  # cifdrc rules.
@@ -1295,23 +889,18 @@ style drc
  templayer seal_metal4
 	bloat-all (sealv4)/m4 m4
 
- templayer seal_metal5
-	bloat-all (sealv5)/m5 m5
-
- templayer seal_metal6
-	bloat-all (sealv6)/m6 m6
-
- templayer seal_metal7 sealv6
-	grow 1300
-	and m7
+ templayer seal_metal5 sealv4
+	# Edge seal metal width = 3.5um
+	# TopVia2 width = 0.62  (3.5 - 0.62 / 2 = 1.44)
+	grow 1440
+	and m5
 
  templayer non_seal_psd *psd
 	and-not seal_active
 
  templayer all_seal seal_active
 	or seal_metal1,seal_metal2,seal_metal3
-	or seal_metal4,seal_metal5,seal_metal6
-	or seal_metal7
+	or seal_metal4,seal_metal5
 
  # Should this list include active fill?
  templayer all_diff_but_psd *ndiff,*nsd,*hvndiff,*hvnsd
@@ -1338,11 +927,7 @@ style density
 
  templayer m4_all allm4,m4fill,sealv3,sealv4
 
- templayer m5_all allm5,m5fill,sealv4,sealv5
-
- templayer m6_all allm6,m6fill,sealv5,sealv6
-
- templayer m7_all allm7,m7fill,sealv6
+ templayer m5_all allm5,m5fill,sealv4
 
 #----------------------------------------------------------------
 style patternfill variants (),(tiled)
@@ -1401,11 +986,6 @@ style patternfill variants (),(tiled)
 	grow	1100
 	and-not	well_shrink
 
- # Generate area of TRANS for diffusion fill keep-out 
- templayer trans
-	bloat-all (gec,nec,hvnec)/a (nemitter,hvnemitter,*ndiff,space)/a 3430
-	shrink 200
-
  # Precompute diffusion and pSD for poly:fill keep-out areas,
  # because it is compute-intensive and is used multiple times
 
@@ -1431,15 +1011,11 @@ style patternfill variants (),(tiled)
 #------------------------------------------------------------------------
 
  templayer      obstruct_diff allpoly,polyfill,allcont
-	grow	100
-	or	trans
-	grow	580
+	grow	680
 	or	alldiff,difffill,obsactive
 
  templayer      obstruct_poly obstruct_diff_psd
-	grow	100
-	or	trans
-	grow	580
+	grow	680
 	or	allpoly,polyfill,obspoly
 
  templayer	obstruct_diffpoly obstruct_diff,obstruct_poly
@@ -1469,16 +1045,12 @@ style patternfill variants (),(tiled)
 
  templayer      obstruct_diff_medium allpoly,polyfill,allcont
 	or	polyfill_coarse
-	grow	100
-	or	trans
-	grow	580
+	grow	680
 	or	alldiff,difffill,obsactive,difffill_coarse
 
  templayer      obstruct_poly_medium obstruct_diff_psd
 	or	difffill_coarse
-	grow	100
-	or	trans
-	grow	580
+	grow	680
 	or	allpoly,polyfill,obspoly,polyfill_coarse
 
  templayer      obstruct_diffpoly_medium obstruct_diff_medium,obstruct_poly_medium
@@ -1500,17 +1072,13 @@ style patternfill variants (),(tiled)
 
  templayer      obstruct_diff_fine allpoly,polyfill,allcont
 	or	polyfill_coarse,polyfill_medium
-	grow	100
-	or	trans
-	grow	580
+	grow	680
 	or	alldiff,difffill,obsactive
 	or	difffill_coarse,difffill_medium
 
  templayer      obstruct_poly_fine obstruct_diff_psd
 	or	difffill_coarse,difffill_medium
-	grow	100
-	or	trans
-	grow	580
+	grow	680
 	or	allpoly,polyfill,obspoly
 	or	polyfill_coarse,polyfill_medium
 
@@ -1543,16 +1111,15 @@ style patternfill variants (),(tiled)
  	calma 	5 22
 
 #---------------------------------------------------
-# MET1 to MET5 rules:
-# Space to other metal1-5: 0.42um (MFil.c)
-# Space to TRANS: 1.0 (MFil.d)
-# Also:  Prohibiting metal1-5 fill under pads.
+# MET1 to MET4 rules:
+# Space to other metal1-4: 0.42um (MFil.c)
+# Also:  Prohibiting metal1-4 fill under pads.
 #---------------------------------------------------
 # MET1 fill
 # Three passes in sizes 5000, 2000, and 1000
 #---------------------------------------------------
 
- templayer	obstruct_m1 trans,glass,seal
+ templayer	obstruct_m1 glass,seal
 	grow	580
 	or	allm1,obsm1,m1fill,fillblock
         grow    420
@@ -1566,7 +1133,7 @@ style patternfill variants (),(tiled)
         shrink  2495
         grow    2495
 
- templayer      obstruct_m1_medium trans,glass,seal
+ templayer      obstruct_m1_medium glass,seal
 	grow	580
 	or	allm1,obsm1,m1fill,fillblock
 	or	met1fill_coarse
@@ -1580,7 +1147,7 @@ style patternfill variants (),(tiled)
         shrink  995
         grow    995
 
- templayer      obstruct_m1_fine trans,glass,seal
+ templayer      obstruct_m1_fine glass,seal
 	grow	580
 	or	allm1,obsm1,m1fill,fillblock
 	or	met1fill_coarse,met1fill_medium
@@ -1604,7 +1171,7 @@ style patternfill variants (),(tiled)
 # Three passes in sizes 5000, 2000, and 1000
 #---------------------------------------------------
 
- templayer	obstruct_m2 trans,glass,seal
+ templayer	obstruct_m2 glass,seal
 	grow	580
 	or	allm2,obsm2,m2fill,fillblock
         grow    420
@@ -1619,7 +1186,7 @@ style patternfill variants (),(tiled)
         shrink  2495
         grow    2495
 
- templayer      obstruct_m2_medium trans,glass,seal
+ templayer      obstruct_m2_medium glass,seal
 	grow	580
 	or	allm2,obsm2,m2fill,fillblock
 	or	met2fill_coarse
@@ -1633,7 +1200,7 @@ style patternfill variants (),(tiled)
         shrink  995
         grow    995
 
- templayer      obstruct_m2_fine trans,glass,seal
+ templayer      obstruct_m2_fine glass,seal
 	grow	580
 	or	allm2,obsm2,m2fill,fillblock
 	or	met2fill_coarse,met2fill_medium
@@ -1657,7 +1224,7 @@ style patternfill variants (),(tiled)
 # Three passes in sizes 5000, 2000, and 1000
 #---------------------------------------------------
 
- templayer	obstruct_m3 trans,glass,seal
+ templayer	obstruct_m3 glass,seal
 	grow	580
 	or	allm3,obsm3,m3fill,fillblock
         grow    420
@@ -1672,7 +1239,7 @@ style patternfill variants (),(tiled)
         shrink  2495
         grow    2495
 
- templayer      obstruct_m3_medium trans,glass,seal
+ templayer      obstruct_m3_medium glass,seal
 	grow	580
 	or	allm3,obsm3,m3fill,fillblock
 	or	met3fill_coarse
@@ -1686,7 +1253,7 @@ style patternfill variants (),(tiled)
         shrink  995
         grow    995
 
- templayer      obstruct_m3_fine trans,glass,seal
+ templayer      obstruct_m3_fine glass,seal
 	grow	580
 	or	allm3,obsm3,m3fill,fillblock
 	or	met3fill_coarse,met3fill_medium
@@ -1707,10 +1274,11 @@ style patternfill variants (),(tiled)
 
 #---------------------------------------------------
 # MET4 fill
+# Prohibit metal4 fill under pads
 # Three passes in sizes 5000, 2000, and 1000
 #---------------------------------------------------
 
- templayer	obstruct_m4 trans,glass,seal
+ templayer	obstruct_m4 glass,seal
 	grow	580
 	or	allm4,obsm4,m4fill,fillblock
         grow    420
@@ -1725,7 +1293,7 @@ style patternfill variants (),(tiled)
         shrink  2495
         grow    2495
 
- templayer      obstruct_m4_medium trans,glass,seal
+ templayer      obstruct_m4_medium glass,seal
 	grow	580
 	or	allm4,obsm4,m4fill,fillblock
 	or	met4fill_coarse
@@ -1739,7 +1307,7 @@ style patternfill variants (),(tiled)
         shrink  995
         grow    995
 
- templayer      obstruct_m4_fine trans,glass,seal
+ templayer      obstruct_m4_fine glass,seal
 	grow	580
 	or	allm4,obsm4,m4fill,fillblock
 	or	met4fill_coarse,met4fill_medium
@@ -1759,132 +1327,40 @@ style patternfill variants (),(tiled)
  	calma 	50 22
 
 #---------------------------------------------------
-# MET5 fill
-# Three passes in sizes 5000, 2000, and 1000
+# MET5 (TopMetal1) fill
+# Space to other metal5: 3.0um (TM1MFil.c)
+# Two passes in sizes 10000, 5000
 #---------------------------------------------------
-
- templayer	obstruct_m5 trans,glass,seal
-	grow	580
-	or	allm5,*mimcap,obsm5,m5fill,fillblock
-        grow    420
+ templayer	obstruct_m5 glass,seal
+	grow	1900
+	or	allm5,obsm5,m5fill,fillblock
+        grow    3000
 
  templayer	met5fill_coarse topbox
-        # slots   0 5000 420 0 5000 420 1700 850
-	# Make spacing 2.00um so that max density is < 50%
-        slots   0 5000 2000 0 5000 2000 500 4500
+        slots   0 10000 4000 0 10000 4000 2500 3500
         and-not obstruct_m5
 	and	topbox
 	orthogonal
-        shrink  2495
-        grow    2495
+        shrink  4995
+        grow    4995
 
- templayer      obstruct_m5_medium trans,glass,seal
-	grow	580
-	or	allm5,*mimcap,obsm5,m5fill,fillblock
+ templayer      obstruct_m5_medium glass,seal
+	grow	1900
+	or	allm5,obsm5,m5fill,fillblock
 	or	met5fill_coarse
-        grow    420
+        grow    3000
 
  templayer	met5fill_medium topbox
-        slots   0 2000 420 0 2000 420 650 320
+        slots   0 5000 3000 0 5000 3000 1000 500
         and-not obstruct_m5_medium
 	and	topbox
 	orthogonal
-        shrink  995
-        grow    995
+        shrink  2495
+        grow    2495
 
- templayer      obstruct_m5_fine trans,glass,seal
-	grow	580
-	or	allm5,*mimcap,obsm5,m5fill,fillblock
-	or	met5fill_coarse,met5fill_medium
-        grow    420
-
- templayer	met5fill_fine topbox
-        slots   0 1200 420 0 1200 420 300 0
-        and-not obstruct_m5_fine
-	and	topbox
-	orthogonal
-        shrink  595
-        grow    595
-
- layer	MET5FILL met5fill_coarse
+ layer	MET6FILL met5fill_coarse
 	or	met5fill_medium
-	or	met5fill_fine
- 	calma 	67 22
-
-#---------------------------------------------------
-# MET6 (TopMetal1) fill
-# Space to other metal6: 3.0um (TM1MFil.c)
-# Space to TRANS: 4.9 (TM1Fil.d)
-# Also:  Prohibiting metal6 fill under pads.
-# Two passes in sizes 10000, 5000
-#---------------------------------------------------
- templayer	obstruct_m6 trans,glass,seal,solder,pillar
-	grow	1900
-	or	allm6,obsm6,m6fill,fillblock
-        grow    3000
-
- templayer	met6fill_coarse topbox
-        slots   0 10000 4000 0 10000 4000 2500 3500
-        and-not obstruct_m6
-	and	topbox
-	orthogonal
-        shrink  4995
-        grow    4995
-
- templayer      obstruct_m6_medium trans,glass,seal,solder,pillar
-	grow	1900
-	or	allm6,obsm6,m6fill,fillblock
-	or	met6fill_coarse
-        grow    3000
-
- templayer	met6fill_medium topbox
-        slots   0 5000 3000 0 5000 3000 1000 500
-        and-not obstruct_m6_medium
-	and	topbox
-	orthogonal
-        shrink  2495
-        grow    2495
-
- layer	MET6FILL met6fill_coarse
-	or	met6fill_medium
  	calma 	126 22
-
-#---------------------------------------------------
-# MET7 (TopMetal2) fill
-# Space to other metal7: 3.0um (TM2MFil.c)
-# Space to TRANS: 4.9 (TM2Fil.d)
-# Two passes in sizes 10000, 5000
-#---------------------------------------------------
- templayer	obstruct_m7 trans,glass,seal,solder,pillar
-	grow	1900
-	or	allm7,obsm7,m7fill,fillblock
-        grow    3000
-
- templayer	met7fill_coarse topbox
-        slots   0 10000 4000 0 10000 4000 4500 1500
-        and-not obstruct_m7
-	and	topbox
-	orthogonal
-        shrink  4995
-        grow    4995
-
- templayer      obstruct_m7_medium trans,glass,seal,solder,pillar
-	grow	1900
-	or	allm7,obsm7,m7fill,fillblock
-	or	met7fill_coarse
-        grow    3000
-
- templayer	met7fill_medium topbox
-        slots   0 5000 3000 0 5000 3000 1000 500
-        and-not obstruct_m7_medium
-	and	topbox
-	orthogonal
-        shrink  2495
-        grow    2495
-
- layer	MET7FILL met7fill_coarse
-	or	met7fill_medium
- 	calma 	134 22
 
 end
 

@@ -29,44 +29,6 @@ drc
  variants (fast),(full)
 
 #-----------------------------
-# DNWELL (nBuLay)
-#-----------------------------
-
- width dnwell 1000 "Deep N-well width < %d (NBL.a)"
- spacing dnwell dnwell 1500 touching_ok \
-	"Deep N-well spacing, same net < %d (NBL.b)"
- # spacing dnwell dnwell 3200 touching_illegal \
- #	"Deep N-well spacing, different net < %d (NBL.c)"
- spacing dnwell allnwell 2200 surround_ok \
-	"Deep N-well spacing to N-well < %d (NBL.d)"
- spacing dnwell allnactive 1000 surround_ok \
-	"Deep N-well spacing to N-diffusion < %d (NBL.e)"
- spacing dnwell allpactive 500 surround_ok \
-	"Deep N-well spacing to P-diffusion < %d (NBL.f)"
-
- # NOTE: Nwell > 3um has generated dnwell implant and must be considered here.
- # Also:  Illustration shows pwell:block regions connected to a deep nwell as
- # being considered part of the nwell for the purpose of checking DRC rules.
-
- variants (full)
- cifmaxwidth dwell_overlap_of_active 0 bend_illegal \
-	"Deep N-well enclosure of N-diffusion in P-well < 1.24um (nmosi.b)"
- cifmaxwidth nwell_space_to_pwell_active 0 bend_illegal \
-	"N-well space to diffusion in P-well < %d (nmosi.c)"
-
- # Assuming that any nwell overlapping a deep nwell edge must satisfy
- # rule nmosi.d is more conservative than the rule is written.  May
- # warrant revisiting.
- cifmaxwidth nwell_missing 0 bend_illegal \
-	"N-well overlap of deep N-well < 0.62um inside (nmosi.d)"
-
- # NOTE:  This rule check has been disabled because the nmoscl_* layouts
- # violate it;  it is not clear why it should be a rule.
- ## cifmaxwidth unconnected_pwell_ptap 0 bend_illegal \
- ##	"P-well contact unabutted to a MOS device is not allowed (nmosi.e1)"
- variants *
-
-#-----------------------------
 # NWELL
 #-----------------------------
 
@@ -85,9 +47,9 @@ drc
 
  exception SRAMID
  surround *pdiff,pfet allnwell 270 absence_illegal \
-	"N-well overlap of HV P-Diffusion in SRAM < %d (NW.c exception)"
+        "N-well overlap of HV P-Diffusion in SRAM < %d (NW.c exception)"
  spacing *ndiff,nfet allnwell 270 touching_illegal \
-	"N-Diffusion spacing to N-well in SRAM < %d (NW.d exception)"
+        "N-Diffusion spacing to N-well in SRAM < %d (NW.d exception)"
  exception none
 
  surround *hvpdiff,hvpfet,hvpfetesd allnwell 620 absence_illegal \
@@ -102,8 +64,6 @@ drc
 	~(*psd,*ptap,pvar)/a 240 "P-tap spacing to N-well < %d (NW.f)"
  spacing *hvpsd,*hvptap allnwell 620 touching_illegal \
 	"HV P-tap spacing to N-well < %d (NW.f1)"
- surround *schottky allnwell 620 absence_illegal \
-	"N-well overlap of HV N-tap < %d (NW.e1)"
 
  # N-well surround rule needs to accommodate the SCR device,
  # in which nwell stops at the hvndiffres edge.
@@ -117,7 +77,7 @@ drc
 #-----------------------------
  width pblock 620 "PWell block width < %d (PWB.a)"
  spacing pblock pblock 620 touching_ok "PWell block spacing < %d (PWB.a)"
- spacing nwell,isolbox pblock 620 touching_ok \
+ spacing nwell pblock 620 touching_ok \
 	"PWell block spacing to NWell < %d (PWB.c)"
  spacing pblock *ndiff,nfet 310 touching_illegal \
 	"PWell block spacing to N-diffusion < %d (PWB.e)"
@@ -136,7 +96,7 @@ drc
 # DIFF
 #-----------------------------
 
- width alldiff,isodiffres,hvisodiffres,sealc 150 "Diffusion width < %d (Act.a)"
+ width alldiff,sealc 150 "Diffusion width < %d (Act.a)"
  spacing alldiff,sealc alldiff,sealc 210 touching_illegal \
 	"Diffusion spacing < %d (Act.b)"
 
@@ -154,8 +114,6 @@ drc
  # Latchup rules
  cifmaxwidth ptap_missing 0 bend_illegal \
 	"N-diff distance to P-tap must be < 20.0um (LU.b)"
- cifmaxwidth dptap_missing 0 bend_illegal \
-	"N-diff distance to P-tap in deep nwell must be < 20.0um (LU.b)"
  cifmaxwidth ntap_missing 0 bend_illegal \
 	"P-diff distance to N-tap must be < 20.0um (LU.a)"
  cifmaxwidth tap_far_from_contact 0 bend_illegal \
@@ -175,10 +133,8 @@ drc
 	"Diff fill spacing to Poly < %d (AFil.c)"
  spacing difffill ndc,pdc,nsc,psc,ndic,pdic,hvndc,hvpdc,hvnsc,hvpsc \
 	 1100 touching_illegal "Diff fill spacing to Contact < %d (AFil.c)"
- spacing difffill nwell,isolbox 1000 surround_ok \
+ spacing difffill nwell 1000 surround_ok \
 	"Diff fill spacing to Nwell < %d (AFil.d)"
- spacing difffill dnwell 1000 touching_illegal \
-	"Diff fill spacing to Deep nwell < %d (AFil.d)"
  spacing difffill  npn,pnp 1000 touching_illegal \
 	"Diff fill spacing to bipolar transistor < %d (AFil.e)"
  angles difffill 90 "Only 90 degree angles permitted on Diff fill (AFil.i)"
@@ -215,17 +171,6 @@ drc
 
  edge4way hvndiff hvnfet 450 hvnfet 0 0 \
 	"HV NMOS minimum length < %d (Gat.a3)"
-
- # Rules for NSDBLOCK implicitly defined by (hv)isodiffres
-
- spacing isodiffres *pdiff,*hvpdiff 660 touching_illegal \
-	"isodiffres spacing to P-diffusion < %d (nSDB.c + overlaps)"
- spacing isodiffres *psd,*ptap,*hvpsd,*hvptap 510 touching_ok \
-	"isodiffres spacing to P+ diffusion < %d (nSDB.c + overlaps)"
- spacing hvisodiffres *pdiff,*hvpdiff 690 touching_illegal \
-	"isodiffres spacing to P-diffusion < %d (nSDB.c + overlaps)"
- spacing hvisodiffres *psd,*ptap,*hvpsd,*hvptap 540 touching_ok \
-	"isodiffres spacing to P+ diffusion < %d (nSDB.c + overlaps)"
 
 #-----------------------------
 # POLY
@@ -264,14 +209,10 @@ drc
  # To do:  add spacing requirements to devices with P+, N+-block, and SBLK
  spacing polyfill alldiff,*poly 1100 touching_illegal \
 	"Poly fill spacing to Poly and Diffusion < %d (GFil.d)"
- spacing polyfill nwell,isolbox 1100 surround_ok \
+ spacing polyfill nwell 1100 surround_ok \
  	"Poly fill spacing to Nwell < %d (GFil.e)"
- spacing polyfill dnwell 1100 surround_ok \
-	"Poly fill spacing to Deep nwell < %d (GFil.e)"
- surround polyfill nwell,isolbox 1100 absence_ok \
+ surround polyfill nwell 1100 absence_ok \
  	"Poly fill spacing to Nwell < %d (GFil.e)"
- surround polyfill dnwell 1100 absence_ok \
-	"Poly fill spacing to Deep nwell < %d (GFil.e)"
  spacing polyfill  npn,pnp 1100 touching_illegal \
 	"Poly fill spacing to bipolar transistor < %d (GFil.f)"
  extend *polyfill difffill 180 "Poly fill overhang of Diff fill < %d (GFil.j)"
@@ -289,7 +230,6 @@ drc
  width psc/m1 160 "P-tap contact width     < %d (Cnt.a)"
  width ndic/m1 160 "N-diode contact width < %d (Cnt.a)"
  width pdic/m1 160 "P-diode contact width < %d (Cnt.a)"
- width sdic/m1 160 "Schottky-diode contact width < %d (Cnt.a)"
  width pc/m1   160 "poly contact width        < %d (Cnt.a)"
 
  width hvndc/m1 160 "N-diffusion contact width < %d (Cnt.a)"
@@ -366,8 +306,6 @@ drc
 
  surround pc/m1 *m1,rm1 50 directional \
 	"Metal1 overlap of poly contact < %d in one direction (M1.c1)"
- surround sdic/m1 *m1,rm1 50 directional \
-	"Metal1 overlap of schottky contact < %d in one direction (M1.c1)"
  surround (ndc,nsc)/m1 *m1,rm1 50 directional \
 	"Metal1 overlap of N-diffusion contact < %d in one direction (M1.c1)"
  surround (pdc,psc)/m1 *m1,rm1 50 directional \
@@ -396,15 +334,13 @@ drc
 # CONTBAR
 #-------------------------------------------------------------
 
- # Note: BJTs and Schottky diode are exempted from this rule, so
- # it does not include pbc or sdic.
-
- exception CONTBAR
- surround allcont *m1 50 absence_illegal \
- 	"Metal enclosure of ContBar < %d (CntB.h1)"
- spacing allcont allcont 280 touching_illegal \
-	"ContBar spacing < %d (CntB.b)"
- exception none
+ variants (full)
+ cifmaxwidth contbar_enclosure_error 0 bend_illegal \
+	"Metal enclosure of ContBar < 0.05um (CntB.h1)"
+ cifwidth contbar 160 "ContBar width < 0.16um (CntB.a)"
+ cifspacing contbar contbar 280 touching_illegal \
+	"ContBar spacing < 0.28um (CntB.b)"
+ variants *
 
 #-------------------------------------------------------------
 # METAL1 -
@@ -456,8 +392,10 @@ variants *
  spacing v1 v1 210 touching_ok "Via1 spacing < %d (V1.b - 2 * M2.c)"
  surround v1/m1 *m1,rm1 5 absence_illegal \
 	"Metal1 overlap of Via1 < %d (V1.c - M2.c)"
+ exemption SRAMID
  surround v1/m1 *m1,rm1 45 directional \
 	"Metal1 overlap of Via1 < %d in one direction (V1.c1 - M2.c)"
+ exemption none
  surround v1/m2 *m2,rm2 45 directional \
 	"Metal2 overlap of Via1 < %d in one direction (M2.c1 - M2.c)"
 
@@ -623,160 +561,42 @@ variants (full)
 variants *
 
 #--------------------------------------------------
-# VIA4 -
+# VIA4 (TopVia1) -
 #--------------------------------------------------
 
- width v4/m4 200 "via4 width < %d (V4.a + 2 * V4.c)"
+ width v4/m4 620 "via4 width < %d (TV1.a + 2 * TV1.c)"
 
- spacing v4 v4 210 touching_ok "via4 spacing < %d (V4.b - 2 * V4.c)"
+ spacing v4 v4 220 touching_ok "via4 spacing < %d (TV1.b - 2 * TV1.c)"
 
- surround v4/m4 *m4,rm4 45 directional \
-	"Metal4 overlap of via4 < %d in one direction (V4.c1 - V4.c)"
- surround v4/m5 *m5,rm5 45 directional \
-	"Metal5 overlap of via4 < %d in one direction (M5.c1 - V4.c)"
+ surround v4/m5 *m5,rm5 320 absence_illegal \
+	"Metal5 overlap of via4 < %d (TV1.d - TV1.c)"
 
  exact_overlap v4/m4
 
- width sealv4 190 "Seal via4 width < %d (Seal.c1)"
+ width sealv4 420 "Seal TopVia1 width < %d (Seal.c2)"
 
 #--------------------------------------------------
-# METAL5 -
+# METAL5 (TopMetal1) -
 #--------------------------------------------------
 
- width allm5,sealv5 200 "Metal5 width < %d (M5.a)"
- spacing allm5,sealv5  allm5,*obsm5,sealv5 210 touching_ok \
-	"Metal5 spacing < %d (M5.b)"
- area allm5,obsm5 144000 200 "Metal5 minimum area < %a (M5.d)"
+ width allm5 1640 "Metal5 width < %d (TM1.a)"
+ spacing allm5  allm5,obsm5 1640 touching_ok "Metal5 spacing < %d (TM1.b)"
 
  angles allm5 45 "Only 45 and 90 degree angles permitted on metal5 (Grid Rules)"
 
- width *m5,rm5 240 angles "Metal5 drawn at 45 degrees width < %d (M5.g)"
-
- # NOTE: M5.i is probably not implementable in magic (would require "spacing ... angles"
- # implementation similar to "width ... angles").
-
- variants (fast),(full)
- widespacing allm5,sealv5 395 1005 allm5,*obsm5 240 touching_ok \
-	"Metal5 > 0.39um with runlength > 1.0um spacing to unrelated m5 < %d (M5.e)"
- widespacing *obsm5 395 1005 allm5 240 touching_ok \
-	"Metal5 > 0.39um with runlength > 1.0um spacing to unrelated m5 < %d (M5.e)"
-
- widespacing allm5,sealv5 10005 10005 allm5,*obsm5 600 touching_ok \
-	"Metal5 > 10.0um with runlength > 10.0um spacing to unrelated m5 < %d (M5.f)"
- widespacing *obsm5 10005 10005 allm5 600 touching_ok \
-	"Metal5 > 10.0um with runlength > 10.0um spacing to unrelated m5 < %d (M5.f)"
- variants *
-
- width m5fill 1000 "Metal5 fill width < %d (MFil.a1)"
- maxwidth m5fill 5000 both "Metal5 fill width > %d (MFil.a2)"
- spacing m5fill m5fill 420 touching_ok "Metal5 fill spacing < %d (MFil.b)"
- spacing m5fill allm5,obsm5 420 touching_illegal \
-	"Metal5 fill spacing to Metal5 < %d (MFil.c)"
- spacing m5fill  npn,pnp 1000 touching_illegal \
-	"Metal5 fill spacing to bipolar transistor < %d (MFil.d)"
- angles m5fill 90 "Only 90 degree angles permitted on Metal5 fill (MFil.i)"
+ width m5fill 5000 "Metal5 fill width < %d (TM1Fil.a)"
+ maxwidth m5fill 10000 both "Metal5 fill width > %d (TM1Fil.a1)"
+ spacing m5fill  m5fill 3000 touching_ok "Metal5 fill spacing < %d (TM1Fil.b)"
+ spacing m5fill  allm5,obsm5 3000 touching_illegal \
+	"Metal5 fill spacing to Metal5 < %d (TM1Fil.c)"
+ spacing m5fill  pnp 4900 touching_illegal \
+	"Metal5 fill spacing to bipolar transistor < %d (TM1Fil.d)"
+ angles m5fill 90 "Only 90 degree angles permitted on Metal5 fill (TM1Fil.g)"
 
 variants (full)
- # NOTE:  This rule needs to exclude MiM cap bottom plates
- # maxwidth *m5 30000 bend_ok "Metal5 maximum width without slots < %d (Slt.c)"
- cifwidth seal_metal5 3500 "EdgeSeal-Metal5 width < 3.5um (Seal.a)"
+ maxwidth *m5 30000 bend_ok "Metal5 maximum width without slots < %d (Slt.c)"
+ cifwidth seal_metal5 3500 "EdgeSeal-TopMetal1 width < 3.5um (Seal.a)"
 variants *
-
-#--------------------------------------------------
-# VIA5 (TopVia1) -
-#--------------------------------------------------
-
- width v5/m5 620 "via5 width < %d (TV1.a + 2 * TV1.c)"
-
- spacing v5 v5 220 touching_ok "via5 spacing < %d (TV1.b - 2 * TV1.c)"
-
- surround v5/m6 *m6,rm6 320 absence_illegal \
-	"Metal6 overlap of via5 < %d (TV1.d - TV1.c)"
-
- exact_overlap v5/m5
-
- width sealv5 420 "Seal TopVia1 width < %d (Seal.c2)"
-
-#--------------------------------------------------
-# METAL6 (TopMetal1) -
-#--------------------------------------------------
-
- width allm6,sealv6 1640 "Metal6 width < %d (TM1.a)"
- spacing allm6,sealv6  allm6,obsm6,sealv6 1640 touching_ok "Metal6 spacing < %d (TM1.b)"
-
- angles allm6 45 "Only 45 and 90 degree angles permitted on metal6 (Grid Rules)"
-
- width m6fill 5000 "Metal6 fill width < %d (TM1Fil.a)"
- maxwidth m6fill 10000 both "Metal6 fill width > %d (TM1Fil.a1)"
- spacing m6fill  m6fill 3000 touching_ok "Metal6 fill spacing < %d (TM1Fil.b)"
- spacing m6fill  allm6,obsm6 3000 touching_illegal \
-	"Metal6 fill spacing to Metal7 < %d (TM1Fil.c)"
- spacing m6fill  npn,pnp 4900 touching_illegal \
-	"Metal6 fill spacing to bipolar transistor < %d (TM1Fil.d)"
- angles m6fill 90 "Only 90 degree angles permitted on Metal6 fill (TM1Fil.g)"
-
-variants (full)
- maxwidth *m6 30000 bend_ok "Metal6 maximum width without slots < %d (Slt.c)"
- cifwidth seal_metal6 3500 "EdgeSeal-TopMetal1 width < 3.5um (Seal.a)"
-variants *
-
-#--------------------------------------------------
-# VIA6 (TopVia2) -
-#--------------------------------------------------
-
- width v6/m6 1900 "via6 width < %d (TV2.a + 2 * TV2.c)"
-
- spacing v6 v6 60 touching_ok "via6 spacing < %d (TV2.b - 2 * TV2.c)"
-
- exact_overlap v6/m6
-
- width sealv6 900 "Seal TopVia2 width < %d (Seal.c3)"
-
-#--------------------------------------------------
-# METAL7 (TopMetal2) -
-#--------------------------------------------------
-
- width allm7 2000 "Metal7 width < %d (TM2.a)"
-
- # Note: TopVia2 (via6/m7) is not allowed under bond pad
- spacing allm7  allm7,obsm7 2000 touching_ok \
-	"Metal7 spacing < %d (TM2.b)"
- # Note: This rule is inconsistent with the generated cell.
- # spacing m7,rm7  glass 5 touching_illegal "TopVia2 spacing to pad < %d (Pad.kR)"
-
- variants (fast),(full)
- widespacing allm7 5005 50005 allm7,*obsm7 5000 touching_ok \
-	"Metal7 > 5.0um with runlength > 50.0um spacing to unrelated m7 < %d (TM2.bR)"
- variants *
-
- angles allm7 45 \
-	"Only 45 and 90 degree angles permitted on metal7 (Grid Rules)"
-
- width m7fill 5000 "Metal7 fill width < %d (TM2Fil.a)"
- maxwidth m7fill 10000 both "Metal7 fill width > %d (TM2Fil.a1)"
- spacing m7fill  m7fill 3000 touching_ok "Metal7 fill spacing < %d (TM2Fil.b)"
- spacing m7fill  allm7,obsm7 3000 touching_illegal \
-	"Metal7 fill spacing to Metal7 < %d (TM2Fil.c)"
- spacing m7fill  npn,pnp 4900 touching_illegal \
-	"Metal7 fill spacing to bipolar transistor < %d (TM2Fil.d)"
- angles m7fill 90 "Only 90 degree angles permitted on Metal7 fill (TM2Fil.g)"
-
- variants (full)
- surround pillar allm7 7500 absence_illegal \
-	"Metal 7 must surround Cu pillar pad by %d (Padc.c)"
- surround solder allm7 10000 absence_illegal \
-	"Metal 7 must surround Solder bump pad by %d (Padb.c)"
- surround glass allm7 2100 absence_illegal \
-	"Metal 7 must surround bond pad by %d (Pas.c)"
- variants *
-
- variants (full)
- # This rule excludes pads;  may need to include inductors?  Would any
- # inductor wire exceed 30um width?
- maxwidth *m7 30000 bend_ok glass,pillar,solder \
-	"Metal7 maximum width without slots (except pads) < %d (Slt.c)"
- cifwidth seal_metal7 3500 "EdgeSeal-TopMetal2 width < 3.5um (Seal.a)"
- variants *
 
 #--------------------------------------------------
 # NMOS, PMOS
@@ -870,108 +690,13 @@ variants *
  spacing hvndiffres,hvnmosesd alldifflv,allpolynonfet,*hvpdiff,*hvpsd,*hvptap 480 \
 	corner_ok *poly \
 	"HV diffusion resistor to poly and unrelated diffusion < %d (Sal.c + Sal.d)"
- spacing isodiffres *ndiff,*psd,*ptap 520 touching_ok \
-	"Diffusion resistor to poly and unrelated diffusion < %d (Sal.c + Sal.d)"
- edge4way isodiffres ~(*ndiff,*psd,*ptap,isodiffres)/a 520 \
-	~(alldiffhv,allpoly,*pdiff,*nsd,*ntap)/a 0 0 \
-	"Diffusion resistor to poly and unrelated diffusion < %d (Sal.c + Sal.d)"
- edge4way isodiffres (*ndiff,*psd,*ptap)/a 200 \
-	~(alldiffhv,allpoly,*pdiff,*nsd,*ntap)/a 0 0 \
-	"Diffusion resistor to poly and unrelated diffusion < %d (Sal.d)"
- spacing hvisodiffres *hvndiff,*hvpsd,*hvptap 530 touching_ok \
-	"HV diffusion resistor to poly and unrelated diffusion < %d (Sal.c + Sal.d)"
- spacing hvisodiffres alldifflv,allpoly,*hvpdiff,*hvnsc 530 touching_illegal \
-	"HV diffusion resistor to poly and unrelated diffusion < %d (Sal.c + Sal.d)"
-
-#-----------------------------------------------------------
-# MiM CAP (MIM) - 
-#-----------------------------------------------------------
-
- width *mimcap 1140 "MiM cap width < %d (MIM.a)"
- spacing *mimcap *mimcap 600 touching_ok "MiM cap spacing < %d (MIM.b)"
- rect_only *mimcap "MiM cap must be rectangular (Grid Rules)
-
- surround *mimcap *metal5/m5 600 absence_illegal \
-	"Metal5 must surround MiM cap by %d (MIM.c)"
-
- area *mimcap 1300000 1140 "MiM cap minimum area < %a (MIM.f)"
-
- # MIM.g:  Need a maximum area rule?
-
- # MiM cap contact rules (Vmim)
-
- width mimcc/m6 1140 "MiM contact width < %d (TV1.a + 2 * MIM.d)"
-
- # Prevent interactions between MIMCC and VIA5
- exact_overlap mimcc/m6
- no_overlap mimcc/m6 via5/m6
- spacing mimcc/m6 via5/m6 1117 touching_illegal \
-	"MiM cap contact to TopVia1 spacing < 1.17um (MIM.c + MIM.d + M5.b)"
-
- # Note:  This should be done with a bloat-all <dist> DRC CIF rule,
- # but need a definition of the error, which is missing in the document.
- spacing mimcap via4/m5 810 touching_illegal \
-	"Via4 cannot contact MiM cap bottom plate (MIM.i)"
-
- variants (full)
- cifmaxwidth mimcap_missing_via 0 bend_illegal \
-	"TopVia1 must be over MiM (MIM.h)"
-
- cifmaxwidth metal6_spacing_to_mimcap 0 bend_illegal \
-	"MiM cap spacing to unrelated metal6 < 0.6um (MIM.e)"
- variants *
-
-#-----------------------------------------------------------
-# Bipolar devices
-#-----------------------------------------------------------
-
-# npn13G2
- width gec/a 70 "npn13G2 emitter width < %d (npn13G2)"
- maxwidth gec/a 70 bend_illegal "npn13G2 emitter width > %d (npn13G2)"
- maxwidth gec/a 900 both "npn13G2 emitter length > %d (npn13G2.a)"
- area gec/a 63000 70 "npn13G2 emitter length < 0.9um (npn13G2.a)"
-
-# npn13G2L
- width nec/a 70 "npn13g2L emitter width < %d (npn13G2L)"
- maxwidth nec/a 70 bend_illegal "npn13g2L emitter width > %d (npn13G2L)"
- maxwidth nec/a 2500 both "npn13g2l emitter width > %d (npn13G2L.b)"
- area nec/a 70000 70 "npn13g2L emitter length < 1.0um (npn13G2L.a)"
-
-# npn13G2V
- width hvnec/a 120 "npn13g2V emitter width < %d (npn13G2V)"
- maxwidth hvnec/a 120 bend_illegal "npn13g2V emitter width > %d (npn13G2V)"
- maxwidth hvnec/a 5000 both "npn13g2V emitter width > %d (npn13G2V.b)"
- area hvnec/a 120000 120 "npn13g2L emitter length < 1.0um (npn13G2V.a)"
-
- variants (full)
- cifspacing transkeepout trans 1210 touching_illegal \
-	"N+ Diffusion, NWell, DNwell spacing to bipolar transistor < 1.21um (npnG2.d)"
- cifspacing cifpoly trans 900 touching_illegal \
-	"Poly spacing to bipolar transistor < 0.9um (npnG2.d1)"
- cifspacing psdcont trans 270 touching_illegal \
-	"Contact spacing to bipolar transistor < 0.27um (npnG2.d1)"
- cifmaxwidth illegal_type_in_npn 0 bend_illegal \
-	"No unrelated diffusion or well may exist in the NPN area ()"
- variants *
-
-#-----------------------------------------------------------
-# Schottky diode
-#-----------------------------------------------------------
-
- width sdic/a 300 "Schottky contact width < %d (Sdiod.d)"
- maxwidth sdic/a 300 bend_illegal "Schottky contact width > %d (Sdiod.d)"
- maxwidth sdic/a 1000 both "Schottky contact length > %d (Sdiod.e)"
- area sdic/a 30000 300 "Schottky contact length < 1.0um (Sdiod.e)"
- 
- surround sdic schottky 450 absence_illegal \
-	"Schottky diode overlap of contact < %d (Sdiod.c)"
 
 #-----------------------------------------------------------
 # Glass cut (passivation cut)
 #-----------------------------------------------------------
 
  width seal 4200 "Seal ring passivation width < %d (Seal.e)"
- spacing seal pdiff,m1,m2,m3,m4,m5,m6 1000 touching_illegal \
+ spacing seal pdiff,m1,m2,m3,m4 1000 touching_illegal \
 	"Seal ring passivation spacing to seal metals < %d (Seal.f)"
 
  variants (full)
@@ -980,23 +705,7 @@ variants *
  spacing glass glass 8400 touching_ok "Bond pad spacing (recommended) < %d (Pad.bR)"
  spacing glass seal 7500 touching_illegal "Bond pad spacing to EdgeSeal < %d (Pad.d)"
 
- width solder 60000 "Solder bump pad size < %d (Padb.a)"
- maxwidth solder 60000 bend_illegal "Solder bump pad size > %d (Padb.a)"
- spacing solder solder 70000 touching_ok "Solder bump pad spacing < %d (Padb.b)"
- spacing solder seal 50000 touching_illegal \
-	"Solder bump pad spacing to EdgeSeal < %d (Padb.d)"
- 
- width pillar 35000 "CuPillar pad size < %d (Padc.a)"
- maxwidth pillar 45000 both "CuPillar pad width > %d (Padc.a)"
- spacing pillar pillar 40000 touching_ok "CuPillar pad spacing < %d (Padc.e)"
- spacing pillar seal 30000 touching_illegal \
-	"CuPillar pad spacing to EdgeSeal < %d (Padc.d)"
  variants *
-
- # NOTE: Verification layout suggests that passivation over metal6 is
- # legal and follows the same rules as for metal7.  This use is not
- # documented.  Checking overlap of one OR the other would require a
- # cifwidth rule.
 
 #----------------------------
 # End DRC style

@@ -1,6 +1,6 @@
-########################################################################
+#######################################################################
 #
-# Copyright 2025 IHP PDK Authors
+# Copyright 2026 IHP PDK Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ cifinput
 # or else magic will scale below the allowed layout grid size
 #-----------------------------------------------------------------------
 
-style  sg13g2 variants ()
+style  sg13cmos5l variants ()
  scalefactor 10 nanometers
  gridlimit 5
 
@@ -32,13 +32,11 @@ style  sg13g2 variants ()
  # May need to handle these layers---ignoring during tech file development
  ignore CAPID
  ignore PADPIN
- ignore DEEPNBLK
- ignore EMITPOLY
- ignore RFMEMS
  ignore INDBOUND
  ignore INDUCTOR
  ignore INDPIN
  ignore DEVICE
+ ignore RFMEMS
 
  # These layers are not used by this technology file
  ignore HEATRES
@@ -52,46 +50,21 @@ style  sg13g2 variants ()
  ignore MET3NORCX
  ignore MET4NORCX
  ignore MET5NORCX
- ignore MET6NORCX
- ignore MET7NORCX
 
- # Sort of a hack---Identify a PNP area as a small island of pdiff
- # in a pwell in a deep nwell in nwell.  Only consider "small" deep
- # nwell regions (2.28um), as they are too small to hold any other
- # device except a diode, which is checked for.
+ templayer pnpid NWELL
+ grow 500
+ tagged pnpMPA
+ shrink 500
 
- templayer large_dnwell DNWELL
- and NWELL
- shrink 1140
- grow 1140
-
- templayer small_dnwell DNWELL
- and NWELL
- and-not large_dnwell
-
- templayer pnparea DIFF
- and PSD
- and-not THKOX
- and-not SBLK
- and-not NSDBLOCK
- and-not DIODE
- and small_dnwell
- grow 1050
- and NWELL
-
- layer pnp pnparea
+ layer pnp pnpid
 
  layer nwell NWELL,WELLPIN
- and-not pnparea
+ and-not pnpid
  labels NWELL
  labels WELLPIN port
 
- # N-wells which are tagged with "isolbox" are recast as type isolbox
- layer isolbox
- tagged isolbox NWELL
-
  templayer nwellarea NWELL
- and-not pnp
+ and-not pnpid
  copyup nwelcheck
 
  # Copy nwell areas up for diffusion checks
@@ -135,29 +108,13 @@ style  sg13g2 variants ()
  grow 480
  and DIFF
 
- layer dnwell DNWELL
- and-not vararea
- labels DNWELL
-
  layer digisub DIGITALID
  labels DIGITALID
-
- # Define schottky diode device from the salicide block.
- templayer schottkyarea DIODE
- and SBLK
-
- templayer schottkyexpanded schottkyarea
- grow 1900
 
  # Documentation allows PWELLBLK overlapping NWELL but since
  # this is effectively redundant, the two have been placed on
  # the same plane (well) and NWELL masks PWELLBLK in magic.
- # Do not keep PWELLBLK in a Schottky diode layout because
- # it does not follow DRC rules, and is auto-generated on
- # output.
-
  layer pblock PWELLBLK
- and-not schottkyexpanded
  and-not NWELL
  labels PWELLBLK
 
@@ -198,92 +155,6 @@ style  sg13g2 variants ()
  # Copy ndiff areas up for contact checks
  templayer hvxndifcheck hvndifcheck
  copyup hvndifcheck
-
- # Identify emitter area of low voltage bipolars (type npn13G2).
- templayer lvnpnarea EMITTER
- and DIFFMASK
- grow 890
- and DIFFMASK
- grow 1600
- and DIFFMASK,NSDBLOCK
- 
- # Identify emitter area of low voltage bipolars (type npn13G2L).
- templayer npnarea EMITTER
- and DIFF
- and BIPOLARID
- grow 705
- and DIFF,DIFFMASK
-
- # Identify high voltage bipolars (type npn13G2V).
- templayer hvnpnarea HVEMITTER
- and DIFF
- and BIPOLARID
- grow 705
- and DIFF,DIFFMASK
-
- layer nemitter DIFFMASK
- and lvnpnarea
- and-not EMITTER
- labels DIFFMASK
-
- layer nemitter DIFF
- and npnarea
- and-not EMITTER
- labels DIFF
-
- layer hvnemitter DIFF
- and hvnpnarea
- and-not HVEMITTER
- labels DIFF
-
- # Layer "npn" is the device identifier for the NPN bipolar,
- # marks the base area, and extends under collector and
- # emitter.  The emitter window is defined as the contact,
- # although CONT is the real contact and is generated on
- # output.  This is done so that the emitter window dimensions
- # can be preserved for extraction.  Note that "npn" is grown
- # by 0.04um so that it abuts the collector diffusion so that
- # the collector will be identified as a terminal.  This is
- # done in the proprietary cell and does not get regenerated
- # on output.
-
- layer npn NSDBLOCK
- and lvnpnarea
- grow 40
-
- layer npn DIFFMASK,DIFF
- and npnarea,hvnpnarea
-
- layer gec DIFFMASK
- and lvnpnarea
- and EMITTER
-
- layer nec DIFF
- and npnarea
- and EMITTER
- labels DIFF
-
- layer hvnec DIFF
- and hvnpnarea
- and HVEMITTER
- labels DIFF
-
- # One type of bipolar has the base over NSDBLOCK only.
- # This is a bar contact.
- layer pbc NSDBLOCK
- and lvnpnarea
- and CONT
- labels NSDBLOCK
-
- # The other type of bipolar has the base over diffusion
- # which has been defined as "nemitter" from the 1st
- # bipolar type, although it is not the emitter here.
- # This is *not* a bar contact, so preserve the cuts
- # (no grow/shrink operation to merge them).
- layer pbc DIFFMASK
- and npnarea,hvnpnarea
- and CONT
- labels DIFFMASK
 
  layer ndiode DIFF
  and-not NSDBLOCK
@@ -349,66 +220,17 @@ style  sg13g2 variants ()
  and THKOX
  and-not isoarea
  and-not DIODE
- and-not BIPOLARID
  and-not POLY
  labels DIFF
-
- layer isodiffres DIFF,DIFFMASK
- and isoarea
- and SBLK
- and-not THKOX
- and-not BIPOLARID
- and-not POLY
- labels DIFF,DIFFMASK
-
- layer hvisodiffres DIFF
- and isoarea
- and SBLK
- and THKOX
- and-not BIPOLARID
- and-not POLY
- labels DIFF
-
- # Include DIFFMASK on either side of isodiffres in pwell tap
- layer ndiff DIFFMASK
- and isoarea
- and SBLK
- and-not NWELL
- and-not BIPOLARID
- grow 150
- and DIFFMASK
- grow 200
- and DIFFMASK
- and-not PSD
- and-not isoarea
 
  layer psd DIFFMASK
  and isoarea
  and SBLK
  and-not NWELL
- and-not BIPOLARID
  grow 200
  and DIFFMASK
  and PSD
  and-not SBLK
-
- layer schottky schottkyarea
- and-not CONT
- labels DIODE
-
- layer sdic DIODE
- and SBLK
- and CONT
- labels DIODE
-
- # Extend nwell under and around schottky diode to avoid having
- # to create special layers and rules.  The nwell will be
- # generated for the schottky device on output.
-
- layer nwell schottkyarea
- grow 1000
- and DIFF
- grow 620
 
  # Define pfet areas as known pdiff
 
@@ -604,12 +426,10 @@ style  sg13g2 variants ()
  templayer sramarea SRAMID
  mask-hints SRAMID
 
- # Find CONTBAR areas (other than pbc, sdic, or sealc)
+ # Find CONTBAR areas (other than sealc)
  # and mark them with CONT mask hints.
  templayer contbar CONT
  and-not EDGESEAL
- and-not npnarea,hvnpnarea,lvnpnarea
- and-not schottkyarea
  not-square
  mask-hints CONTBAR
 
@@ -944,16 +764,6 @@ style  sg13g2 variants ()
  layer m1fill MET1FILL
  labels MET1FILL
 
- layer mimcap MIM
- and MET5
- labels MIM
-
- layer mimcc VIA5,MIMCC
- and MIM
- grow 420
- shrink 60
- labels MIM
-
  layer m2c VIA1
  and-not EDGESEAL
  grow 5
@@ -1031,11 +841,11 @@ style  sg13g2 variants ()
 
  layer via4 VIA4
  and-not EDGESEAL
- grow 5
- grow 105 
- shrink 105
- shrink 95
- grow 95
+ grow 100
+ grow 110 
+ shrink 110
+ shrink 305
+ grow 305
 
  layer sealv4 VIA4
  and EDGESEAL
@@ -1053,57 +863,6 @@ style  sg13g2 variants ()
 
  layer m5fill MET5FILL
  labels MET5FILL
-
- layer via5 VIA5
- and-not EDGESEAL
- and-not MIM
- grow 100
- grow 110 
- shrink 110
- shrink 305
- grow 305
-
- layer sealv5 VIA5
- and EDGESEAL
-
- layer m6 MET6,MET6TXT,MET6PIN
- and-not MET6RES
- and-not MET6SLIT
- labels MET6
- labels MET6PIN port
- labels MET6TXT text
-
- layer rm6 MET6
- and MET6RES
- labels MET6RES
-
- layer m6fill MET6FILL
- labels MET6FILL
-
- layer via6 VIA6
- and-not EDGESEAL
- grow 500
- grow 25 
- shrink 25
- shrink 945
- grow 945
-
- layer sealv6 VIA6
- and EDGESEAL
-
- layer m7 MET7,MET7TXT,MET7PIN
- and-not MET7RES
- and-not MET7SLIT
- labels MET7
- labels MET7PIN port
- labels MET7TXT text
-
- layer rm7 MET7
- and MET7RES
- labels MET7RES
-
- layer m7fill MET7FILL
- labels MET7FILL
 
  # Handle contacts found by copyup
 
@@ -1124,7 +883,7 @@ style  sg13g2 variants ()
  labels CONT
 
  templayer pdiccopy CONT
- and LI
+ and MET1
  and DIODE
  and DIFF
  and PSD
@@ -1280,20 +1039,8 @@ style  sg13g2 variants ()
  and GLASS
  labels GLASS
 
- layer pillar PILLARID
- and MET7
- and GLASS,PILLAR
- and-not EDGESEAL
- labels PILLARID
-
- layer solder SOLDERID
- and MET7
- and GLASS,SOLDER
- and-not EDGESEAL
- labels SOLDERID
-
  layer glass PADID
- and MET7
+ and MET5
  and GLASS
  and-not EDGESEAL
  labels PADID
@@ -1332,12 +1079,6 @@ style  sg13g2 variants ()
  templayer met5block MET5BLOCK
  mask-hints MET5BLOCK
 
- templayer met6block MET6BLOCK
- mask-hints MET6BLOCK
-
- templayer met7block MET7BLOCK
- mask-hints MET7BLOCK
-
  # MOS Varactor
  layer var vararea
  and POLY
@@ -1361,7 +1102,6 @@ style  sg13g2 variants ()
  calma NWELL 31 0
  calma DIFF 1 0
  calma DIFFMASK 1 20
- calma DNWELL 32 0
  calma SUBCUT 40 0
  # NSD (NPLUS)
  calma NSD 7 0
@@ -1375,12 +1115,8 @@ style  sg13g2 variants ()
  calma POLY 5 0
  calma NSDBLOCK 7 21
  calma EXTBLOCK 111 0
- calma EMITTER 33 0
- calma HVEMITTER 156 0
  # Diode ID mark
  calma DIODE 99 31
- # NPN and PNP poly regions (unused)
- calma EMITPOLY 55 0
  # Capacitor ID
  calma CAPID 99 39
  # ESD area ID
@@ -1391,9 +1127,7 @@ style  sg13g2 variants ()
  calma DIGITALID 16 0
  calma HEATRES 52 0
  calma HEATTRANS 51 0
- calma BIPOLARID 26 0
  calma PWELLBLK 46 21
- calma DEEPNBLK 32 21
  calma EDGESEAL 39 0
  calma IPROBE 8 33
  calma DPROBE 8 34
@@ -1408,20 +1142,11 @@ style  sg13g2 variants ()
  calma MET3 30 0
  calma VIA3 49 0
  calma MET4 50 0
- calma VIA4 66 0
- calma MET5 67 0
- calma VIA5 125 0
- calma MIMCC 129 0
- calma MET6 126 0
- calma VIA6 133 0
- calma MET7 134 0
+ calma VIA4 125 0
+ calma MET5 126 0
 
  calma GLASS 9 0
- calma PILLAR 9 35
- calma SOLDER 9 36
  calma PADID 41 0
- calma PILLARID 41 35
- calma SOLDERID 41 36
  calma RFMEMS 69 0
 
  calma SUBTXT  40 25
@@ -1429,9 +1154,7 @@ style  sg13g2 variants ()
  calma MET2TXT 10 25
  calma MET3TXT 30 25
  calma MET4TXT 50 25
- calma MET5TXT 67 25
- calma MET6TXT 126 25
- calma MET7TXT 134 25
+ calma MET5TXT 126 25
 
  # NOTE: POLYRES includes POLY (or doesn't; layouts are inconsistent)
  calma POLYRES 128 0
@@ -1440,9 +1163,7 @@ style  sg13g2 variants ()
  calma MET2RES 10 29
  calma MET3RES 30 29
  calma MET4RES 50 29
- calma MET5RES 67 29
- calma MET6RES 126 29
- calma MET7RES 134 29
+ calma MET5RES 126 29
 
  calma DIFFFILL 1 22 
  calma POLYFILL 5 22
@@ -1450,17 +1171,13 @@ style  sg13g2 variants ()
  calma MET2FILL 10 22
  calma MET3FILL 30 22
  calma MET4FILL 50 22
- calma MET5FILL 67 22
- calma MET6FILL 126 22
- calma MET7FILL 134 22
+ calma MET5FILL 126 22
  
  calma MET1SLIT 8 24
  calma MET2SLIT 10 24
  calma MET3SLIT 30 24
  calma MET4SLIT 50 24
- calma MET5SLIT 67 24
- calma MET6SLIT 126 24
- calma MET7SLIT 134 24
+ calma MET5SLIT 126 24
 
  calma PADPIN 9 2
  calma DIFFPIN 1 2
@@ -1470,9 +1187,7 @@ style  sg13g2 variants ()
  calma MET2PIN 10 2
  calma MET3PIN 30 2
  calma MET4PIN 50 2
- calma MET5PIN 67 2
- calma MET6PIN 126 2
- calma MET7PIN 134 2
+ calma MET5PIN 126 2
 
  calma BOUND 189 *
 
@@ -1484,17 +1199,13 @@ style  sg13g2 variants ()
 
  calma LVSTEXT 63 0
 
- calma MIM 36 0
-
  calma DIFFBLOCK  1  23
  calma POLYBLOCK  5  23
  calma MET1BLOCK  8  23
  calma MET2BLOCK  10 23
  calma MET3BLOCK  30 23
  calma MET4BLOCK  50 23
- calma MET5BLOCK  67 23
- calma MET6BLOCK  126 23
- calma MET7BLOCK  134 23
+ calma MET5BLOCK  126 23
  calma FILLBLOCK  160 0
 
  calma DIFFFILL	  1  22
@@ -1503,9 +1214,7 @@ style  sg13g2 variants ()
  calma MET2FILL	  10  22
  calma MET3FILL	  30  22
  calma MET4FILL	  50  22
- calma MET5FILL	  67  22
- calma MET6FILL	  126  22
- calma MET7FILL	  134  22
+ calma MET5FILL	  126  22
 
  calma NORCX	  148 *
  calma DIFFNORCX  1  28
@@ -1514,9 +1223,7 @@ style  sg13g2 variants ()
  calma MET2NORCX  10  28
  calma MET3NORCX  30  28
  calma MET4NORCX  50  28
- calma MET5NORCX  67  28
- calma MET6NORCX  126  28
- calma MET7NORCX  134  28
+ calma MET5NORCX  126  28
 
 end
 
