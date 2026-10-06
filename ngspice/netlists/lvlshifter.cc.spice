@@ -1,0 +1,69 @@
+* NGSPICE file created from lvlshifter.ext - technology: ihp-sg13cmos5l
+
+.subckt lvlshifter in out vddlo vddhi vss
+X0 a_2050_450# xp a_1950_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X1 yp xm a_1350_450# vddhi sg13_hv_pmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X2 a_750_450# ym vddhi vddhi sg13_hv_pmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X3 vss xp ym vss sg13_hv_nmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X4 ym xp a_2250_450# vddhi sg13_hv_pmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X5 a_2750_n450# ym out vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X6 xm in vddlo vddlo sg13_lv_pmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X7 a_1750_450# yp a_1650_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X8 yp xm vss vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X9 yp xm vss vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X10 xp xm vddlo vddlo sg13_lv_pmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X11 a_n200_n450# in vss vss sg13_lv_nmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X12 vss xp ym vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X13 vddhi ym out vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X14 a_1050_450# ym a_950_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X15 ym xp vss vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X16 a_1350_450# xm a_1250_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X17 out ym a_2550_n450# vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X18 a_2250_450# xp a_2150_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X19 vss xm yp vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X20 vss xm yp vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X21 ym xp vss vss sg13_hv_nmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X22 vddlo in xm vddlo sg13_lv_pmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X23 xm in a_n200_n450# vss sg13_lv_nmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X24 a_100_n450# xm vss vss sg13_lv_nmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X25 a_1650_450# yp vddhi vddhi sg13_hv_pmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X26 a_950_450# ym a_850_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X27 out ym vddhi vddhi sg13_hv_pmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X28 vddlo xm xp vddlo sg13_lv_pmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X29 xp xm a_100_n450# vss sg13_lv_nmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X30 vss xp ym vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X31 a_1950_450# yp a_1850_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X32 a_2550_n450# ym vss vss sg13_hv_nmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X33 vddhi ym out vddhi sg13_hv_pmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X34 yp xm vss vss sg13_hv_nmos ad=0.625p pd=3u as=1.25p ps=6u w=2.5u l=0.5u
+X35 yp xm vss vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X36 a_1250_450# xm a_1150_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X37 a_2150_450# xp a_2050_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X38 vss xp ym vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X39 a_850_450# ym a_750_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X40 ym xp vss vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X41 a_1850_450# yp a_1750_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X42 vss ym a_2750_n450# vss sg13_hv_nmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X43 vss xm yp vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X44 out ym vddhi vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X45 vss xm yp vss sg13_hv_nmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=0.5u
+X46 a_1150_450# xm a_1050_450# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+X47 ym xp vss vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+C0 xm yp 1.55358f
+C1 xm vddhi 1.17632f
+C2 out ym 1.40666f
+C3 vddhi ym 2.94693f
+C4 vddhi xp 1.36705f
+C5 vddlo xm 1.06013f
+C6 yp vddhi 1.4688f
+C7 xp ym 2.2586f
+C8 vddhi vss 3.57481f
+C9 vddlo vss 1.57201f
+C10 a_2050_450# vss 2.75091f
+C11 a_1950_450# vss 2.75978f
+C12 a_1750_450# vss 2.40167f
+C13 a_1650_450# vss 2.60058f
+C14 a_1350_450# vss 3.14144f
+C15 a_750_450# vss 2.26053f
+.ends
+

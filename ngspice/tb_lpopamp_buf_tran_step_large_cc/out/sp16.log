@@ -98,7 +98,7 @@ v_out#branch                      -0.000351416
 v_en#branch                       -1.18902e-10
 v_in#branch                       -3.24861e-12
 v_avdd#branch                     -0.000125748
-v_avss#branch                      1.81138e-09
+v_avss#branch                      1.81116e-09
 
 
 No. of Data Rows : 340
@@ -120,11 +120,8 @@ Error: RHS "abs(dv/slewm)" invalid
 Warning from checkvalid: vector slewrm is not available or has zero length.
 Error: RHS "(slewrp+slewrm)/2" invalid
 Warning from checkvalid: vector slewrm is not available or has zero length.
-No such file or directory
 Error: &slewrm: no such variable.
 Error: &slewr: no such variable.
-No such file or directory
-../data/tb_lpopamp_buf_tran_step_large_cc.dat16: No such file or directory
 binary raw file "../out/sp16.raw"
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
@@ -219,7 +216,7 @@ v_out#branch                      -0.000351416
 v_en#branch                       -1.18902e-10
 v_in#branch                       -3.24861e-12
 v_avdd#branch                     -0.000125748
-v_avss#branch                      1.81138e-09
+v_avss#branch                      1.81116e-09
 
 
 No. of Data Rows : 340
@@ -228,17 +225,17 @@ doAnalyses: TRAN:  Timestep too small; time = 1.28182e-05, timestep = 5e-20: tro
 
 run simulation(s) aborted
 
-Total analysis time (seconds) = 866.19
+Total analysis time (seconds) = 800.138
 
-Total elapsed time (seconds) = 868.810 
+Total elapsed time (seconds) = 802.549 
 
-Total DRAM available = 19163.051 MB.
-DRAM currently available = 8791.004 MB.
-Maximum ngspice program size =  306.934 MB.
-Current ngspice program size =  224.754 MB.
+Total DRAM available = 19163.059 MB.
+DRAM currently available = 9833.637 MB.
+Maximum ngspice program size =  306.930 MB.
+Current ngspice program size =  224.926 MB.
 
-Shared ngspice pages =   11.723 MB.
+Shared ngspice pages =   11.875 MB.
 Text (code) pages =    6.406 MB.
 Stack = 0 bytes.
-Library pages =  222.000 MB.
+Library pages =  221.996 MB.
 

@@ -40,7 +40,7 @@ xdut.xlpopamp_core_0.xsliceb_1.yn_m       0.0936117
 in                                        0.05
 xdut.zn_p                             0.827514
 xdut.xlpopamp_core_0.xsliceb_1.bpa_l         2.38676
-xdut.xlpopamp_core_0.xsliceb_1.tihi         2.92823
+xdut.xlpopamp_core_0.xsliceb_1.tihi         2.92818
 xdut.xlpopamp_core_0.xsliceb_1.enb     3.97864e-09
 xdut.xlpopamp_core_0.xslicea_0.bpb         1.68813
 xdut.xlpopamp_core_0.xslicea_0.zn_m        0.611298
@@ -58,7 +58,7 @@ xdut.xlpopamp_core_0.xslicea_0.yp_m          2.8874
 xdut.xlpopamp_core_0.xslicea_0.bpa         2.30156
 xdut.xlpopamp_core_0.xslicea_0.enb     3.97864e-09
 xdut.xlpopamp_core_0.xslicea_0.xn     5.80331e-06
-xdut.xlpopamp_core_0.xslicea_0.tihi         2.92823
+xdut.xlpopamp_core_0.xslicea_0.tihi         2.92818
 xdut.xlpopamp_core_0.xslicea_1.bpb         1.68813
 xdut.xlpopamp_core_0.xslicea_1.zn_m        0.611298
 xdut.xlpopamp_core_0.xslicea_1.yn_m       0.0936117
@@ -75,7 +75,7 @@ xdut.xlpopamp_core_0.xslicea_1.yp_m          2.8874
 xdut.xlpopamp_core_0.xslicea_1.bpa         2.30156
 xdut.xlpopamp_core_0.xslicea_1.enb     3.97864e-09
 xdut.xlpopamp_core_0.xslicea_1.xn     5.80331e-06
-xdut.xlpopamp_core_0.xslicea_1.tihi         2.92823
+xdut.xlpopamp_core_0.xslicea_1.tihi         2.92818
 xdut.xlpopamp_core_0.xsliceb_0.zp_m         2.35646
 xdut.xlpopamp_core_0.xsliceb_0.bnb         1.22265
 xdut.xlpopamp_core_0.xsliceb_0.yp_p         2.88367
@@ -91,14 +91,14 @@ xdut.xlpopamp_core_0.xsliceb_0.bpa         2.30156
 xdut.xlpopamp_core_0.xsliceb_0.xn     5.80331e-06
 xdut.xlpopamp_core_0.xsliceb_0.yn_m       0.0936117
 xdut.xlpopamp_core_0.xsliceb_0.bpa_l         2.38676
-xdut.xlpopamp_core_0.xsliceb_0.tihi         2.92823
+xdut.xlpopamp_core_0.xsliceb_0.tihi         2.92818
 xdut.xlpopamp_core_0.xsliceb_0.enb     3.97864e-09
 out_                                       1.5
 v_out#branch                      -0.000291643
 v_en#branch                       -9.89928e-11
 v_in#branch                       -3.24861e-12
 v_avdd#branch                     -0.000120399
-v_avss#branch                      1.69607e-09
+v_avss#branch                      1.69618e-09
 
 
 No. of Data Rows : 1035
@@ -111,9 +111,6 @@ slewm               =  2.063206e-06 targ=  3.212231e-05 trig=  3.005911e-05
 slewrp = 1.032686e+06
 slewrm = 1.240787e+06
 slewr = 1.136737e+06
-No such file or directory
-No such file or directory
-../data/tb_lpopamp_buf_tran_step_large_cc.dat8: No such file or directory
 binary raw file "../out/sp8.raw"
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
@@ -150,7 +147,7 @@ xdut.xlpopamp_core_0.xsliceb_1.yn_m       0.0936117
 in                                        0.05
 xdut.zn_p                             0.827514
 xdut.xlpopamp_core_0.xsliceb_1.bpa_l         2.38676
-xdut.xlpopamp_core_0.xsliceb_1.tihi         2.92823
+xdut.xlpopamp_core_0.xsliceb_1.tihi         2.92818
 xdut.xlpopamp_core_0.xsliceb_1.enb     3.97864e-09
 xdut.xlpopamp_core_0.xslicea_0.bpb         1.68813
 xdut.xlpopamp_core_0.xslicea_0.zn_m        0.611298
@@ -168,7 +165,7 @@ xdut.xlpopamp_core_0.xslicea_0.yp_m          2.8874
 xdut.xlpopamp_core_0.xslicea_0.bpa         2.30156
 xdut.xlpopamp_core_0.xslicea_0.enb     3.97864e-09
 xdut.xlpopamp_core_0.xslicea_0.xn     5.80331e-06
-xdut.xlpopamp_core_0.xslicea_0.tihi         2.92823
+xdut.xlpopamp_core_0.xslicea_0.tihi         2.92818
 xdut.xlpopamp_core_0.xslicea_1.bpb         1.68813
 xdut.xlpopamp_core_0.xslicea_1.zn_m        0.611298
 xdut.xlpopamp_core_0.xslicea_1.yn_m       0.0936117
@@ -185,7 +182,7 @@ xdut.xlpopamp_core_0.xslicea_1.yp_m          2.8874
 xdut.xlpopamp_core_0.xslicea_1.bpa         2.30156
 xdut.xlpopamp_core_0.xslicea_1.enb     3.97864e-09
 xdut.xlpopamp_core_0.xslicea_1.xn     5.80331e-06
-xdut.xlpopamp_core_0.xslicea_1.tihi         2.92823
+xdut.xlpopamp_core_0.xslicea_1.tihi         2.92818
 xdut.xlpopamp_core_0.xsliceb_0.zp_m         2.35646
 xdut.xlpopamp_core_0.xsliceb_0.bnb         1.22265
 xdut.xlpopamp_core_0.xsliceb_0.yp_p         2.88367
@@ -201,29 +198,29 @@ xdut.xlpopamp_core_0.xsliceb_0.bpa         2.30156
 xdut.xlpopamp_core_0.xsliceb_0.xn     5.80331e-06
 xdut.xlpopamp_core_0.xsliceb_0.yn_m       0.0936117
 xdut.xlpopamp_core_0.xsliceb_0.bpa_l         2.38676
-xdut.xlpopamp_core_0.xsliceb_0.tihi         2.92823
+xdut.xlpopamp_core_0.xsliceb_0.tihi         2.92818
 xdut.xlpopamp_core_0.xsliceb_0.enb     3.97864e-09
 out_                                       1.5
 v_out#branch                      -0.000291643
 v_en#branch                       -9.89928e-11
 v_in#branch                       -3.24861e-12
 v_avdd#branch                     -0.000120399
-v_avss#branch                      1.69607e-09
+v_avss#branch                      1.69618e-09
 
 
 No. of Data Rows : 1035
 
-Total analysis time (seconds) = 932.165
+Total analysis time (seconds) = 1160.55
 
-Total elapsed time (seconds) = 934.767 
+Total elapsed time (seconds) = 1163.659 
 
-Total DRAM available = 19163.051 MB.
-DRAM currently available = 8724.262 MB.
-Maximum ngspice program size =  306.934 MB.
-Current ngspice program size =  225.090 MB.
+Total DRAM available = 19163.059 MB.
+DRAM currently available = 9916.570 MB.
+Maximum ngspice program size =  306.941 MB.
+Current ngspice program size =  224.812 MB.
 
-Shared ngspice pages =   12.047 MB.
+Shared ngspice pages =   11.727 MB.
 Text (code) pages =    6.406 MB.
 Stack = 0 bytes.
-Library pages =  222.000 MB.
+Library pages =  222.008 MB.
 

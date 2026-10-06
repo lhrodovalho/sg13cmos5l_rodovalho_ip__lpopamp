@@ -1,17 +1,19 @@
 * num: 5 corner: mos_ss vdd: 3.0 temp: 85
 
 * Include models
-.lib ../..//models/cornerMOShv.lib mos_ss
+.lib ../../models/cornerMOShv.lib mos_ss
+.lib ../../models/cornerMOSlv.lib mos_ss
 .temp 85
 
-.include ../../netlists/lvlshifter.spice
+.include ../../netlists/lvlshifter.cc.spice
 
 
 * Simulation parameters
-.param xavdd  = 3.0
-.param xavss  = 0
+.param xavdd = 3.0
+.param xdvdd = 1.2
+.param xavss = 0
 
-.param xvhi  = {1.2}
+.param xvhi  = {xdvdd}
 .param xvlo  = {0}
 .param xper  = {1u}
 .param xtdel = {0}
@@ -19,20 +21,21 @@
 .param xpw   = {1f}
 
 * Design under test
-*.subckt lvlshifter in out vdd vss
-xdut in out avdd avss lvlshifter
+*.subckt lvlshifter in out vddlo vddhi vss
+xdut in out dvdd avdd avss lvlshifter
 
 v_avss GND avss xavss
 v_avdd avdd avss dc {xavdd} 
+v_dvdd dvdd avss dc {xdvdd} 
 v_in in avss pulse({xvlo} {xvhi} {xtdel} {xtr} {xtr} {xpw} {xper}) 
 
 * Simulation control
 .option gmin=1e-12
-.option rshunt=1e12
+.option cshunt=1e-15
 .option method=Gear
 .param xtstart = 0
 .param xtend   = {xper}
-.param xtstep  = {0.5e-9}
+.param xtstep  = {0.1e-9}
 .tran {xtstep} {xtend} {xtstart}
 
 .save v(in) v(out)
@@ -41,13 +44,6 @@ v_in in avss pulse({xvlo} {xvhi} {xtdel} {xtr} {xtr} {xpw} {xper})
 
   run
   plot in out
-
-  let avdd = 3.3
-  let vhi  = avdd-50m
-  let vlo  = 50m
-  let vmax = vlo+0.9*(vhi-vlo)
-  let vmin = vlo+0.1*(vhi-vlo)
-  let dv   = vmax-vmin
 
   wrdata ../data/tb_lvlshifter.dat5 v(in) v(out)
 

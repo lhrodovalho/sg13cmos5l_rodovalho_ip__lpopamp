@@ -6,76 +6,38 @@ Warning: m=xx on .subckt line will override multiplier m hierarchy!
 
 Circuit: * num: 7 corner: mos_sf vdd: 3.0 temp: 85
 
+Option cshunt: 27 capacitors added with 1e-15 F each
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
 Using SPARSE 1.3 as Direct Linear Solver
 Note: Starting dynamic gmin stepping
-Note: Dynamic gmin stepping completed
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Warning: True gmin stepping failed
+Note: Starting source stepping
+Note: Source stepping completed
 
 Initial Transient Solution
 --------------------------
 
 Node                                   Voltage
 ----                                   -------
-xdut.xst.xp0                                 3
-in                                           0
-xdut.xst.x0a.xd.xd.x                         3
+xdut.xp                            2.07112e-06
 avdd                                         3
-xdut.xst.x0a.xd.x                            3
-xdut.xst.x0a.xd.xs.x                         3
-xdut.xst.x0a.x                               3
-xdut.xst.x0a.xs.xd.x                         3
-xdut.xst.x0a.xs.x                            3
-xdut.xst.x0a.xs.xs.x                         3
-xdut.x                                       3
-xdut.xst.x0b.xd.xd.x                         3
-xdut.xst.x0b.xd.x                            3
-xdut.xst.x0b.xd.xs.x                         3
-xdut.xst.x0b.x                               3
-xdut.xst.x0b.xs.xd.x                         3
-xdut.xst.x0b.xs.x                            3
-xdut.xst.x0b.xs.xs.x                         3
-xdut.xst.xn0                           2.41084
+xdut.yp                            1.98058e-09
+xdut.xm                                    1.2
+xdut.ym                                      3
 avss                                         0
-xdut.xst.xp1                                 3
-xdut.xst.x1a.xd.xd.x                         3
-xdut.xst.x1a.xd.x                            3
-xdut.xst.x1a.xd.xs.x                         3
-xdut.xst.x1a.x                               3
-xdut.xst.x1a.xs.xd.x                         3
-xdut.xst.x1a.xs.x                            3
-xdut.xst.x1a.xs.xs.x                         3
-xdut.xst.y1                                  3
-xdut.xst.x1b.xd.xd.x                         3
-xdut.xst.x1b.xd.x                            3
-xdut.xst.x1b.xd.xs.x                         3
-xdut.xst.x1b.x                               3
-xdut.xst.x1b.xs.xd.x                         3
-xdut.xst.x1b.xs.x                            3
-xdut.xst.x1b.xs.xs.x                         3
-xdut.xst.x2a.xd.xd.x                         3
-xdut.xst.x2a.xd.x                            3
-xdut.xst.x2a.xd.xs.x                         3
-xdut.xst.x2a.x                               3
-xdut.xst.x2a.xs.xd.x                         3
-xdut.xst.x2a.xs.x                            3
-xdut.xst.x2a.xs.xs.x                         3
-xdut.xst.y2                          0.0316842
-xdut.xst.x2b.xd.xd.x                   1.44773
-xdut.xst.x2b.xd.x                       1.4484
-xdut.xst.x2b.xd.xs.x                   1.44843
-xdut.xst.x2b.x                         1.51486
-xdut.xst.x2b.xs.xd.x                   2.84856
-xdut.xst.x2b.xs.x                      2.94578
-xdut.xst.x2b.xs.xs.x                   2.97874
-xdut.xst.xn2                         0.0316842
-out                                1.34393e-08
-v_in#branch                                  0
-v_avdd#branch                     -2.73998e-10
-v_avss#branch                       1.8812e-10
+out                                5.81224e-08
+in                                           0
+dvdd                                       1.2
+v_in#branch                        5.00852e-10
+v_dvdd#branch                     -3.45765e-09
+v_avdd#branch                     -9.58762e-11
+v_avss#branch                      6.76519e-16
 
 
-No. of Data Rows : 2034
+No. of Data Rows : 10033
 
 Warning: command 'plot' is not available during batch simulation, ignored!
     You may use Gnuplot instead.
@@ -86,84 +48,45 @@ Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 Using SPARSE 1.3 as Direct Linear Solver
 No. of Data Columns : 3  
 Note: Starting dynamic gmin stepping
-Note: Dynamic gmin stepping completed
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Warning: True gmin stepping failed
+Note: Starting source stepping
+Note: Source stepping completed
 
 Initial Transient Solution
 --------------------------
 
 Node                                   Voltage
 ----                                   -------
-xdut.xst.xp0                                 3
-in                                           0
-xdut.xst.x0a.xd.xd.x                         3
+xdut.xp                            2.07112e-06
 avdd                                         3
-xdut.xst.x0a.xd.x                            3
-xdut.xst.x0a.xd.xs.x                         3
-xdut.xst.x0a.x                               3
-xdut.xst.x0a.xs.xd.x                         3
-xdut.xst.x0a.xs.x                            3
-xdut.xst.x0a.xs.xs.x                         3
-xdut.x                                       3
-xdut.xst.x0b.xd.xd.x                         3
-xdut.xst.x0b.xd.x                            3
-xdut.xst.x0b.xd.xs.x                         3
-xdut.xst.x0b.x                               3
-xdut.xst.x0b.xs.xd.x                         3
-xdut.xst.x0b.xs.x                            3
-xdut.xst.x0b.xs.xs.x                         3
-xdut.xst.xn0                           2.41084
+xdut.yp                            1.98058e-09
+xdut.xm                                    1.2
+xdut.ym                                      3
 avss                                         0
-xdut.xst.xp1                                 3
-xdut.xst.x1a.xd.xd.x                         3
-xdut.xst.x1a.xd.x                            3
-xdut.xst.x1a.xd.xs.x                         3
-xdut.xst.x1a.x                               3
-xdut.xst.x1a.xs.xd.x                         3
-xdut.xst.x1a.xs.x                            3
-xdut.xst.x1a.xs.xs.x                         3
-xdut.xst.y1                                  3
-xdut.xst.x1b.xd.xd.x                         3
-xdut.xst.x1b.xd.x                            3
-xdut.xst.x1b.xd.xs.x                         3
-xdut.xst.x1b.x                               3
-xdut.xst.x1b.xs.xd.x                         3
-xdut.xst.x1b.xs.x                            3
-xdut.xst.x1b.xs.xs.x                         3
-xdut.xst.x2a.xd.xd.x                         3
-xdut.xst.x2a.xd.x                            3
-xdut.xst.x2a.xd.xs.x                         3
-xdut.xst.x2a.x                               3
-xdut.xst.x2a.xs.xd.x                         3
-xdut.xst.x2a.xs.x                            3
-xdut.xst.x2a.xs.xs.x                         3
-xdut.xst.y2                          0.0316842
-xdut.xst.x2b.xd.xd.x                   1.44773
-xdut.xst.x2b.xd.x                       1.4484
-xdut.xst.x2b.xd.xs.x                   1.44843
-xdut.xst.x2b.x                         1.51486
-xdut.xst.x2b.xs.xd.x                   2.84856
-xdut.xst.x2b.xs.x                      2.94578
-xdut.xst.x2b.xs.xs.x                   2.97874
-xdut.xst.xn2                         0.0316842
-out                                1.34393e-08
-v_in#branch                                  0
-v_avdd#branch                     -2.73998e-10
-v_avss#branch                       1.8812e-10
+out                                5.81224e-08
+in                                           0
+dvdd                                       1.2
+v_in#branch                        5.00852e-10
+v_dvdd#branch                     -3.45765e-09
+v_avdd#branch                     -9.58762e-11
+v_avss#branch                      6.76519e-16
 
 
-No. of Data Rows : 2034
+No. of Data Rows : 10033
 
-Total analysis time (seconds) = 7.36747
+Total analysis time (seconds) = 13.2073
 
-Total elapsed time (seconds) = 7.474 
+Total elapsed time (seconds) = 13.284 
 
 Total DRAM available = 19163.059 MB.
-DRAM currently available = 13060.945 MB.
-Maximum ngspice program size =  103.145 MB.
-Current ngspice program size =   21.816 MB.
+DRAM currently available = 12672.129 MB.
+Maximum ngspice program size =   99.500 MB.
+Current ngspice program size =   18.312 MB.
 
-Shared ngspice pages =   11.707 MB.
+Shared ngspice pages =   11.836 MB.
 Text (code) pages =    6.406 MB.
 Stack = 0 bytes.
-Library pages =   18.211 MB.
+Library pages =   14.566 MB.
 

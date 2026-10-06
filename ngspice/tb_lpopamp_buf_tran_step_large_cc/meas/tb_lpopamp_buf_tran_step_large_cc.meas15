@@ -1,0 +1,2 @@
+num,corner,vdd,temp,slewrp,slewrm,slewr
+15,mos_sf,3.6,85,1.25116E+06,1.19502E+06,1.22309E+06

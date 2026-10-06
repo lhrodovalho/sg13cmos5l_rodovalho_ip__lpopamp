@@ -98,7 +98,7 @@ v_out#branch                       -0.00029177
 v_en#branch                       -9.89928e-11
 v_in#branch                       -3.24861e-12
 v_avdd#branch                     -0.000120227
-v_avss#branch                      1.81456e-09
+v_avss#branch                      1.81473e-09
 
 
 No. of Data Rows : 1036
@@ -111,9 +111,6 @@ slewm               =  2.158677e-06 targ=  3.221664e-05 trig=  3.005796e-05
 slewrp = 1.038694e+06
 slewrm = 1.185912e+06
 slewr = 1.112303e+06
-No such file or directory
-No such file or directory
-../data/tb_lpopamp_buf_tran_step_large_cc.dat7: No such file or directory
 binary raw file "../out/sp7.raw"
 Doing analysis at TEMP = 85.000000 and TNOM = 27.000000
 
@@ -208,22 +205,22 @@ v_out#branch                       -0.00029177
 v_en#branch                       -9.89928e-11
 v_in#branch                       -3.24861e-12
 v_avdd#branch                     -0.000120227
-v_avss#branch                      1.81456e-09
+v_avss#branch                      1.81473e-09
 
 
 No. of Data Rows : 1036
 
-Total analysis time (seconds) = 944.206
+Total analysis time (seconds) = 1139.96
 
-Total elapsed time (seconds) = 946.809 
+Total elapsed time (seconds) = 1143.036 
 
-Total DRAM available = 19163.051 MB.
-DRAM currently available = 8730.520 MB.
-Maximum ngspice program size =  306.934 MB.
-Current ngspice program size =  224.848 MB.
+Total DRAM available = 19163.059 MB.
+DRAM currently available = 7875.402 MB.
+Maximum ngspice program size =  306.938 MB.
+Current ngspice program size =  224.777 MB.
 
-Shared ngspice pages =   11.812 MB.
+Shared ngspice pages =   11.699 MB.
 Text (code) pages =    6.406 MB.
 Stack = 0 bytes.
-Library pages =  222.000 MB.
+Library pages =  222.004 MB.
 

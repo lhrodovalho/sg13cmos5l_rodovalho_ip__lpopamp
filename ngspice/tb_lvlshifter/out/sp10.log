@@ -6,76 +6,40 @@ Warning: m=xx on .subckt line will override multiplier m hierarchy!
 
 Circuit: * num: 10 corner: mos_ff vdd: 3.6 temp: -40
 
+Option cshunt: 27 capacitors added with 1e-15 F each
 Doing analysis at TEMP = -40.000000 and TNOM = 27.000000
 
 Using SPARSE 1.3 as Direct Linear Solver
 Note: Starting dynamic gmin stepping
-Note: Dynamic gmin stepping completed
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Warning: True gmin stepping failed
+Note: Starting source stepping
+Warning: source stepping failed
+Note: Transient op started
+Note: Transient op finished successfully
 
 Initial Transient Solution
 --------------------------
 
 Node                                   Voltage
 ----                                   -------
-xdut.xst.xp0                               3.6
-in                                           0
-xdut.xst.x0a.xd.xd.x                       3.6
+xdut.xp                            1.32132e-06
 avdd                                       3.6
-xdut.xst.x0a.xd.x                          3.6
-xdut.xst.x0a.xd.xs.x                       3.6
-xdut.xst.x0a.x                             3.6
-xdut.xst.x0a.xs.xd.x                       3.6
-xdut.xst.x0a.xs.x                          3.6
-xdut.xst.x0a.xs.xs.x                       3.6
-xdut.x                                     3.6
-xdut.xst.x0b.xd.xd.x                       3.6
-xdut.xst.x0b.xd.x                          3.6
-xdut.xst.x0b.xd.xs.x                       3.6
-xdut.xst.x0b.x                             3.6
-xdut.xst.x0b.xs.xd.x                       3.6
-xdut.xst.x0b.xs.x                          3.6
-xdut.xst.x0b.xs.xs.x                       3.6
-xdut.xst.xn0                           2.91805
+xdut.yp                            3.50783e-09
+xdut.xm                                    1.2
+xdut.ym                                    3.6
 avss                                         0
-xdut.xst.xp1                               3.6
-xdut.xst.x1a.xd.xd.x                       3.6
-xdut.xst.x1a.xd.x                          3.6
-xdut.xst.x1a.xd.xs.x                       3.6
-xdut.xst.x1a.x                             3.6
-xdut.xst.x1a.xs.xd.x                       3.6
-xdut.xst.x1a.xs.x                          3.6
-xdut.xst.x1a.xs.xs.x                       3.6
-xdut.xst.y1                                3.6
-xdut.xst.x1b.xd.xd.x                       3.6
-xdut.xst.x1b.xd.x                          3.6
-xdut.xst.x1b.xd.xs.x                       3.6
-xdut.xst.x1b.x                             3.6
-xdut.xst.x1b.xs.xd.x                       3.6
-xdut.xst.x1b.xs.x                          3.6
-xdut.xst.x1b.xs.xs.x                       3.6
-xdut.xst.x2a.xd.xd.x                       3.6
-xdut.xst.x2a.xd.x                          3.6
-xdut.xst.x2a.xd.xs.x                       3.6
-xdut.xst.x2a.x                             3.6
-xdut.xst.x2a.xs.xd.x                       3.6
-xdut.xst.x2a.xs.x                          3.6
-xdut.xst.x2a.xs.xs.x                       3.6
-xdut.xst.y2                           0.735742
-xdut.xst.x2b.xd.xd.x                   1.07187
-xdut.xst.x2b.xd.x                      1.07194
-xdut.xst.x2b.xd.xs.x                   1.07194
-xdut.xst.x2b.x                         1.07194
-xdut.xst.x2b.xs.xd.x                   1.07194
-xdut.xst.x2b.xs.x                      1.07194
-xdut.xst.x2b.xs.xs.x                   1.07271
-xdut.xst.xn2                          0.735742
-out                                1.95442e-09
-v_in#branch                                  0
-v_avdd#branch                     -2.25135e-10
-v_avss#branch                      2.17105e-10
+out                                7.91324e-09
+in                                           0
+dvdd                                       1.2
+v_in#branch                        4.33979e-10
+v_dvdd#branch                     -3.24052e-09
+v_avdd#branch                     -7.54151e-11
+v_avss#branch                      6.60809e-11
 
 
-No. of Data Rows : 2035
+No. of Data Rows : 10033
 
 Warning: command 'plot' is not available during batch simulation, ignored!
     You may use Gnuplot instead.
@@ -93,77 +57,34 @@ Initial Transient Solution
 
 Node                                   Voltage
 ----                                   -------
-xdut.xst.xp0                               3.6
-in                                           0
-xdut.xst.x0a.xd.xd.x                       3.6
+xdut.xp                            1.32132e-06
 avdd                                       3.6
-xdut.xst.x0a.xd.x                          3.6
-xdut.xst.x0a.xd.xs.x                       3.6
-xdut.xst.x0a.x                             3.6
-xdut.xst.x0a.xs.xd.x                       3.6
-xdut.xst.x0a.xs.x                          3.6
-xdut.xst.x0a.xs.xs.x                       3.6
-xdut.x                                     3.6
-xdut.xst.x0b.xd.xd.x                       3.6
-xdut.xst.x0b.xd.x                          3.6
-xdut.xst.x0b.xd.xs.x                       3.6
-xdut.xst.x0b.x                             3.6
-xdut.xst.x0b.xs.xd.x                       3.6
-xdut.xst.x0b.xs.x                          3.6
-xdut.xst.x0b.xs.xs.x                       3.6
-xdut.xst.xn0                           2.91805
+xdut.yp                            1.11358e-12
+xdut.xm                                    1.2
+xdut.ym                                    3.6
 avss                                         0
-xdut.xst.xp1                               3.6
-xdut.xst.x1a.xd.xd.x                       3.6
-xdut.xst.x1a.xd.x                          3.6
-xdut.xst.x1a.xd.xs.x                       3.6
-xdut.xst.x1a.x                             3.6
-xdut.xst.x1a.xs.xd.x                       3.6
-xdut.xst.x1a.xs.x                          3.6
-xdut.xst.x1a.xs.xs.x                       3.6
-xdut.xst.y1                                3.6
-xdut.xst.x1b.xd.xd.x                       3.6
-xdut.xst.x1b.xd.x                          3.6
-xdut.xst.x1b.xd.xs.x                       3.6
-xdut.xst.x1b.x                             3.6
-xdut.xst.x1b.xs.xd.x                       3.6
-xdut.xst.x1b.xs.x                          3.6
-xdut.xst.x1b.xs.xs.x                       3.6
-xdut.xst.x2a.xd.xd.x                       3.6
-xdut.xst.x2a.xd.x                          3.6
-xdut.xst.x2a.xd.xs.x                       3.6
-xdut.xst.x2a.x                             3.6
-xdut.xst.x2a.xs.xd.x                       3.6
-xdut.xst.x2a.xs.x                          3.6
-xdut.xst.x2a.xs.xs.x                       3.6
-xdut.xst.y2                           0.735742
-xdut.xst.x2b.xd.xd.x                   1.07187
-xdut.xst.x2b.xd.x                      1.07194
-xdut.xst.x2b.xd.xs.x                   1.07194
-xdut.xst.x2b.x                         1.07194
-xdut.xst.x2b.xs.xd.x                   1.07194
-xdut.xst.x2b.xs.x                      1.07194
-xdut.xst.x2b.xs.xs.x                   1.07271
-xdut.xst.xn2                          0.735742
-out                                1.95442e-09
-v_in#branch                                  0
-v_avdd#branch                     -2.25135e-10
-v_avss#branch                      2.17105e-10
+out                                7.91323e-09
+in                                           0
+dvdd                                       1.2
+v_in#branch                        4.33628e-10
+v_dvdd#branch                      -3.2174e-09
+v_avdd#branch                     -1.76718e-11
+v_avss#branch                      1.75926e-16
 
 
-No. of Data Rows : 2035
+No. of Data Rows : 10033
 
-Total analysis time (seconds) = 7.40804
+Total analysis time (seconds) = 14.154
 
-Total elapsed time (seconds) = 7.517 
+Total elapsed time (seconds) = 14.233 
 
 Total DRAM available = 19163.059 MB.
-DRAM currently available = 13051.941 MB.
-Maximum ngspice program size =  103.125 MB.
-Current ngspice program size =   22.043 MB.
+DRAM currently available = 12670.598 MB.
+Maximum ngspice program size =   99.605 MB.
+Current ngspice program size =   18.449 MB.
 
-Shared ngspice pages =   11.934 MB.
+Shared ngspice pages =   11.871 MB.
 Text (code) pages =    6.406 MB.
 Stack = 0 bytes.
-Library pages =   18.191 MB.
+Library pages =   14.672 MB.
 
