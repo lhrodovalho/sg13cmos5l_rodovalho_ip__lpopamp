@@ -13,4 +13,4 @@ ext2spice -p extfiles -o ../ngspice/netlists/lpopamp.cc.spice
 quit -noprompt
 EOF
 rm -r extfiles
-exit 0
+#exit 0

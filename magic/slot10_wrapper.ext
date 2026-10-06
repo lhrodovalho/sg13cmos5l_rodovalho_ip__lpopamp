@@ -1,0 +1,438 @@
+timestamp 1791318316
+version 8.3
+tech ihp-sg13cmos5l
+style ngspice()
+scale 1000 1 0.5
+resistclasses 3000000 67000 110 88 88 88 18 7000 260000 1360000
+use lpopamp lpopamp_0 1 0 39600 0 1 14200
+port "vdd_1v2" 51 0 400 400 11358 m5
+port "vss_1v2" 50 0 13272 400 19272 m5
+port "vss_3v3" 52 0 22708 400 28708 m5
+port "vdd_3v3" 53 0 30224 400 51216 m5
+port "s10_an_2_esd" 6 107030 3640 107430 3738 m3
+port "s10_an[2]" 3 107070 5036 107230 9990 m3
+port "dig_out[0]" 43 0 14438 400 14482 m3
+port "dig_out[1]" 42 0 14526 400 14570 m3
+port "dig_out[2]" 41 0 14614 400 14658 m3
+port "dig_out[3]" 40 0 14702 400 14746 m3
+port "dig_out[4]" 39 0 14790 400 14834 m3
+port "dig_out[5]" 38 0 14878 400 14922 m3
+port "dig_out[6]" 37 0 14966 400 15010 m3
+port "dig_out[7]" 36 0 15054 400 15098 m3
+port "dig_out[8]" 35 0 15142 400 15186 m3
+port "dig_out[9]" 34 0 15230 400 15274 m3
+port "dig_out[10]" 33 0 15318 400 15362 m3
+port "dig_out[11]" 32 0 15406 400 15450 m3
+port "dig_in[0]" 31 0 15670 400 15714 m3
+port "dig_in[1]" 30 0 15758 400 15802 m3
+port "dig_in[2]" 29 0 15846 400 15890 m3
+port "dig_in[3]" 28 0 15934 400 15978 m3
+port "dig_in[4]" 27 0 16022 400 16066 m3
+port "dig_in[5]" 26 0 16110 400 16154 m3
+port "dig_in[6]" 25 0 16198 400 16242 m3
+port "dig_in[7]" 24 0 16286 400 16330 m3
+port "dig_in[8]" 23 0 16374 400 16418 m3
+port "dig_in[9]" 22 0 16462 400 16506 m3
+port "dig_in[10]" 21 0 16550 400 16594 m3
+port "dig_in[11]" 20 0 16638 400 16682 m3
+port "dig_in[12]" 19 0 16726 400 16770 m3
+port "dig_in[13]" 18 0 16814 400 16858 m3
+port "dig_in[14]" 17 0 16902 400 16946 m3
+port "dig_in[15]" 16 0 16990 400 17034 m3
+port "dig_in[16]" 15 0 17078 400 17122 m3
+port "dig_in[17]" 14 0 17166 400 17210 m3
+port "dig_in[18]" 13 0 17254 400 17298 m3
+port "dig_in[19]" 12 0 17342 400 17386 m3
+port "dig_in[20]" 11 0 17430 400 17474 m3
+port "dig_in[21]" 10 0 17518 400 17562 m3
+port "dig_in[22]" 9 0 17606 400 17650 m3
+port "dig_in[23]" 8 0 17694 400 17738 m3
+port "reset" 56 0 17782 400 17826 m3
+port "enable" 54 0 17872 400 17916 m3
+port "clk" 55 0 17960 400 18004 m3
+port "vbias" 7 0 18842 400 19242 m3
+port "ibias0" 44 0 19430 400 19830 m3
+port "ibias1" 45 0 20018 400 20418 m3
+port "analog_bus3" 46 0 20606 400 21006 m3
+port "analog_bus2" 47 0 21194 400 21594 m3
+port "analog_bus1" 48 0 21782 400 22182 m3
+port "analog_bus0" 49 0 22370 400 22770 m3
+port "s10_an_1_esd" 5 107030 25640 107430 25738 m3
+port "s10_an[1]" 2 107070 27036 107230 31990 m3
+port "s10_an_0_esd" 4 107030 47640 107430 47738 m3
+port "s10_an[0]" 1 107070 49036 107230 53990 m3
+node "vdd_1v2" 1 4692.52 0 400 m5 0 0 0 0 0 0 0 0 0 0 0 0 4389146 22906 0 0 0 0 0 0
+node "vss_1v2" 0 2440.23 0 13272 m5 0 0 0 0 0 0 0 0 0 0 0 0 2400000 12800 0 0 0 0 0 0
+node "m5_1300_22700#" 0 135.432 1300 22700 rm5 0 0 0 0 0 0 0 0 0 0 0 0 600000 200 0 0 0 0 0 0
+node "vss_3v3" 0 2728.76 0 22708 m5 0 0 0 0 0 0 0 0 0 0 0 0 7800000 8618 0 0 0 0 0 0
+node "m5_1300_45400#" 0 135.432 1300 45400 rm5 0 0 0 0 0 0 0 0 0 0 0 0 600000 200 0 0 0 0 0 0
+node "vdd_3v3" 0 9010.64 0 30224 m5 0 0 0 0 0 0 0 0 0 0 0 0 13796800 38952 0 0 0 0 0 0
+node "avss" 1 155772 8100 28400 m4 0 0 0 0 0 0 0 0 0 0 180000 1800 694200000 237400 0 0 0 0 0 0
+node "avdd" 0 136331 8100 45400 m4 0 0 0 0 0 0 0 0 0 0 180000 1800 605400000 207800 0 0 0 0 0 0
+node "s10_an_2_esd" 0 150.687 107030 3640 m3 0 0 0 0 0 0 0 0 39316 1000 0 0 0 0 0 0 0 0 0 0
+node "m3_106900_5100#" 0 174.585 106900 5100 rm3 0 0 0 0 0 0 0 0 480000 200 0 0 0 0 0 0 0 0 0 0
+node "inm" 2 6319.93 104700 5100 m3 0 0 0 0 0 0 0 0 10560000 9200 2010000 14000 0 0 0 0 0 0 0 0
+node "s10_an[2]" 0 1284.24 107070 5036 m3 0 0 0 0 0 0 0 0 1425212 5684 0 0 0 0 0 0 0 0 0 0
+node "dig_out[0]" 1 82.1384 0 14438 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[1]" 1 22.8824 0 14526 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[2]" 1 22.8824 0 14614 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[3]" 1 22.8824 0 14702 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[4]" 1 22.8824 0 14790 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[5]" 1 22.8824 0 14878 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[6]" 1 22.8824 0 14966 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[7]" 1 22.8824 0 15054 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[8]" 1 22.8824 0 15142 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[9]" 1 22.8824 0 15230 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[10]" 1 22.8824 0 15318 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_out[11]" 1 30.8943 0 15406 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[0]" 1 30.8943 0 15670 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[1]" 1 22.8824 0 15758 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[2]" 1 22.8824 0 15846 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[3]" 1 22.8824 0 15934 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[4]" 1 22.8824 0 16022 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[5]" 1 22.8824 0 16110 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[6]" 1 22.8824 0 16198 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[7]" 1 22.8824 0 16286 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[8]" 1 22.8824 0 16374 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[9]" 1 22.8824 0 16462 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[10]" 1 22.8824 0 16550 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[11]" 1 22.8824 0 16638 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[12]" 1 22.8824 0 16726 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[13]" 1 22.8824 0 16814 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[14]" 1 22.8824 0 16902 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[15]" 1 22.8824 0 16990 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[16]" 1 22.8824 0 17078 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[17]" 1 22.8824 0 17166 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[18]" 1 22.8824 0 17254 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[19]" 1 22.8824 0 17342 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[20]" 1 22.8824 0 17430 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[21]" 1 22.8824 0 17518 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[22]" 1 22.8824 0 17606 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "dig_in[23]" 1 22.8824 0 17694 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "reset" 1 22.9758 0 17782 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "enable" 1 22.9758 0 17872 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "clk" 1 48.6011 0 17960 m3 0 0 0 0 0 0 0 0 17600 888 0 0 0 0 0 0 0 0 0 0
+node "m3_0_18723#" 1 53.1317 0 18723 m3 0 0 0 0 0 0 0 0 20800 904 0 0 0 0 0 0 0 0 0 0
+node "vbias" 0 176.957 0 18842 m3 0 0 0 0 0 0 0 0 160000 1600 0 0 0 0 0 0 0 0 0 0
+node "m3_0_19311#" 1 28.5314 0 19311 m3 0 0 0 0 0 0 0 0 20800 904 0 0 0 0 0 0 0 0 0 0
+node "ib" 15 20423.7 800 19500 m3 0 0 0 0 0 0 0 0 12930000 87100 2640000 18800 0 0 0 0 0 0 0 0
+node "m3_700_19500#" 0 39.6525 700 19500 rm3 0 0 0 0 0 0 0 0 30000 200 0 0 0 0 0 0 0 0 0 0
+node "ibias0" 0 249.929 0 19430 m3 0 0 0 0 0 0 0 0 250000 1900 0 0 0 0 0 0 0 0 0 0
+node "m3_0_19899#" 1 28.5314 0 19899 m3 0 0 0 0 0 0 0 0 20800 904 0 0 0 0 0 0 0 0 0 0
+node "ibias1" 0 176.957 0 20018 m3 0 0 0 0 0 0 0 0 160000 1600 0 0 0 0 0 0 0 0 0 0
+node "m3_0_20487#" 1 28.5314 0 20487 m3 0 0 0 0 0 0 0 0 20800 904 0 0 0 0 0 0 0 0 0 0
+node "analog_bus3" 0 176.957 0 20606 m3 0 0 0 0 0 0 0 0 160000 1600 0 0 0 0 0 0 0 0 0 0
+node "m3_0_21075#" 1 28.5314 0 21075 m3 0 0 0 0 0 0 0 0 20800 904 0 0 0 0 0 0 0 0 0 0
+node "analog_bus2" 0 176.957 0 21194 m3 0 0 0 0 0 0 0 0 160000 1600 0 0 0 0 0 0 0 0 0 0
+node "m3_0_21663#" 1 28.5314 0 21663 m3 0 0 0 0 0 0 0 0 20800 904 0 0 0 0 0 0 0 0 0 0
+node "analog_bus1" 0 176.957 0 21782 m3 0 0 0 0 0 0 0 0 160000 1600 0 0 0 0 0 0 0 0 0 0
+node "m3_0_22251#" 1 28.5314 0 22251 m3 0 0 0 0 0 0 0 0 20800 904 0 0 0 0 0 0 0 0 0 0
+node "analog_bus0" 0 176.957 0 22370 m3 0 0 0 0 0 0 0 0 160000 1600 0 0 0 0 0 0 0 0 0 0
+node "m3_0_22839#" 1 86.6689 0 22839 m3 0 0 0 0 0 0 0 0 20800 904 0 0 0 0 0 0 0 0 0 0
+node "s10_an_1_esd" 0 150.687 107030 25640 m3 0 0 0 0 0 0 0 0 39316 1000 0 0 0 0 0 0 0 0 0 0
+node "m3_106900_27300#" 0 43.1332 106900 27300 rm3 0 0 0 0 0 0 0 0 70000 200 0 0 0 0 0 0 0 0 0 0
+node "m3_102300_27300#" 2 2471.04 102300 27300 m3 0 0 0 0 0 0 0 0 3220000 9900 840000 8000 0 0 0 0 0 0 0 0
+node "m3_106900_28700#" 0 32.1698 106900 28700 rm3 0 0 0 0 0 0 0 0 70000 200 0 0 0 0 0 0 0 0 0 0
+node "out" 2 1829.81 102300 28700 m3 0 0 0 0 0 0 0 0 3220000 9900 840000 8000 0 0 0 0 0 0 0 0
+node "m3_106900_29800#" 0 32.1698 106900 29800 rm3 0 0 0 0 0 0 0 0 70000 200 0 0 0 0 0 0 0 0 0 0
+node "m3_102300_29800#" 2 1829.81 102300 29800 m3 0 0 0 0 0 0 0 0 3220000 9900 840000 8000 0 0 0 0 0 0 0 0
+node "m3_106900_31200#" 0 43.1332 106900 31200 rm3 0 0 0 0 0 0 0 0 70000 200 0 0 0 0 0 0 0 0 0 0
+node "m3_102300_31200#" 2 2471.04 102300 31200 m3 0 0 0 0 0 0 0 0 3220000 9900 840000 8000 0 0 0 0 0 0 0 0
+node "s10_an[1]" 1 1588.41 107070 27036 m3 0 0 0 0 0 0 0 0 1405212 7744 0 0 0 0 0 0 0 0 0 0
+node "s10_an_0_esd" 0 150.687 107030 47640 m3 0 0 0 0 0 0 0 0 39316 1000 0 0 0 0 0 0 0 0 0 0
+node "en" 10 13247 13800 47500 m3 0 0 0 0 0 0 0 0 8940000 60200 1050000 8200 0 0 0 0 0 0 0 0
+node "m3_106900_49100#" 0 174.585 106900 49100 rm3 0 0 0 0 0 0 0 0 480000 200 0 0 0 0 0 0 0 0 0 0
+node "inp" 2 7295.6 104100 49100 m3 0 0 0 0 0 0 0 0 13440000 10400 1950000 13600 0 0 0 0 0 0 0 0
+node "s10_an[0]" 0 1284.24 107070 49036 m3 0 0 0 0 0 0 0 0 1425212 5684 0 0 0 0 0 0 0 0 0 0
+substrate "SUB" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "analog_bus0" "avss" 0.842139
+cap "vss_1v2" "dig_in[11]" 13.3755
+cap "dig_in[12]" "dig_in[11]" 230.293
+cap "m3_0_21075#" "vss_3v3" 0.191624
+cap "dig_out[10]" "dig_out[11]" 230.293
+cap "vss_1v2" "dig_in[12]" 13.3755
+cap "out" "m3_102300_29800#" 439.863
+cap "m3_0_22839#" "analog_bus0" 159.433
+cap "dig_out[5]" "dig_out[4]" 230.293
+cap "vss_3v3" "m3_0_22839#" 53.9284
+cap "vss_1v2" "dig_out[9]" 13.3755
+cap "clk" "enable" 230.293
+cap "dig_out[7]" "dig_out[6]" 230.293
+cap "vss_1v2" "dig_in[18]" 13.3755
+cap "dig_in[15]" "dig_in[14]" 230.293
+cap "dig_out[2]" "dig_out[3]" 230.293
+cap "dig_in[9]" "dig_in[10]" 230.293
+cap "dig_in[4]" "dig_in[5]" 230.293
+cap "dig_out[4]" "dig_out[3]" 230.293
+cap "dig_in[13]" "dig_in[14]" 230.293
+cap "vss_1v2" "analog_bus3" 3.29586
+cap "dig_in[22]" "dig_in[21]" 230.293
+cap "analog_bus1" "m3_0_22251#" 159.433
+cap "dig_in[2]" "dig_in[3]" 230.293
+cap "vss_1v2" "dig_in[17]" 13.3755
+cap "m3_0_21663#" "analog_bus2" 159.433
+cap "vss_1v2" "dig_out[0]" 44.111
+cap "vss_3v3" "analog_bus2" 6.07553
+cap "dig_out[5]" "vss_1v2" 13.3755
+cap "vss_1v2" "ibias0" 30.3
+cap "vss_1v2" "dig_in[7]" 13.3755
+cap "m3_0_22839#" "avss" 0.616778
+cap "m3_0_21075#" "analog_bus3" 159.433
+cap "dig_out[8]" "vss_1v2" 13.3755
+cap "vss_1v2" "dig_in[5]" 13.3755
+cap "dig_in[18]" "dig_in[17]" 230.293
+cap "dig_in[20]" "dig_in[21]" 230.293
+cap "dig_in[19]" "vss_1v2" 13.3755
+cap "dig_out[8]" "dig_out[9]" 230.293
+cap "dig_in[23]" "reset" 230.293
+cap "vss_1v2" "dig_out[3]" 13.3755
+cap "reset" "enable" 222.068
+cap "vss_1v2" "dig_out[10]" 13.3755
+cap "dig_in[8]" "dig_in[9]" 230.293
+cap "dig_in[19]" "dig_in[18]" 230.293
+cap "m3_0_21075#" "analog_bus2" 159.433
+cap "dig_out[10]" "dig_out[9]" 230.293
+cap "ib" "avss" 16720
+cap "vss_1v2" "dig_out[6]" 13.3755
+cap "m3_102300_29800#" "m3_102300_31200#" 254.114
+cap "vss_1v2" "dig_in[22]" 13.3755
+cap "dig_in[6]" "vss_1v2" 13.3755
+cap "m3_0_18723#" "vbias" 159.433
+cap "s10_an_0_esd" "s10_an[0]" 6.13808
+cap "dig_in[4]" "dig_in[3]" 230.293
+cap "clk" "m3_0_18723#" 17.0587
+cap "analog_bus0" "m3_0_22251#" 159.433
+cap "m3_106900_31200#" "m3_106900_29800#" 4.3788
+cap "vss_1v2" "dig_in[20]" 13.3755
+cap "vss_1v2" "vbias" 82.6597
+cap "vss_3v3" "m3_0_22251#" 3.40825
+cap "dig_in[10]" "dig_in[11]" 230.293
+cap "vss_1v2" "dig_in[10]" 13.3755
+cap "vss_1v2" "clk" 38.1837
+cap "vss_3v3" "vdd_3v3" 14.3515
+cap "dig_in[1]" "dig_in[2]" 230.293
+cap "dig_in[0]" "dig_out[11]" 54.0687
+cap "vss_1v2" "m3_0_19311#" 7.33632
+cap "vss_1v2" "dig_in[16]" 13.3755
+cap "en" "avdd" 11645.6
+cap "vss_1v2" "dig_in[15]" 13.3755
+cap "vss_1v2" "dig_in[3]" 13.3755
+cap "ibias1" "m3_0_19899#" 159.433
+cap "dig_out[5]" "dig_out[6]" 230.293
+cap "vss_1v2" "dig_in[13]" 13.3755
+cap "dig_in[13]" "dig_in[12]" 230.293
+cap "dig_out[1]" "dig_out[2]" 230.293
+cap "m3_0_21663#" "analog_bus1" 159.433
+cap "analog_bus1" "vss_3v3" 15.4043
+cap "ibias1" "m3_0_20487#" 159.433
+cap "dig_in[6]" "dig_in[7]" 230.293
+cap "dig_in[0]" "dig_in[1]" 230.293
+cap "dig_in[6]" "dig_in[5]" 230.293
+cap "vss_1v2" "dig_in[23]" 13.3755
+cap "m3_106900_27300#" "m3_106900_28700#" 4.3788
+cap "vss_1v2" "dig_in[14]" 13.3755
+cap "vss_1v2" "enable" 13.4858
+cap "dig_in[16]" "dig_in[17]" 230.293
+cap "m5_1300_22700#" "analog_bus0" 0.226365
+cap "m3_0_19311#" "ibias0" 159.433
+cap "vss_1v2" "dig_in[2]" 13.3755
+cap "vss_1v2" "dig_in[8]" 13.3755
+cap "vss_1v2" "dig_in[9]" 13.3755
+cap "s10_an[1]" "s10_an_1_esd" 6.13808
+cap "vss_1v2" "reset" 13.4858
+cap "dig_in[19]" "dig_in[20]" 230.293
+cap "vss_1v2" "dig_out[1]" 13.3755
+cap "vss_1v2" "dig_out[11]" 22.499
+cap "vss_1v2" "ibias1" 10.496
+cap "vss_1v2" "dig_out[7]" 13.3755
+cap "dig_in[0]" "vss_1v2" 22.499
+cap "vss_1v2" "dig_in[21]" 13.3755
+cap "vss_1v2" "m3_0_19899#" 2.23626
+cap "m5_1300_22700#" "m3_0_22839#" 0.165789
+cap "dig_in[8]" "dig_in[7]" 230.293
+cap "vss_1v2" "dig_in[1]" 13.3755
+cap "vss_1v2" "m3_0_20487#" 0.858435
+cap "vss_1v2" "dig_out[2]" 13.3755
+cap "vss_3v3" "analog_bus0" 55.2134
+cap "dig_out[1]" "dig_out[0]" 230.293
+cap "m3_0_21663#" "vss_3v3" 1.18468
+cap "vss_1v2" "dig_out[4]" 13.3755
+cap "s10_an_2_esd" "s10_an[2]" 6.13808
+cap "m3_106900_28700#" "m3_106900_29800#" 7.5828
+cap "m3_0_19311#" "vbias" 159.433
+cap "vss_1v2" "dig_in[4]" 13.3755
+cap "out" "m3_102300_27300#" 254.114
+cap "dig_out[8]" "dig_out[7]" 230.293
+cap "dig_in[23]" "dig_in[22]" 230.293
+cap "dig_in[15]" "dig_in[16]" 230.293
+cap "m3_0_20487#" "analog_bus3" 159.433
+cap "vss_1v2" "m3_0_18723#" 41.0468
+cap "ibias0" "m3_0_19899#" 159.433
+device devres None 1300 22700 1301 22701 0.0003 "m5_1300_22700#" 0 0 "vss_3v3" 6000 7800000,14618 "avss" 6000 694200000,243400
+device devres None 1300 45400 1301 45401 0.0003 "m5_1300_45400#" 0 0 "vdd_3v3" 6000 13796800,44952 "avdd" 6000 605400000,213800
+device devres None 106900 5100 106901 5101 0.00183333 "m3_106900_5100#" 0 0 "inm" 4800 10560000,14000 "s10_an[2]" 4800 1425212,10484
+device devres None 700 19500 701 19501 0.0293333 "m3_700_19500#" 0 0 "ibias0" 300 250000,2200 "ib" 300 3960000,27000
+device devres None 106900 27300 106901 27301 0.0125714 "m3_106900_27300#" 0 0 "m3_102300_27300#" 700 3220000,10600 "s10_an[1]" 700 351303,2636
+device devres None 106900 28700 106901 28701 0.0125714 "m3_106900_28700#" 0 0 "out" 700 3220000,10600 "s10_an[1]" 700 351303,2636
+device devres None 106900 29800 106901 29801 0.0125714 "m3_106900_29800#" 0 0 "m3_102300_29800#" 700 3220000,10600 "s10_an[1]" 700 351303,2636
+device devres None 106900 31200 106901 31201 0.0125714 "m3_106900_31200#" 0 0 "m3_102300_31200#" 700 3220000,10600 "s10_an[1]" 700 351303,2636
+device devres None 106900 49100 106901 49101 0.00183333 "m3_106900_49100#" 0 0 "inp" 4800 13440000,15200 "s10_an[0]" 4800 1425212,10484
+cap "lpopamp_0/lpopamp_core_0/en_uq0" "lpopamp_0/lpopamp_core_0/avss" 47.8406
+cap "lpopamp_0/lpopamp_core_0/avss" "lpopamp_0/lpopamp_core_0/ib_uq0" -70.8767
+cap "lpopamp_0/lpopamp_core_0/inm_uq0" "lpopamp_0/avss" 7.76834
+cap "lpopamp_0/avss" "lpopamp_0/lpopamp_core_0/inm_uq0" 67.4091
+cap "lpopamp_0/lpopamp_cap_12/a_n6800_0#" "ib" 17.6954
+cap "lpopamp_0/avss" "lpopamp_0/lpopamp_cap_12/a_n6800_0#" 25.6909
+cap "lpopamp_0/lpopamp_cap_12/zn_p" "ib" 1.86799
+cap "lpopamp_0/lpopamp_cap_12/a_n6800_0#" "ib" 88.7512
+cap "lpopamp_0/avss" "lpopamp_0/lpopamp_cap_12/out" 129.97
+cap "lpopamp_0/avss" "lpopamp_0/lpopamp_cap_12/zp_p" 16.8444
+cap "lpopamp_0/lpopamp_cap_12/out" "ib" 112.285
+cap "lpopamp_0/avss" "lpopamp_0/lpopamp_cap_12/zn_p" 23.6033
+cap "lpopamp_0/lpopamp_cap_12/zp_p" "ib" 3.73597
+cap "lpopamp_0/lpopamp_cap_12/a_n6800_0#" "lpopamp_0/avss" 93.5567
+cap "avss" "lpopamp_0/lpopamp_cap_12/zn_p" 30.5063
+cap "lpopamp_0/lpopamp_cap_12/out" "avss" 132.998
+cap "ib" "lpopamp_0/lpopamp_cap_12/zn_p" 3.73597
+cap "ib" "lpopamp_0/lpopamp_cap_12/out" 118.26
+cap "lpopamp_0/lpopamp_cap_12/zp_p" "avss" 17.2495
+cap "lpopamp_0/lpopamp_cap_12/zp_p" "ib" 3.73597
+cap "lpopamp_0/lpopamp_cap_12/a_n6800_0#" "avss" 93.4454
+cap "ib" "lpopamp_0/lpopamp_cap_12/a_n6800_0#" 88.6714
+cap "avss" "lpopamp_0/lpopamp_cap_12/a_n6800_0#" 62.4318
+cap "avss" "lpopamp_0/lpopamp_cap_12/out" 181.617
+cap "ib" "lpopamp_0/lpopamp_cap_12/a_n6800_0#" 60.2521
+cap "avss" "lpopamp_0/lpopamp_cap_12/zp_p" 19.8252
+cap "avss" "lpopamp_0/lpopamp_cap_12/zn_p" 38.6896
+cap "ib" "lpopamp_0/lpopamp_cap_12/out" 163.067
+cap "ib" "lpopamp_0/lpopamp_cap_12/zp_p" 10.2022
+cap "ib" "lpopamp_0/lpopamp_cap_12/zn_p" 12.0701
+cap "lpopamp_0/lpopamp_cap_12/zp_p" "ib" 4.11281
+cap "avss" "lpopamp_0/lpopamp_cap_12/a_n6800_0#" 83.1196
+cap "avss" "lpopamp_0/lpopamp_cap_12/out" 132.893
+cap "lpopamp_0/lpopamp_cap_12/a_n6800_0#" "ib" 111.167
+cap "lpopamp_0/lpopamp_cap_12/out" "ib" 126.031
+cap "avss" "lpopamp_0/lpopamp_cap_12/zn_p" 32.4937
+cap "lpopamp_0/lpopamp_cap_12/out" "lpopamp_0/lpopamp_cap_12/a_n6800_0#" 1.13687e-13
+cap "lpopamp_0/lpopamp_cap_12/zn_p" "ib" 3.02336
+cap "avss" "lpopamp_0/lpopamp_cap_12/zp_p" 17.2495
+cap "lpopamp_0/lpopamp_cap_12/zp_p" "avss" 21.2244
+cap "avss" "lpopamp_0/lpopamp_cap_12/out" 214.489
+cap "lpopamp_0/lpopamp_cap_12/zn_p" "avss" 26.886
+cap "avss" "lpopamp_0/lpopamp_cap_12/a_n6800_0#" 125.277
+cap "avss" "lpopamp_0/lpopamp_cap_12/a_n6800_0#" 168.239
+cap "avss" "lpopamp_0/lpopamp_cap_13/out" 94.5717
+cap "avss" "lpopamp_0/lpopamp_cap_13/zn_p" 15.9453
+cap "avss" "lpopamp_0/lpopamp_cap_12/out" 58.9385
+cap "avss" "lpopamp_0/lpopamp_cap_12/zp_p" 1.69816
+cap "avss" "lpopamp_0/lpopamp_cap_13/zp_p" 3.06761
+cap "avss" "lpopamp_0/lpopamp_cap_12/zn_p" 13.0241
+cap "avss" "lpopamp_0/lpopamp_cap_13/out" 206.894
+cap "avss" "lpopamp_0/lpopamp_cap_13/zp_p" 20.7686
+cap "avss" "lpopamp_0/lpopamp_cap_13/zn_p" 34.4811
+cap "lpopamp_0/lpopamp_cap_12/a_n6800_0#" "avss" 125.277
+cap "avss" "lpopamp_0/lpopamp_cap_13/zn_p" 27.3417
+cap "avss" "lpopamp_0/lpopamp_cap_13/out" 213.578
+cap "avss" "lpopamp_0/lpopamp_cap_13/zp_p" 21.2244
+cap "avss" "lpopamp_0/lpopamp_cap_13/a_n6800_0#" 125.277
+cap "avss" "lpopamp_0/lpopamp_cap_13/a_n6800_0#" 86.0073
+cap "avss" "lpopamp_0/lpopamp_cap_13/zn_p" 43.8251
+cap "lpopamp_0/lpopamp_cap_13/out" "avss" 257.957
+cap "avss" "lpopamp_0/lpopamp_cap_13/zp_p" 31.0241
+cap "lpopamp_0/lpopamp_core_0/sliceB_0/out" "lpopamp_0/lpopamp_core_0/sliceB_0/out" 3.82615
+cap "lpopamp_0/lpopamp_core_0/sliceB_0/out" "lpopamp_0/lpopamp_core_0/sliceB_0/out" 1.85584
+cap "lpopamp_0/lpopamp_cap_13/zn_p" "avss" 34.4811
+cap "avss" "lpopamp_0/lpopamp_cap_13/zp_p" 14.0849
+cap "avss" "lpopamp_0/lpopamp_cap_13/a_n6800_0#" 125.277
+cap "avss" "lpopamp_0/lpopamp_cap_13/out" 213.578
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_0/avss" 3.68188
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_0/avdd" 6.95848
+cap "lpopamp_0/lpopamp_core_0/sliceB_0/enb" "lpopamp_0/out" 9.79921
+cap "lpopamp_0/lpopamp_core_0/sliceB_0/zn_p" "lpopamp_0/out" 1.86867
+cap "lpopamp_0/lpopamp_core_0/sliceB_0/avdd" "lpopamp_0/out" 0.956474
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/out" 514.491
+cap "lpopamp_0/inp" "lpopamp_0/out" 527.05
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 1237.95
+cap "lpopamp_0/inm" "lpopamp_0/out" 105.586
+cap "lpopamp_0/inp" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" -62.2995
+cap "lpopamp_0/inm" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" -6.43762
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 623.208
+cap "lpopamp_0/out" "lpopamp_0/inm" 421.464
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/inm" -55.8619
+cap "avss" "lpopamp_0/lpopamp_cap_13/zn_p" 5.429
+cap "avss" "lpopamp_0/lpopamp_cap_13/a_n6800_0#" 35.2566
+cap "avss" "lpopamp_0/lpopamp_cap_13/out" 59.3942
+cap "avss" "lpopamp_0/lpopamp_cap_13/zp_p" 8.83759
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/lpopamp_core_0/sliceB_1/out" 2.76141
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avdd" "lpopamp_0/lpopamp_core_0/sliceB_1/out" 6.95848
+cap "lpopamp_0/lpopamp_core_0/sliceB_0/enb" "lpopamp_0/lpopamp_core_0/sliceB_1/out" 0.961186
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_0/zn_p" 0.820344
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 572.007
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_0/a_58900_6600#" 0.754892
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avdd" 0.956474
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_0/enb" 11.7735
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_0/zn_p" 0.759248
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/out" 1397.48
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/inm" -9.65642
+cap "lpopamp_0/out" "lpopamp_0/inm" 105.586
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/inp" -93.4493
+cap "lpopamp_0/out" "lpopamp_0/inp" 527.05
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 689.485
+cap "lpopamp_0/out" "lpopamp_0/inm" 421.464
+cap "lpopamp_0/inm" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" -83.7928
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avdd" "lpopamp_0/lpopamp_core_0/sliceB_1/out" 6.95848
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 2.76141
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_1/enb" 0.961186
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/a_58900_6600#" 0.754892
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 512.595
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/zn_p" 0.759248
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/zn_p" 0.820344
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avdd" 0.956474
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/enb" 11.7735
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/inm" -6.43762
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/out" 1237.95
+cap "lpopamp_0/inp" "lpopamp_0/out" 527.05
+cap "lpopamp_0/out" "lpopamp_0/inm" 105.586
+cap "lpopamp_0/inp" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" -62.2995
+cap "lpopamp_0/inm" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" -55.8619
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 623.208
+cap "lpopamp_0/out" "lpopamp_0/inm" 421.464
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avdd" 6.95848
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 3.68188
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 455.079
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/enb" "lpopamp_0/out" 9.79921
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/zn_p" 1.86867
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avdd" "lpopamp_0/out" 0.956474
+cap "lpopamp_0/inm" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" -3.21881
+cap "lpopamp_0/inm" "lpopamp_0/out" 105.586
+cap "lpopamp_0/inp" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" -31.1498
+cap "lpopamp_0/out" "lpopamp_0/inp" 527.05
+cap "lpopamp_0/out" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" 1078.42
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/avss" "lpopamp_0/out" 556.931
+cap "lpopamp_0/inm" "lpopamp_0/out" 421.464
+cap "lpopamp_0/inm" "lpopamp_0/lpopamp_core_0/sliceB_1/avss" -27.9309
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_1/out" 3.82615
+cap "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_1/out" 1.85584
+cap "lpopamp_0/lpopamp_cap_15/out" "lpopamp_0/lpopamp_cap_15/a_n6800_0#" 1.13687e-13
+cap "lpopamp_0/lpopamp_cap_15/out" "en" 12.7878
+cap "en" "lpopamp_0/lpopamp_cap_15/a_n6800_0#" 41.9092
+cap "lpopamp_0/lpopamp_core_0/avdd" "lpopamp_0/lpopamp_core_0/ib" -70.8767
+cap "lpopamp_0/lpopamp_core_0/avdd" "lpopamp_0/lpopamp_core_0/en" 47.8406
+cap "lpopamp_0/avdd" "lpopamp_0/lpopamp_core_0/inp" 75.1775
+merge "lpopamp_0/out" "m3_102300_31200#" -5236.65 0 0 0 0 0 0 0 0 -2153200 -6152 -3360000 -32000 0 0 0 0 0 0 0 0
+merge "m3_102300_31200#" "lpopamp_0/lpopamp_core_0/sliceB_1/out"
+merge "lpopamp_0/lpopamp_core_0/sliceB_1/out" "lpopamp_0/lpopamp_core_0/sliceB_0/out"
+merge "lpopamp_0/lpopamp_core_0/sliceB_0/out" "m3_102300_27300#"
+merge "m3_102300_27300#" "out"
+merge "out" "m3_102300_29800#"
+merge "lpopamp_0/lpopamp_core_0/ib" "lpopamp_0/lpopamp_core_0/ib_uq0" -20462.6 0 0 0 0 0 0 0 0 -13546014 -83589 -2876400 -20976 0 0 0 0 0 0 0 0
+merge "lpopamp_0/lpopamp_core_0/ib_uq0" "en"
+merge "en" "lpopamp_0/ib"
+merge "lpopamp_0/ib" "ib"
+merge "lpopamp_0/SUB" "SUB" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "lpopamp_0/lpopamp_core_0/avdd" "lpopamp_0/avdd" -60768.4 0 0 0 0 0 0 0 0 0 0 0 0 -176200000 -180200 0 0 0 0 0 0
+merge "lpopamp_0/avdd" "avdd"
+merge "lpopamp_0/lpopamp_core_0/avss" "lpopamp_0/avss" -68542.7 0 0 0 0 0 0 0 0 0 0 0 0 -195503994 -207489 0 0 0 0 0 0
+merge "lpopamp_0/avss" "avss"
+merge "lpopamp_0/lpopamp_core_0/inp" "inp" -575.825 0 0 0 0 0 0 0 0 -1235014 -769 0 -600 0 0 0 0 0 0 0 0
+merge "lpopamp_0/lpopamp_core_0/inm_uq0" "inm" -87.63 0 0 0 0 0 0 0 0 0 0 0 -600 0 0 0 0 0 0 0 0

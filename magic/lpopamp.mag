@@ -1,6 +1,6 @@
 magic
-tech ihp-sg13g2
-timestamp 1790335422
+tech ihp-sg13cmos5l
+timestamp 1791314769
 << metal4 >>
 rect 50 15350 200 15400
 rect 250 15350 400 15400
@@ -8,128 +8,99 @@ rect 550 15350 600 15400
 rect 650 15350 700 15400
 rect 750 15350 800 15400
 rect 1050 15350 1100 15400
-rect 1250 15350 1300 15400
-rect 1450 15350 1500 15400
-rect 1650 15350 1700 15400
-rect 30750 15350 30900 15400
-rect 30950 15350 31100 15400
-rect 31150 15350 31300 15400
-rect 31350 15350 31500 15400
-rect 31650 15350 31800 15400
-rect 31850 15350 32000 15400
-rect 32050 15350 32200 15400
-rect 32250 15350 32400 15400
-rect 32450 15350 32600 15400
-rect 32650 15350 32800 15400
-rect 32850 15350 33000 15400
-rect 33050 15350 33200 15400
+rect 1350 0 1400 50
+rect 1550 0 1600 50
+rect 1850 -1200 2000 16600
+rect 2150 -1200 2300 16600
+rect 31950 -1200 32100 16600
+rect 32250 -1200 32400 16600
+rect 32550 -1200 32700 16600
+<< metal5 >>
+rect -12700 15600 32800 16600
+rect -12700 -1200 32800 -200
 use lpopamp_cap  lpopamp_cap_0
 timestamp 1790332655
-transform 1 0 -50 0 1 0
+transform 1 0 1050 0 1 0
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_1
 timestamp 1790332655
-transform 1 0 -50 0 -1 7700
+transform 1 0 1050 0 -1 7700
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_2
 timestamp 1790332655
-transform 1 0 -50 0 1 7700
+transform 1 0 1050 0 1 7700
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_3
 timestamp 1790332655
-transform 1 0 -50 0 -1 15400
+transform 1 0 1050 0 -1 15400
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_4
 timestamp 1790332655
-transform 1 0 -3500 0 1 0
+transform 1 0 -2400 0 1 0
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_5
 timestamp 1790332655
-transform 1 0 -3500 0 -1 7700
+transform 1 0 -2400 0 -1 7700
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_6
 timestamp 1790332655
-transform 1 0 -3500 0 1 7700
+transform 1 0 -2400 0 1 7700
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_7
 timestamp 1790332655
-transform 1 0 -3500 0 -1 15400
+transform 1 0 -2400 0 -1 15400
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_8
 timestamp 1790332655
-transform 1 0 -6950 0 1 0
+transform 1 0 -5850 0 1 0
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_9
 timestamp 1790332655
-transform 1 0 -6950 0 -1 7700
+transform 1 0 -5850 0 -1 7700
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_10
 timestamp 1790332655
-transform 1 0 -6950 0 1 7700
+transform 1 0 -5850 0 1 7700
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_11
 timestamp 1790332655
-transform 1 0 -6950 0 -1 15400
+transform 1 0 -5850 0 -1 15400
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_12
 timestamp 1790332655
-transform 1 0 -10400 0 1 0
+transform 1 0 -9300 0 1 0
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_13
 timestamp 1790332655
-transform 1 0 -10400 0 -1 7700
+transform 1 0 -9300 0 -1 7700
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_14
 timestamp 1790332655
-transform 1 0 -10400 0 1 7700
+transform 1 0 -9300 0 1 7700
 box -3400 0 50 3850
 use lpopamp_cap  lpopamp_cap_15
 timestamp 1790332655
-transform 1 0 -10400 0 -1 15400
+transform 1 0 -9300 0 -1 15400
 box -3400 0 50 3850
 use lpopamp_core  lpopamp_core_0
-timestamp 1790334857
+timestamp 1791314382
 transform 1 0 50 0 1 0
-box -50 0 33150 15400
+box 1050 -1200 32750 16600
 << labels >>
-rlabel metal4 1250 15350 1300 15400 0 in_m
+rlabel metal4 32550 -1200 32700 16600 0 inm
+port 0 nsew
+rlabel metal4 32250 -1200 32400 16600 0 inp
 port 1 nsew
-rlabel metal4 1050 15350 1100 15400 0 in_p
+rlabel metal4 31950 -1200 32100 16600 0 out
 port 2 nsew
-rlabel metal4 1450 15350 1500 15400 0 ib
-port 6 nsew
-rlabel metal4 1650 15350 1700 15400 0 en
-port 7 nsew
-rlabel metal4 31150 15350 31300 15400 0 out
+rlabel metal5 -12700 15600 31350 16600 0 avdd
 port 3 nsew
-rlabel metal4 32450 15350 32600 15400 0 avdd
+rlabel metal5 -12700 -1200 1150 -200 0 avss
 port 4 nsew
-rlabel metal4 32650 15350 32800 15400 0 avss
+rlabel metal4 2150 -1200 2300 16600 0 en
 port 5 nsew
-rlabel metal4 33050 15350 33200 15400 0 avss_uq0
-port 8 nsew
-rlabel metal4 32250 15350 32400 15400 0 avss_uq1
-port 9 nsew
-rlabel metal4 31850 15350 32000 15400 0 avss_uq2
-port 10 nsew
-rlabel metal4 50 15350 200 15400 0 avss_uq3
-port 11 nsew
-rlabel metal4 32850 15350 33000 15400 0 avdd_uq0
-port 12 nsew
-rlabel metal4 32050 15350 32200 15400 0 avdd_uq1
-port 13 nsew
-rlabel metal4 31650 15350 31800 15400 0 avdd_uq2
-port 14 nsew
-rlabel metal4 250 15350 400 15400 0 avdd_uq3
-port 15 nsew
-rlabel metal4 31350 15350 31500 15400 0 out_uq0
-port 16 nsew
-rlabel metal4 30950 15350 31100 15400 0 out_uq1
-port 17 nsew
-rlabel metal4 30750 15350 30900 15400 0 out_uq2
-port 18 nsew
-rlabel metal4 650 15350 700 15400 0 out_uq3
-port 19 nsew
-rlabel metal4 550 15350 600 15400 0 zp_p
-rlabel metal4 750 15350 800 15400 0 zn_p
+rlabel metal4 1850 -1200 2000 16600 0 ib
+port 6 nsew
+rlabel metal4 1550 0 1600 50 0 zp_p
+rlabel metal4 1350 0 1400 50 0 zn_p
 << end >>

@@ -1,4 +1,4 @@
-* NGSPICE file created from lpopamp.ext - technology: ihp-sg13cmos5l
+* NGSPICE file created from lpopamp_core.ext - technology: ihp-sg13cmos5l
 
 .subckt lpopamp_sliceB in_m in_p out avss avdd ib en zp_p zn_p
 X0 zp_m zp_m yp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
@@ -1334,14 +1334,10 @@ X662 yp_p in_m a_13250_700# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=
 X663 bnb bnb a_9250_700# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
 .ends
 
-.subckt lpopamp_core zn_p out inm ib zp_p inp en avdd SUB
-XsliceB_1 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceB
-XsliceA_0 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceA
-XsliceA_1 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceA
-XsliceB_0 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceB
-.ends
-
-.subckt lpopamp inm inp out avdd avss en ib
-Xlpopamp_core_0 zn_p out inm ib zp_p inp en avdd avss lpopamp_core
+.subckt lpopamp_core zn_p avdd avss en out inm inp ib zp_p
+XsliceB_1 inm inp out avss avdd ib en zp_p zn_p lpopamp_sliceB
+XsliceA_0 inm inp out avss avdd ib en zp_p zn_p lpopamp_sliceA
+XsliceA_1 inm inp out avss avdd ib en zp_p zn_p lpopamp_sliceA
+XsliceB_0 inm inp out avss avdd ib en zp_p zn_p lpopamp_sliceB
 .ends
 
