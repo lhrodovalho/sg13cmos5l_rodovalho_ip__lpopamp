@@ -1403,15 +1403,15 @@ Xlpopamp_core_0 zn_p out inm ib zp_p inp en avdd SUB lpopamp_core
 + dig_in[0] dig_out[11] dig_out[10] dig_out[9] dig_out[8] dig_out[7] dig_out[6] dig_out[5]
 + dig_out[4] dig_out[3] dig_out[2] dig_out[1] dig_out[0] ibias0 ibias1 analog_bus3
 + analog_bus2 analog_bus1 analog_bus0 vss_1v2 vdd_1v2 vss_3v3 vdd_3v3 enable clk reset
-Xlvlshifter_0 enable lvlshifter_0/out vdd_1v2 avdd vdd_1v2 lvlshifter
-Xlpopamp_0 lpopamp_0/en avdd inp vdd_1v2 inm out ib lpopamp
-R0 out s10_an[1] 0.012571
+Xlvlshifter_0 enable en vdd_1v2 avdd vdd_1v2 lvlshifter
+Xlpopamp_0 en avdd inp vdd_1v2 inm out ib lpopamp
+R0 inm s10_an_2_esd 0.027556
 R1 out s10_an[1] 0.012571
-R2 ibias0 ib 0.029333
-R3 inp s10_an[0] 0.001833
+R2 out s10_an[1] 0.012571
+R3 ibias0 ib 0.029333
 R4 vss_3v3 vdd_1v2 0.000300
-R5 out s10_an[1] 0.012571
-R6 inm s10_an[2] 0.001833
+R5 inp s10_an_0_esd 0.027556
+R6 out s10_an[1] 0.012571
 R7 vdd_3v3 avdd 0.000300
 R8 out s10_an[1] 0.012571
 .ends
