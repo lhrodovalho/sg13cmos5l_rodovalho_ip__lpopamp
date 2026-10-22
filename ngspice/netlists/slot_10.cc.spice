@@ -1,4 +1,4 @@
-* NGSPICE file created from slot10.ext - technology: ihp-sg13cmos5l
+* NGSPICE file created from slot_10.ext - technology: ihp-sg13cmos5l
 
 .subckt lvlshifter in out vddlo vddhi vss
 X0 a_2100_900# ym a_1900_900# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
@@ -49,6 +49,21 @@ X44 xm in a_n400_n900# vss sg13_lv_nmos ad=1.25p pd=6u as=0.625p ps=3u w=2.5u l=
 X45 a_3700_900# yp a_3500_900# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
 X46 vss xp ym vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
 X47 vss xp ym vss sg13_hv_nmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
+C0 vddhi xm 1.17632f
+C1 vddlo xm 1.06013f
+C2 vddhi yp 1.4688f
+C3 out ym 1.40666f
+C4 xp ym 2.2586f
+C5 vddhi ym 2.94693f
+C6 yp xm 1.55358f
+C7 vddhi xp 1.36705f
+C8 vddhi vss 3.51703f
+C9 vddlo vss 1.57201f
+C10 a_4500_900# vss 2.75091f
+C11 a_4300_900# vss 2.75091f
+C12 a_3300_900# vss 2.40167f
+C13 a_2100_900# vss 2.26941f
+C14 a_1900_900# vss 2.26053f
 .ends
 
 .subckt lpopamp_sliceB in_m in_p out avss avdd ib en zp_p zn_p
@@ -716,6 +731,116 @@ X660 a_17300_6600# bnb bnb avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4
 X661 avss zn_m a_33500_5400# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
 X662 out zn_p a_56100_6600# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
 X663 zn_p bpb zp_p avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=0.5u
+C0 avdd xp 5.91307f
+C1 zp_p bnb 2.39779f
+C2 a_46700_600# zn_m 3.5951f
+C3 out zp_m 1.96949f
+C4 zn_m yn_p 13.9168f
+C5 zn_p bnb 2.71664f
+C6 zp_p zp_m 5.7842f
+C7 a_46700_600# bpa 1.6634f
+C8 yp_m zp_m 20.3168f
+C9 bpb zp_m 1.6692f
+C10 zn_p enb 2.13215f
+C11 xn bna 1.8596f
+C12 avdd bnb 3.69842f
+C13 en enb 6.83308f
+C14 avdd enb 1.43175f
+C15 avdd zp_m 0.12092p
+C16 zn_m yn_m 14.0434f
+C17 bpa bna 1.61513f
+C18 enb bnb 11.1075f
+C19 bnb zp_m 3.06886f
+C20 out yn_p 1.96509f
+C21 a_46700_600# bpb 2.28126f
+C22 out yp_p 1.26866f
+C23 in_m xn 2.53433f
+C24 in_m yn_p 6.27757f
+C25 in_p xn 2.53188f
+C26 in_m yp_p 3.08993f
+C27 avdd a_46700_600# 2.30336f
+C28 out zn_m 3.57588f
+C29 avdd yn_p 2.46185f
+C30 avdd yp_p 16.5284f
+C31 bnb a_39100_5400# 4.60414f
+C32 bpb zn_m 5.05493f
+C33 zn_p zn_m 3.61017f
+C34 out yn_m 2.25905f
+C35 bpa yp_m 1.33507f
+C36 a_39100_5400# zp_m 1.79193f
+C37 bpa bpb 12.7164f
+C38 xp yn_p 4.44674f
+C39 bpb bna 1.61513f
+C40 zn_p yn_m 2.25464f
+C41 avdd zn_m 4.50198f
+C42 en bpa 2.59392f
+C43 in_p yn_m 4.46577f
+C44 avdd bpa 0.12355p
+C45 en bna 2.10424f
+C46 avdd yn_m 2.50598f
+C47 a_43900_600# zn_m 3.5951f
+C48 a_43900_600# bpa 1.66379f
+C49 xp bpa 4.66257f
+C50 xp yn_m 4.44674f
+C51 yp_p zp_m 28.0262f
+C52 bnb zn_m 1.39193f
+C53 zp_p out 0.17929p
+C54 enb zn_m 1.21366f
+C55 bpa bnb 3.43496f
+C56 zn_p out 0.17711p
+C57 zp_p yp_m 7.97649f
+C58 zp_p bpb 3.34826f
+C59 bna bnb 9.23208f
+C60 in_m out 1.65561f
+C61 zn_p zp_p 12.5901f
+C62 bpa zp_m 1.84078f
+C63 in_p out 3.06945f
+C64 bpa_r bpb 13.682f
+C65 zn_p bpb 3.18211f
+C66 bna enb 3.19869f
+C67 in_p zp_p 1.20042f
+C68 en out 1.45139f
+C69 bpa_l bpb 13.5916f
+C70 avdd out 24.9601f
+C71 in_p yp_m 4.84344f
+C72 en zp_p 2.42912f
+C73 avdd zp_p 29.4451f
+C74 en ib 1.90518f
+C75 avdd yp_m 25.6231f
+C76 avdd bpb 79.2367f
+C77 bna_ bnb 11.3956f
+C78 avdd bpa_r 12.1713f
+C79 avdd zn_p 4.47984f
+C80 avdd bpa_l 12.1926f
+C81 avdd in_m 8.19078f
+C82 avdd tihi 27.4428f
+C83 avdd in_p 8.59506f
+C84 avdd en 71.6574f
+C85 a_43900_600# bpb 2.28126f
+C86 bna a_39100_5400# 1.89282f
+C87 in_m xp 2.87935f
+C88 in_p xp 2.88055f
+C89 avdd a_43900_600# 2.27677f
+C90 out avss 0.18523p
+C91 ib avss 10.4417f
+C92 avdd avss 0.19078p
+C93 a_46700_600# avss 2.18834f
+C94 xp avss 8.09163f
+C95 a_58900_5400# avss 23.75268f
+C96 a_38300_5400# avss 67.2062f
+C97 a_28100_5400# avss 29.11255f
+C98 a_23700_5400# avss 11.13834f
+C99 a_23500_5400# avss 11.13708f
+C100 a_46100_6600# avss 62.77537f
+C101 a_39100_5400# avss 71.04011f
+C102 yn_p avss 77.85738f
+C103 yn_m avss 20.4457f
+C104 yp_p avss 7.00621f
+C105 a_27700_6600# avss 28.17737f
+C106 yp_m avss 31.24379f
+C107 xn avss 33.36846f
+C108 a_20900_6600# avss 32.72247f
+C109 a_11100_6600# avss 15.89549f
 .ends
 
 .subckt lpopamp_sliceA in_m in_p out avss avdd ib en zp_p zn_p
@@ -1383,6 +1508,113 @@ X660 bna_ bnb a_22100_200# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4
 X661 avdd bpa bnb avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
 X662 yp_p zp_m avdd avdd sg13_hv_pmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
 X663 avss bna a_14300_200# avss sg13_hv_nmos ad=1.125p pd=5u as=1.125p ps=5u w=4.5u l=3.5u
+C0 bpb a_46700_5000# 2.28126f
+C1 zp_m out 1.96963f
+C2 bna bnb 9.23208f
+C3 bpa a_43900_5000# 1.66379f
+C4 zp_m zp_p 5.78427f
+C5 bnb zn_p 2.71664f
+C6 zn_m a_46700_5000# 3.5951f
+C7 bpa_l bpb 13.5916f
+C8 bnb zp_p 2.39779f
+C9 zp_m avdd 0.12165p
+C10 yn_m out 2.25905f
+C11 bpb bna 1.61513f
+C12 bna xn 1.8596f
+C13 yn_m zn_p 2.25464f
+C14 bnb avdd 3.53028f
+C15 bpa a_46700_5000# 1.6634f
+C16 xp in_p 2.88055f
+C17 yn_m in_p 4.46577f
+C18 xp in_m 2.87935f
+C19 bpb zn_p 3.18211f
+C20 bpb zp_p 3.34826f
+C21 xp avdd 5.80918f
+C22 yn_m avdd 2.32704f
+C23 xn in_p 2.53188f
+C24 xn in_m 2.53433f
+C25 zn_m out 3.57588f
+C26 yp_m zp_p 8.06633f
+C27 zn_m zn_p 3.61017f
+C28 bpb avdd 78.68221f
+C29 yp_m in_p 4.86396f
+C30 bpa bna 1.61513f
+C31 zp_m bnb 3.06886f
+C32 a_39100_200# bna 1.89282f
+C33 yp_m avdd 20.0273f
+C34 zn_m avdd 4.1643f
+C35 bpb zp_m 1.6692f
+C36 bpa en 2.59392f
+C37 bpa avdd 0.12341p
+C38 yn_p out 1.96509f
+C39 enb bna 3.19869f
+C40 xp yn_m 4.44674f
+C41 zp_m yp_m 19.3336f
+C42 yn_p in_m 6.27757f
+C43 bna_ bnb 11.3956f
+C44 enb zn_p 2.13215f
+C45 zn_m bnb 1.39193f
+C46 yn_p avdd 2.32345f
+C47 yp_p out 1.26866f
+C48 bpa zp_m 1.88419f
+C49 enb en 6.83308f
+C50 zp_m a_39100_200# 1.79193f
+C51 enb avdd 1.36173f
+C52 yn_m zn_m 12.9013f
+C53 yp_p in_m 3.08993f
+C54 bpa bnb 3.43496f
+C55 a_39100_200# bnb 4.60414f
+C56 yp_p avdd 18.5086f
+C57 bpb zn_m 5.05493f
+C58 bpa xp 4.66257f
+C59 a_43900_5000# avdd 2.21795f
+C60 bpa bpb 12.7164f
+C61 bpa_r avdd 12.1834f
+C62 xp yn_p 4.44674f
+C63 zp_m yp_p 29.3729f
+C64 enb bnb 11.1075f
+C65 bpa yp_m 1.48321f
+C66 a_46700_5000# avdd 2.24647f
+C67 bpa_l avdd 12.2019f
+C68 yn_p zn_m 15.4389f
+C69 ib en 1.90518f
+C70 zn_p out 0.17719p
+C71 zp_p out 0.17937p
+C72 bna en 2.10424f
+C73 in_p out 3.06937f
+C74 zp_p zn_p 12.5901f
+C75 in_m out 1.65554f
+C76 enb zn_m 1.21366f
+C77 en out 1.44977f
+C78 in_p zp_p 1.19747f
+C79 avdd out 24.9763f
+C80 bpb a_43900_5000# 2.28126f
+C81 en zp_p 2.42817f
+C82 avdd zn_p 4.29434f
+C83 avdd zp_p 29.1623f
+C84 avdd in_p 8.48681f
+C85 bpb bpa_r 13.682f
+C86 avdd in_m 8.13381f
+C87 tihi avdd 27.4971f
+C88 avdd en 71.5679f
+C89 a_43900_5000# zn_m 3.5951f
+C90 ib avss 10.4417f
+C91 out avss 0.21307p
+C92 avdd avss 0.20765p
+C93 a_58500_200# avss 44.06347f
+C94 a_50500_200# avss 61.9585f
+C95 a_39700_200# avss 32.76053f
+C96 a_25500_200# avss 67.27516f
+C97 a_58900_1400# avss 24.88781f
+C98 a_39100_200# avss 3.87925f
+C99 xn avss 71.49496f
+C100 a_15700_1400# avss 11.15739f
+C101 a_15500_1400# avss 11.1715f
+C102 yn_m avss 46.71965f
+C103 yn_p avss 46.3402f
+C104 xp avss 59.6406f
+C105 yp_m avss 22.83582f
+C106 yp_p avss 3.56935f
 .ends
 
 .subckt lpopamp_core zn_p out inm ib zp_p inp en avdd SUB
@@ -1390,29 +1622,72 @@ XsliceB_1 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceB
 XsliceA_0 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceA
 XsliceA_1 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceA
 XsliceB_0 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceB
+C0 out avdd 3.84893f
+C1 ib avdd 1.21777f
+C2 en avdd 1.37397f
+C3 sliceB_0/bna sliceB_1/bna 1.10378f
+C4 out SUB 6.01693f
+C5 ib SUB 2.05608f
+C6 inm SUB 3.77983f
+C7 inp SUB 3.78281f
+C8 en SUB 2.10594f
+C9 avdd SUB -31.80862f
 .ends
 
 .subckt lpopamp en avdd inp SUB inm out ib
 Xlpopamp_core_0 zn_p out inm ib zp_p inp en avdd SUB lpopamp_core
+C0 zp_p out 4.52631p
+C1 zn_p zp_p 0.23773p
+C2 zn_p out 4.52634p
+C3 inp out 1.78353f
+C4 en ib 1.78353f
+C5 out SUB -20.62287f
+C6 ib SUB -10.41301f
+C7 en SUB -1.24517f
+C8 avdd SUB -0.10133p
 .ends
 
-.subckt slot10 s10_an[0] s10_an[1] s10_an[2] s10_an_0_esd s10_an_1_esd s10_an_2_esd
+.subckt slot_10 s10_an[0] s10_an[1] s10_an[2] s10_an_0_esd s10_an_1_esd s10_an_2_esd
 + vbias dig_in[23] dig_in[22] dig_in[21] dig_in[20] dig_in[19] dig_in[18] dig_in[17]
 + dig_in[16] dig_in[15] dig_in[14] dig_in[13] dig_in[12] dig_in[11] dig_in[10] dig_in[9]
 + dig_in[8] dig_in[7] dig_in[6] dig_in[5] dig_in[4] dig_in[3] dig_in[2] dig_in[1]
 + dig_in[0] dig_out[11] dig_out[10] dig_out[9] dig_out[8] dig_out[7] dig_out[6] dig_out[5]
 + dig_out[4] dig_out[3] dig_out[2] dig_out[1] dig_out[0] ibias0 ibias1 analog_bus3
 + analog_bus2 analog_bus1 analog_bus0 vss_1v2 vdd_1v2 vss_3v3 vdd_3v3 enable clk reset
-Xlvlshifter_0 enable en vdd_1v2 avdd vdd_1v2 lvlshifter
-Xlpopamp_0 en avdd inp vdd_1v2 inm out ib lpopamp
+Xlvlshifter_0 enable en vdd_1v2 avdd SUB lvlshifter
+Xlpopamp_0 en avdd inp SUB inm out ib lpopamp
 R0 inm s10_an_2_esd 0.027556
 R1 out s10_an[1] 0.012571
 R2 out s10_an[1] 0.012571
 R3 ibias0 ib 0.029333
-R4 vss_3v3 vdd_1v2 0.000300
+R4 vss_3v3 SUB 0.000300
 R5 inp s10_an_0_esd 0.027556
 R6 out s10_an[1] 0.012571
 R7 vdd_3v3 avdd 0.000300
 R8 out s10_an[1] 0.012571
+C0 vdd_1v2 enable 1.00407f
+C1 inm out 2.1082f
+C2 en avdd 11.77913f
+C3 lpopamp_0/zn_p out 4.52617p
+C4 en out 1.71572f
+C5 lpopamp_0/zp_p out 4.52616p
+C6 lpopamp_0/zn_p lpopamp_0/zp_p 0.23772p
+C7 inp out 2.1082f
+C8 vss_1v2 SUB 2.42322f
+C9 vss_3v3 SUB 2.79648f
+C10 vdd_3v3 SUB 9.07835f
+C11 s10_an[2] SUB 2.01835f
+C12 s10_an[1] SUB 1.66371f
+C13 s10_an[0] SUB 2.01835f
+C14 out SUB -29.23704f
+C15 lpopamp_0/zp_p SUB -2.54199f
+C16 ib SUB 5.01035f
+C17 lpopamp_0/zn_p SUB -2.69324f
+C18 inm SUB -5.56006f
+C19 inp SUB -4.07975f
+C20 en SUB -6.11477f
+C21 avdd SUB -83.52245f
+C22 enable SUB 8.79981f
+C23 vdd_1v2 SUB 22.41411f
 .ends
 

@@ -1,4 +1,4 @@
-* NGSPICE file created from slot10.ext - technology: ihp-sg13cmos5l
+* NGSPICE file created from slot_10.ext - technology: ihp-sg13cmos5l
 
 .subckt lvlshifter in out vddlo vddhi vss
 X0 a_2100_900# ym a_1900_900# vddhi sg13_hv_pmos ad=0.625p pd=3u as=0.625p ps=3u w=2.5u l=0.5u
@@ -1396,20 +1396,20 @@ XsliceB_0 inm inp out SUB avdd ib en zp_p zn_p lpopamp_sliceB
 Xlpopamp_core_0 zn_p out inm ib zp_p inp en avdd SUB lpopamp_core
 .ends
 
-.subckt slot10 s10_an[0] s10_an[1] s10_an[2] s10_an_0_esd s10_an_1_esd s10_an_2_esd
+.subckt slot_10 s10_an[0] s10_an[1] s10_an[2] s10_an_0_esd s10_an_1_esd s10_an_2_esd
 + vbias dig_in[23] dig_in[22] dig_in[21] dig_in[20] dig_in[19] dig_in[18] dig_in[17]
 + dig_in[16] dig_in[15] dig_in[14] dig_in[13] dig_in[12] dig_in[11] dig_in[10] dig_in[9]
 + dig_in[8] dig_in[7] dig_in[6] dig_in[5] dig_in[4] dig_in[3] dig_in[2] dig_in[1]
 + dig_in[0] dig_out[11] dig_out[10] dig_out[9] dig_out[8] dig_out[7] dig_out[6] dig_out[5]
 + dig_out[4] dig_out[3] dig_out[2] dig_out[1] dig_out[0] ibias0 ibias1 analog_bus3
 + analog_bus2 analog_bus1 analog_bus0 vss_1v2 vdd_1v2 vss_3v3 vdd_3v3 enable clk reset
-Xlvlshifter_0 enable en vdd_1v2 avdd vdd_1v2 lvlshifter
-Xlpopamp_0 en avdd inp vdd_1v2 inm out ib lpopamp
+Xlvlshifter_0 enable en vdd_1v2 avdd SUB lvlshifter
+Xlpopamp_0 en avdd inp SUB inm out ib lpopamp
 R0 inm s10_an_2_esd 0.027556
 R1 out s10_an[1] 0.012571
 R2 out s10_an[1] 0.012571
 R3 ibias0 ib 0.029333
-R4 vss_3v3 vdd_1v2 0.000300
+R4 vss_3v3 SUB 0.000300
 R5 inp s10_an_0_esd 0.027556
 R6 out s10_an[1] 0.012571
 R7 vdd_3v3 avdd 0.000300
